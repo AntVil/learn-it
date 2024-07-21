@@ -1,0 +1,206 @@
+[
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Warum hat Sortieren durch Vergleiche die Zeitkomplexität Theta(n log n)?",
+        "back": "",
+        "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Erklären Sie das Prinzip der Reduktion, die Herleitung einer unteren Schranke für ein Problem aus einer unteren Schranke für ein anderes Problem.",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Auf welche untere Schranke stützt sich der Beweis, dass die Bestimmung des kleinsten Abstands zwischen n Punkten in der Ebene (dichtestes Paar) mindestens Omega(n log n) Zeit braucht?",
+        "back": "",
+        "hint": "epsilon-closeness"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wie lautet die Eulersche Formel für kreuzungsfreie geometrische Graphen in der Ebene? Beweis?",
+        "back": "",
+        "hint": "Knoten, Kanten, Flächen, Zusammenhangskomponenten"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Was ist das charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wie kann man alle Schnittpunkte von n Liniensegmenten in der Ebene durch ein Sweep-Verfahren berechnen? Erklären Sie die Laufzeit von O((n+k)log n). Warum stimmt hier also O(n log n) nicht ganz?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wie würden Sie alle Schnittpunkte von n Geraden in der Ebene berechnen?",
+        "back": "",
+        "hint": "Je zwei Geraden schneiden sich, also k=Theta(n*n), lohnt sich da noch der Sweep?"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Erläutern Sie das Sweep-Verfahren für die Bestimmung des dichtesten Paars von n Punkten in der Ebene. Warum genügt es, ist es für die Laufzeit wichtig, dass man sich während des Sweeps nur die Punkte im vertikalen Streifen links von der sweep line merkt? Wie kann man das Verfahren auf höhere Dimensionen erweitern?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie einen O(n log n)-Algorithmus zur Konstruktion der konvexen Hülle von n Punkten in der Ebene, und begründen Sie sein Laufzeitverhalten.",
+        "back": "",
+        "hint": "Inkrementell, randomisiert, D & C, Kontur, ..."
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Warum hat die Berechnung der konvexen Hülle von n Punkten in der Ebene die Zeitkomplexität Omega(n log n)? Beweis?",
+        "back": "",
+        "hint": "Reduktion vom Sortierproblem, Punkte auf Parabel"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wenn für eine Menge von n Punkten in der Ebene bereits bekannt ist, dass alle Punkte auf der konvexen Hülle liegen, kann dann die konvexe Hülle in linearer Zeit berechnet werden? Und was ist, wenn die Punkte bereits sortiert vorliegen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Bestimmen Sie den Kern eines Beispielpolygons nach dem im Kurs angegebenen Verfahren. Wieviel Zeit benötigt das Verfahren?",
+        "back": "",
+        "hint": "Drehwinkelbedingung, F- und B-Kantenfolgen, Schnitt von unteren Halbebenen, konvexe Hülle von sortierten Punktmengen"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wie viele Wächter benötigt man zur Bewachung eines konvexen, eines sternförmigen, eines beliebigen einfachen Polygons?",
+        "back": "",
+        "hint": "Toblerone-Polygon"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Mit wie vielen Wächtern kommt man bei einem einfachen Polygon immer aus und wo sollen sie platziert werden?",
+        "back": "",
+        "hint": "(Triangulierung, 3-Färbung"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Zur 3-Färbung: was genau wird gefärbt, nach welcher Regel, warum ist dies immer möglich?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Erläutern Sie ein Verfahren zur Triangulierung eines einfachen Polygons.",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Vergleichen Sie die geometrischen Datenstrukturen k-d-Baum und Bereichsbaum.",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wie hoch ist der Aufwand einer Halbstreifenanfrage unter Verwendung eines Prioritätssuchbaumes? Beweis? Kann der Prioritätssuchbaum auch für rechteckige Anfragen nützlich sein?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Zeichnen Sie das Voronoi-Diagramm zu vier oder fünf vorgegebenen Punkten",
+        "back": "",
+        "hint": "zur üblichen euklidischen Distanz, fangen Sie mit den Bisektoren zwischen benachbarten Punkten an"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie einige Anwendungen von Voronoi-Diagrammen.",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Was ist die Delaunay-Triangulation? Wie und in welcher Zeit kann man die Delaunay-Triangulation in das Voronoi-Diagramm umrechnen?",
+        "back": "",
+        "hint": "Dualität zwischen den beiden"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beweisen Sie den Zusammenhang zwischen dem Voronoi-Diagramm und der konvexen Hülle der Punkte.",
+        "back": "",
+        "hint": "Punkt auf konvexer Hülle <=> unbeschränkte Region"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Für welche Punktmengen hat das euklidische Voronoi-Diagramm die Struktur eines Baumes?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Zeichnen Sie zu zwei vorgegebenen Liniensegmenten den Bisektor bezüglich der euklidischen Metrik, aus wievielen Teilstücken kann der Bisektor bestehen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie das Verfahren Divide and Conquer zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
+        "back": "",
+        "hint": "Wie findet man beim Divide-and-Conquer-Verfahren die Endstücke von B(L,R)?"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie das Verfahren inkrementelle Konstruktion (edge flip) zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
+        "back": "",
+        "hint": "Zwei Phasen beim Einfügen jedes Punktes (Lokalisierung, Einbauen). Was ist ein edge flip, wie viele davon sind im schlimmsten Fall nötig, welche Aussage haben wir über die Laufzeit des Verfahrens?"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie das Verfahren Sweep zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
+        "back": "",
+        "hint": "Was versteht man im Sweep-Verfahren unter der Wellenfront? Aus wie vielen Stücken kann sie bestehen und wie wird sie verwaltet? Was ist ein Spike-Event, wann wird es bemerkt, und wo wird es in die Ereignisstruktur eingefügt?"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie das Verfahren geometrische Transformation zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
+        "back": "",
+        "hint": "Wie wird die Umkreiseigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Was verstehen wir unter einem kompetitiven Verfahren, in welchen Zusammenhängen sind solche Verfahren interessant?",
+        "back": "",
+        "hint": "NP-schwere Probleme und solche mit unvollständigen Informationen"
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
+        "back": "",
+        "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Wir suchen die Tür in der Wand. Welchen kompetitiven Faktor können wir erreichen, wie und warum? Kann es noch besser gehen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Skizzieren Sie einen Algorithmus zum Verlassen eines Labyrinths.",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Algorithmische Geometrie",
+        "front": "Erläutern Sie das Suchverfahren der CAB-Strategie. Was sind selbstnähernde Kurven? Was lässt sich über ihre Länge sagen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Abc",
+        "back": "Def",
+        "hint": ""
+    }
+]
