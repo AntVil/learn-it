@@ -1,6 +1,7 @@
 {
 	"name": "learn-it",
 	"short_name": "learn-it",
+    "description": "A progressive web app (PWA) for learning using cards.",
 	"icons": [
 		{
 			"src": "android-chrome-512x512.png",
@@ -36,5 +37,6 @@
 	"theme_color": "#000000",
 	"background_color": "#000000",
 	"display": "standalone",
-	"start_url": "index.html"
+	"start_url": "index.html",
+    "orientation": "portrait"
 }
