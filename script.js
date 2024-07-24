@@ -81,6 +81,13 @@ function next() {
 
 function setCard(button) {
     let card = currentFolder[Math.floor(Math.random() * currentFolder.length)];
+    let backContent;
+    if(card.hint !== null && card.hint !== "") {
+        backContent = `${card.hint}\n\n${card.back || "no content"}`;
+    } else {
+        backContent = card.back || "no content"
+    }
+
     button.setAttribute("data-front", card.front || "no content");
-    button.setAttribute("data-back", card.back || "no content");
+    button.setAttribute( "data-back", backContent);
 }

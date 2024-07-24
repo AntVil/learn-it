@@ -199,8 +199,86 @@
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Abc",
-        "back": "Def",
+        "front": "Was ist der zustand eines Objekts?",
+        "back": "Die Menge aller Instanz-Variablen. Es sind alle bekannten Objekte, mit denen das Objekt in Beziehung steht.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Pass-by-Reference?",
+        "back": "Es wird einer Funktion eine Referenz (Pointer) übergeben, welche auf den übergebenen Wert zeigt.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Pass-by-Value?",
+        "back": "Es wird einer Funktion der momentane Wert übergeben.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist ein Nachrichten-selektor und wie it er in SMALLTALK aufgebaut?",
+        "back": "Ein Nachrichten-selektor identifiziert eine Methode. Aufbau: '#parameter:parameter:'",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist ein Protokoll und ein Interface?",
+        "back": "Das Interface gibt alle verstandenen Nachrichten an. Das Protokoll enthält den Nachrichten-Katalog und Kommentare.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Nachrichten-Typen gibt es in SMALLTALK?",
+        "back": "Unär (Nur implizites Argument), Binär (Spezielle Nachrichten wie '+') und Schlüsselwort (Nachrichten mit mehreren Argumenten)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "In welcher Beziehung stehen Instanz, Klasse, Meta-Klasse?",
+        "back": "Eine Instanz ist Objekt, dass von einer Klasse erzeugt wurde. Da Klassen auch Objekte sind (zumindest in SMALLTALK) haben Klassen auch Klasse, nämlich eine Meta-Klasse.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist die extension und intension einer Klasse?",
+        "back": "Extension ist die Menge aller Objekte die zu der Klasse gehören. Intension sind die Bedingungen die benötigt werden um zur Klasse zu gehören.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist ein Literal und welche gibt es in SMALLTALK?",
+        "back": "Ein Literal ist ein Objekt, dass während der Übersetzungszeit erzeugt wird. Es gibt Zahlen-, String-, Symbol- und Array-Literale.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Aliase?",
+        "back": "Aliase sind Variablen/Namen die auf das gleiche Objekt zeigen. Sie werden durch Zuweisungen (:=) erzeugt und zeigen somit auf die gleiche Speicheradresse.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Garbage Collection? Warum ist es wichtig für OOP?",
+        "back": "Garbage Collection deallokiert Speicher von Objekten die nicht mehr verwendet werden zu einem unbestimmten Zeitpunkt. Es ist wichtig, da Objekte an vielen verschiedenen erzeugt und 'entfernt' werden. (Es werden nur aliase gelöscht)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Instanz- und was Klassen-Variablen?",
+        "back": "Instanz-Variablen gehören der Instanz und Klassen-Variablen der Klasse. Wird die Klasse als Instanz einer Meta-Klasse betrachtet werden dessen Variablen auch Instanz-Variablen genannt. Instanz-Variablen können nur von der Instanz gelesen und verändert werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind pseudo-variablen in SMALLTALK?",
+        "back": "Pseudo-Variablen sind Variablen die nur gelesen werden können und ersetzen Schlüsselwörter anderer Sprachen. (Bsp: 'true', 'false', 'nil', ...)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Beziehungen in OOP? Was haben Zwischen-Objekte damit zu tun?",
+        "back": "Beziehungen in OOP geben an welche Objekte sich kennen. Es gibt 1-Beziehungen und n-Beziehungen. Für n-Beziehungen werden meist Zwischen-Objekte benötigt, welche die Beziehung pflegen. Zwischen-Objekte sind meistens Collections.",
         "hint": ""
     }
 ]
