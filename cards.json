@@ -20,13 +20,13 @@
     {
         "folder": "Algorithmische Geometrie",
         "front": "Wie lautet die Eulersche Formel für kreuzungsfreie geometrische Graphen in der Ebene? Beweis?",
-        "back": "",
-        "hint": "Knoten, Kanten, Flächen, Zusammenhangskomponenten"
+        "back": "v - e + f = c + 1",
+        "hint": "Knoten, Kanten, Flächen, Zusammenhangs-Komponenten"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Was ist das charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
-        "back": "",
+        "back": "Ein Sweep-Verfahren verwandelt in einem statischen d-dimensionalen Problem eine dimension in eine zeitliche und läuft diese Dimension ab. (In der Ebene erfolgt dies meist mit der Sweep-Line.) Dabei wird eine Sweep-Status-Struktur mitgeführt, welche bei gewissen Ereignissen ggf. aktualisiert wird.",
         "hint": ""
     },
     {
@@ -67,26 +67,26 @@
     },
     {
         "folder": "Algorithmische Geometrie",
-        "front": "Bestimmen Sie den Kern eines Beispielpolygons nach dem im Kurs angegebenen Verfahren. Wieviel Zeit benötigt das Verfahren?",
+        "front": "Bestimmen Sie den Kern eines Beispielpolygons nach dem im Kurs angegebenen Verfahren. Wie viel Zeit benötigt das Verfahren?",
         "back": "",
         "hint": "Drehwinkelbedingung, F- und B-Kantenfolgen, Schnitt von unteren Halbebenen, konvexe Hülle von sortierten Punktmengen"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Wie viele Wächter benötigt man zur Bewachung eines konvexen, eines sternförmigen, eines beliebigen einfachen Polygons?",
-        "back": "",
+        "back": "konvex & sternförmig: genau 1\nbeliebig einfach: max v / 3",
         "hint": "Toblerone-Polygon"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Mit wie vielen Wächtern kommt man bei einem einfachen Polygon immer aus und wo sollen sie platziert werden?",
-        "back": "",
-        "hint": "(Triangulierung, 3-Färbung"
+        "back": "Es reichen immer v / 3 aus und sind manchmal sogar nötig. Durch Triangulation und 3-Färbung des Polygon kann eine der Farben gewählt werden (meist mit minialster Anzahl) und auf jeden Knoten mit dieser Farbe ein Wächter platziert werden.",
+        "hint": "Triangulierung, 3-Färbung"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Zur 3-Färbung: was genau wird gefärbt, nach welcher Regel, warum ist dies immer möglich?",
-        "back": "",
+        "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer Möglich, weil per Definition eine Triangulation eines einfachen Polygon nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor.",
         "hint": ""
     },
     {
@@ -103,7 +103,7 @@
     },
     {
         "folder": "Algorithmische Geometrie",
-        "front": "Wie hoch ist der Aufwand einer Halbstreifenanfrage unter Verwendung eines Prioritätssuchbaumes? Beweis? Kann der Prioritätssuchbaum auch für rechteckige Anfragen nützlich sein?",
+        "front": "Wie hoch ist der Aufwand einer Halbstreifenanfrage unter Verwendung eines Prioritäts-Suchbaumes? Beweis? Kann der Prioritäts-Suchbaum auch für rechteckige Anfragen nützlich sein?",
         "back": "",
         "hint": ""
     },
@@ -111,12 +111,12 @@
         "folder": "Algorithmische Geometrie",
         "front": "Zeichnen Sie das Voronoi-Diagramm zu vier oder fünf vorgegebenen Punkten",
         "back": "",
-        "hint": "zur üblichen euklidischen Distanz, fangen Sie mit den Bisektoren zwischen benachbarten Punkten an"
+        "hint": "zur üblichen euklidischen Distanz, fangen Sie mit den Bi-Sektoren zwischen benachbarten Punkten an"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie einige Anwendungen von Voronoi-Diagrammen.",
-        "back": "",
+        "back": "Berechnung der Delaunay Triangulation: Für die Punkte wird das Voronoi-Diagramm berechnet und anschließend der Duale-Graph bestimmt. Der Duale-Graph entspricht der Delaunay-Triangulation",
         "hint": ""
     },
     {
@@ -128,19 +128,19 @@
     {
         "folder": "Algorithmische Geometrie",
         "front": "Beweisen Sie den Zusammenhang zwischen dem Voronoi-Diagramm und der konvexen Hülle der Punkte.",
-        "back": "",
+        "back": "Für jede Kante der Konvexen-Hülle gilt, dass sie die Ebene in zwei Hälften unterteilt, wobei nur eine Hälfte alle Punkte enthält. Somit kann es keinen Punkt auf der anderen Halb-Ebenen geben. Aus diesem Grund ist die Voronoi-Kante, welche durch die Beiden Punkte der Kante der Konvexen-Hülle gebildet wird unbeschränkt.",
         "hint": "Punkt auf konvexer Hülle <=> unbeschränkte Region"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Für welche Punktmengen hat das euklidische Voronoi-Diagramm die Struktur eines Baumes?",
-        "back": "",
+        "back": "Alle Punkte, für die gilt, dass alle Punkte auf der Konvexen-Hülle liegen, haben die Eigenschaft, dass das Voronoi-Diagramm einen Baum bildet. Dass liegt daran, dass alle Voronoi-Regionen Unbeschränkt sein müssen, damit ein Baum entsteht und nur Knoten auf der Konvexen Hülle bilden Unbeschränkte Regionen.",
         "hint": ""
     },
     {
         "folder": "Algorithmische Geometrie",
-        "front": "Zeichnen Sie zu zwei vorgegebenen Liniensegmenten den Bisektor bezüglich der euklidischen Metrik, aus wievielen Teilstücken kann der Bisektor bestehen?",
-        "back": "",
+        "front": "Zeichnen Sie zu zwei vorgegebenen Liniensegmenten den Bi-Sektor bezüglich der euklidischen Metrik, aus wie vielen Teilstücken kann der Bi-Sektor bestehen?",
+        "back": "Bi-Sektor verläuft geradlinig außerhalb von Orthogonalen Bereichen. Der Bi-Sektor von zwei Liniensegmenten kann maximal aus 7 Teilstücken bestehen. (Bsp: '|-')",
         "hint": ""
     },
     {
@@ -165,7 +165,7 @@
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren geometrische Transformation zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
         "back": "",
-        "hint": "Wie wird die Umkreiseigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
+        "hint": "Wie wird die Umkreis-Eigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
     },
     {
         "folder": "Algorithmische Geometrie",
@@ -176,7 +176,7 @@
     {
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
-        "back": "",
+        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durch probiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1,7.",
         "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
     },
     {
@@ -188,12 +188,12 @@
     {
         "folder": "Algorithmische Geometrie",
         "front": "Skizzieren Sie einen Algorithmus zum Verlassen eines Labyrinths.",
-        "back": "",
+        "back": "Beim Pledge-Algorithmus wird Anfangs eine Richtung gewählt und ein Winkelzähler auf 0 gesetzt. Diese Richtung wird verfolgt, bis eine Wand im Weg ist. Der Wand wird im Uhrzeigersinn gefolgt und dabei wird der Winkelzähler aktualisiert. Sobald der Winkelzähler einen positiven Wert annehmen würde, wird die Wand verlassen und die Richtung wird weiter verfolgt. Dies wiederholt sich so lange, bis das Labyrinth verlassen wurde.",
         "hint": ""
     },
     {
         "folder": "Algorithmische Geometrie",
-        "front": "Erläutern Sie das Suchverfahren der CAB-Strategie. Was sind selbstnähernde Kurven? Was lässt sich über ihre Länge sagen?",
+        "front": "Erläutern Sie das Suchverfahren der CAB-Strategie. Was sind selbst-nähernde Kurven? Was lässt sich über ihre Länge sagen?",
         "back": "",
         "hint": ""
     },
@@ -205,20 +205,20 @@
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist Pass-by-Reference?",
+        "front": "Was ist Pass/Call-by-Reference?",
         "back": "Es wird einer Funktion eine Referenz (Pointer) übergeben, welche auf den übergebenen Wert zeigt.",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist Pass-by-Value?",
+        "front": "Was ist Pass/Call-by-Value?",
         "back": "Es wird einer Funktion der momentane Wert übergeben.",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist ein Nachrichten-selektor und wie it er in SMALLTALK aufgebaut?",
-        "back": "Ein Nachrichten-selektor identifiziert eine Methode. Aufbau: '#parameter:parameter:'",
+        "front": "Was ist ein Nachrichten-Selektor und wie it er in SMALLTALK aufgebaut?",
+        "back": "Ein Nachrichten-Selektor identifiziert eine Methode. Aufbau: '#parameter:parameter:'",
         "hint": ""
     },
     {
@@ -241,7 +241,7 @@
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist die extension und intension einer Klasse?",
+        "front": "Was ist die Extension und Intension einer Klasse?",
         "back": "Extension ist die Menge aller Objekte die zu der Klasse gehören. Intension sind die Bedingungen die benötigt werden um zur Klasse zu gehören.",
         "hint": ""
     },
@@ -260,7 +260,7 @@
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Garbage Collection? Warum ist es wichtig für OOP?",
-        "back": "Garbage Collection deallokiert Speicher von Objekten die nicht mehr verwendet werden zu einem unbestimmten Zeitpunkt. Es ist wichtig, da Objekte an vielen verschiedenen erzeugt und 'entfernt' werden. (Es werden nur aliase gelöscht)",
+        "back": "Garbage Collection deallokiert Speicher von Objekten die nicht mehr verwendet werden zu einem unbestimmten Zeitpunkt. Es ist wichtig, da Objekte an vielen verschiedenen erzeugt und 'entfernt' werden. (Es werden nur Aliase gelöscht)",
         "hint": ""
     },
     {
@@ -279,6 +279,192 @@
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Beziehungen in OOP? Was haben Zwischen-Objekte damit zu tun?",
         "back": "Beziehungen in OOP geben an welche Objekte sich kennen. Es gibt 1-Beziehungen und n-Beziehungen. Für n-Beziehungen werden meist Zwischen-Objekte benötigt, welche die Beziehung pflegen. Zwischen-Objekte sind meistens Collections.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Vorteile von Kapselung?",
+        "back": "Nur das Objekt selbst kann den eigenen Zustand ändern. Implementation von Methoden kann jederzeit angepasst werden ohne mehrere Klassen anpassen zu müssen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was versteht man unter Kaskadieren von Ausdrücken in SMALLTALK?",
+        "back": "Da Ausdrücke immer Objekte liefern, können diesen erneut Nachrichten geschickt werden. Das Ergebnis eines Ausdrucks wird somit im nächsten Ausdruckt direkt verwendet. Falls ein Ausdruck keinen Rückgabewert mit '^' angibt, wird implizit das momentane Objekt zurückgeliefert.",
+        "hint": "Chaining"
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "In welcher Reihenfolge werden Ausdrücke in SMALLTALK ausgeführt? Was ist ein Problem hierbei?",
+        "back": "Klammer Ausdrücke zuerst, danach von links nach rechts. Die Regel Punkt-vor-Strich gilt deshalb nicht und kann zu unerwarteten Ergebnissen führen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was versteht man unter dynamisches Binden? Was ist der unterschied zum statischen Binden?",
+        "back": "Beim dynamischen Binden wird zur Laufzeit des Programms entschieden, welche Methode aufgerufen wird. Es ist bedeutend für die Polymorphie. Beim statischen Binden werden Methoden bereits zur Übersetzungs-Zeit ausgewählt",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Varianten von Instanz-Variablen gibt es? Worin unterscheiden sie sich?",
+        "back": "Es gibt benannte und indizierte Instanz Variablen. Benannte werden über einen Namen zugegriffen und indizierte über einen Index (beginnt in SMALLTALK bei 1)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Nutzen von Konstanten-Methoden?",
+        "back": "Konstante Methoden liefern einen Konstanten wert. Auf diese weise kann der Wert nicht verändert werden.",
+        "hint": "Bsp: pi"
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wofür werden Blöcke in SMALLTALK verwendet?",
+        "back": "Blöcke sind anonyme Funktions-Objekte (Closures), welche die bei der Erzeugung vorhandenen Variablen einfangen. Sie werden in SMALLTALK zusammen mit dem dynamischen Binden verwendet um Kontrollstrukturen zu bilden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was unterscheidet eine direkte von einer Indirekten Instanz einer Klasse?",
+        "back": "Eine Instanz ist direkte Instanz genau einer Klasse und indirekte Instanz aller Generalisierungen dieser Klasse.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was gibt die Klassendefinition an?",
+        "back": "Sie gibt die Intension der Klasse an und damit die benötigten Eigenschaft die Objekte brauchen um zu dieser Klasse zu gehören.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist ein Konstruktor und was macht ihn besonders?",
+        "back": "Ein Konstruktor ist eine Methode einer Klasse und erzeugt ein Objekt dieser Klasse. In vielen Sprachen hat der Konstruktor die Möglichkeit auf die Felder des zu erzeugenden Objekt zuzugreifen. In SMALLTALK muss dazu jedoch eine Methode auf dem neuen Objekt aufgerufen werden, da selbst Klassen nicht auf die Felder von ihren Objekten zugreifen können.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was unterscheidet Klassifikation, Generalisierung und Spezialisierung?",
+        "back": "Klassifikation sagt aus, dass ein Objekt genau zu einer Klasse gehört. Generalisierung ist eine Verallgemeinerung von einer Klasse und Spezialisierung das Gegenteil. Klassifikation ist, anders als Generalisierung, nicht transitiv. (Instanz einer Klasse kann nicht Instanz der Meta-Klasse sein)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Zusammenhang zwischen Spezialisierung/Generalisierung und Vererbung?",
+        "back": "Generalisierung/Spezialisierung sind theoretische Ansätze. Vererbung ist primär für die wiederverwendung von Code gedacht. Ist die Vererbung keine Generalisierung/Spezialisierung, so kommt es schnell/häufig zu Problemen. (Pinguin ist nicht ein spezieller Vogel, da er nicht fliegen kann)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Worin unterscheiden sich Überschreiben und Überladen?",
+        "back": "Überschreiben ändern das Verhalten einer geerbten Methode ab. Überladen gibt mehrere mögliche Methode mit gleichem Namen an, welche ja nach Parameter-Typ aufgerufen werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind abstrakte Klassen?",
+        "back": "Eine abstrakte Klasse kann keine Instanzen erzeugen, da dessen Definition unvollständig ist. Das Gegenstück zu abstrakten Klassen sind konkrete Klassen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was versteht man unter offene Rekursion?",
+        "back": "Bei offener Rekursion ruft eine Methode die in einer Eltern-Klasse definiert wurde auf dem gleichen Objekt eine Methode auf, welche in der Kind-Klasse definiert wird. Hierfür wird dynamisches Binden benötigt.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Double-Dispatch und wann wird es benötigt?",
+        "back": "Beim Double-Dispatch wird in einer Methode mit vertauschten Empfänger aufgerufen, damit die korrekte Implementation ausgeführt wird. (Bsp: Operation zwischen 'int' und 'float') In typisierten Sprachen ist Double-Dispatch meist nicht nötig, da die korrekte Implementation durch Überladung aufgerufen wird.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Vorteil von Delegation?",
+        "back": "Bei delegation verwendet ein Objekt ein anderes Objekt. Zum Beispiel kann ein Stack eine Liste verwenden. Hierbei besteht keine Vererbung und ein Stack besitzt nicht alle Methoden der Liste.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist ein Typ und wofür werden Typ-systeme verwendet?",
+        "back": "Ein Typ ist ein Name mit einem zugehörigen Protokoll. Es gibt alle verstandenen Nachrichten an. Typsysteme sollen verhindern, dass Objekte Nachrichten erhalten, die sie nicht verstehen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wann ist ein Programm typ-korrekt?",
+        "back": "Für die Typ-Korrektheit müssen alle Zuweisungen im Programm überprüft werden. Falls keine Typ-Invariante verletzt wurde ist das Programm typ-korrekt. Typ-Invarianten geben an, welche Werte ein Typ annehmen kann.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wann werden statische und wann dynamische Typ-Prüfungen durch geführt?",
+        "back": "Statische Typ-Prüfungen werden zur Übersetzungs-Zeit durch geführt. Dynamische zur Laufzeit. Dynamische Prüfungen sind nötig wenn zu einem Zeitpunkt nicht bekannt ist, mit welchem Typ man arbeitet.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Unterschied zwischen Definition und Deklaration?",
+        "back": "Deklaration gibt einem Bezeichner einen Typ. Definition gibt eine Speicherstelle (und manchmal auch Wert).",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Collections?",
+        "back": "Collections sind Klassen/Objekte, welche n-Beziehungen pflegen. Sie speichern somit meist beliebig viele Objekte und geben verschiedene Arten Objekte hinzuzufügen, zu entfernen und zuzugreifen. (Bsp: List, Stack, Bag, ...)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Arten gibt es Objekte zu erzeugen?",
+        "back": "Objekte können über Literale, Abändern von bestehenden Objekten (Prototyp-Ansatz), Konstruktoren und Instanziierung von Klassen erzeugt werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Warum ist es in den meisten (typisierten) Sprachen nicht möglich Methoden/Eigenschaften in Sub-Typen zu löschen?",
+        "back": "Sub-Typen sollten als solche alle Nachrichten verstehen die deren Super-Typ versteht. Ansonsten könnte vom Typ-System nicht garantiert werden, dass jede Methode auf einem Typ stets Aufgerufen werden kann.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Warum ist die Klassen-Hierarchie in SMALLTALK keine Generalisierungs-Hierarchie",
+        "back": "Weil manche Collection Subklassen Methoden löschen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Vorteile hat ein Typ-System?",
+        "back": "Weniger Laufzeitfehler, bessere Optimierungen, bessere Speichernutzung (weniger bedeutend wegen Referenz-Semantik), bessere Lesbarkeit",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Nachteile hat ein Typ-system?",
+        "back": "Mehr schreibarbeit, Laufzeitfehler weiterhin möglich (casting / Division mit 0)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind nominale und strukturelle Zuweisungs-Kompatibilität und Typ-Äquivalenz?",
+        "back": "Nominal bezieht sich auf den Namen und strukturell nur auf die Struktur. Typ-Äquivalenz bedeutet, dass zwei Typen gleich sind. Zuweisungs-Kompatibilität verlangt, dass zwei Typen gleich oder zumindest der eine Sub-Typ vom anderen ist.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Kovarianz und Kontravarianz?",
+        "back": "Kovarianz bedeutet, dass ein Sub-Typ in einer Überschriebenen Methoden auch einen Sub-Typ zurück liefert. Kontravarianz bedeutet, dass ein Sub-Typ in einer Überschriebenen Methode einen Super-Typ annimmt.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Arten von Polymorphie gibt es?",
+        "back": "Inklusions-Polymorphie (Subtyp-Polymorphie), einfache, rekursiv und rekursiv beschränkte Parametrische-Polymorphie (Generische-Typen)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Warum sind in Java Sub-Typen Beziehungen von Klassen in Arrays von diesen Klassen ebenfalls Sub-Typen? Worin besteht das Problem?",
+        "back": "Auf ein Array von Sub-Typen kann man lesend genau gleich zugreifen. Schreibend ist dies jedoch nur beschränkt möglich weswegen dynamische Typprüfungen durch Java durchgeführt werden, welche zu einem Laufzeitfehler führen. Bei der Parametrische-Polymorphie wurde diese Lücke im Typ-System nicht wiederholt.",
         "hint": ""
     }
 ]
