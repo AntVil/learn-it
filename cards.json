@@ -217,7 +217,7 @@
     },
     {
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist ein Nachrichten-Selektor und wie it er in SMALLTALK aufgebaut?",
+        "front": "Was ist ein Nachrichten-Selektor und wie ist er in SMALLTALK aufgebaut?",
         "back": "Ein Nachrichten-Selektor identifiziert eine Methode. Aufbau: '#parameter:parameter:'",
         "hint": ""
     },
@@ -465,6 +465,78 @@
         "folder": "Objekt Orientierte Programmierung",
         "front": "Warum sind in Java Sub-Typen Beziehungen von Klassen in Arrays von diesen Klassen ebenfalls Sub-Typen? Worin besteht das Problem?",
         "back": "Auf ein Array von Sub-Typen kann man lesend genau gleich zugreifen. Schreibend ist dies jedoch nur beschränkt möglich weswegen dynamische Typprüfungen durch Java durchgeführt werden, welche zu einem Laufzeitfehler führen. Bei der Parametrische-Polymorphie wurde diese Lücke im Typ-System nicht wiederholt.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Weshalb ist Java nicht streng genommen rein Objekt-Orientiert?",
+        "back": "Java hat Primitive-Datentypen ('int', 'boolean', ...) die keine Objekte sind.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Besonderheit haben Konstruktoren in Java?",
+        "back": "Konstruktoren sind zwischen Klassen- und Instanz-Methoden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welchen Nutzen hat das Schlüsselwort 'final' in Java?",
+        "back": "Das Schlüsselwort 'final' kann verwendet werden um Vererbung von Klassen und Überschreiben von Methoden zu verhindern.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie und warum kann Überladen in Java schief gehen?",
+        "back": "Java schränkt zur Übersetzungszeit die Anzahl an passenden Methoden ein. Wenn bei einem Methodenaufruf mehrere Methoden passen und Java nicht entscheiden kann welche Methode aufgerufen werden soll, erhält man den Compiler-Fehler 'ambiguous'.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Verwendet Java Call-by-Reference oder Call-by-Value?",
+        "back": "Java verwendet Call-by-Value.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie kann Code in Java strukturiert werden?",
+        "back": "Java erlaubt es Code in Klassen und Inneren-Klassen, Packeten (Namespaces) und Modulen (Packet-Sammlung) zu strukturieren. Mit 'public', 'private' und 'protected' und Modulen können Sichtbarkeiten/Schnittstellen festgelegt werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Java unterstützt zwar keine mehrfach-Vererbung, aber wie kann etwas ähnliches emuliert werden?",
+        "back": "Java erlaubt es mehrere Interfaces in einer Klasse zu Implementieren. Durch 'default' können Interfaces sogar Implementation gegeben werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wofür können Interfaces (in Java) verwendet werden?",
+        "back": "Interfaces können verwendet werden um Implementations-Details zu verstecken oder um Schnittstellen zu definieren. Interfaces können auch zum Gruppieren/Tagging verwendet werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wofür kann eine Liste vom Typ 'List<? extends A>' verwendet werden?",
+        "back": "Die Liste enthält nur Sub-Typen von A. Es kann nur Lesend zugegriffen werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wofür kann eine Liste vom Typ 'List<? super A>' verwendet werden?",
+        "back": "Die Liste enthält nur Super-Typen von A. Es kann nur Schreibend zugegriffen werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist das Wild-Card in Java und wofür gibt es es?",
+        "back": "Wild-Cards werden mit '?' als Typ-Variable angegeben. 'List<?>' bezeichnet eine Liste mit beliebigen Elementen. Wild-Cards existieren um Typ-Sicher mit Parametrischer Polymorphie zu arbeiten.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso ist es nicht möglich in einer Überschriebenen Methode neue Fehler einzuführen?",
+        "back": "Einführen von neuen Fehlern wäre kovariantes Überschreiben von Methoden was in Sprachen wie Java nicht erlaubt ist.",
         "hint": ""
     }
 ]
