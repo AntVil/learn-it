@@ -34,9 +34,9 @@
             "purpose": "any"
         }
     ],
-    "theme_color": "#000000",
-    "background_color": "#000000",
+    "theme_color": "#222",
+    "background_color": "#222",
     "display": "standalone",
-    "start_url": "index.html",
+    "start_url": "/learn-it/index.html",
     "orientation": "portrait"
 }

@@ -1,10 +1,10 @@
 const cacheName = "challenge-app";
 const filesToCache = [
-    "/",
-    "/index.html",
-    "/style.css",
-    "/script.js",
-    "/cards.json"
+    "/learn-it/",
+    "/learn-it/index.html",
+    "/learn-it/style.css",
+    "/learn-it/script.js",
+    "/learn-it/cards.json"
 ];
 
 self.addEventListener("install", (event) => {
