@@ -538,5 +538,179 @@
         "front": "Wieso ist es nicht möglich in einer Überschriebenen Methode neue Fehler einzuführen?",
         "back": "Einführen von neuen Fehlern wäre kovariantes Überschreiben von Methoden was in Sprachen wie Java nicht erlaubt ist.",
         "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Ist in C# Call-by-Reference oder Call-by-Value?",
+        "back": "Standardmäßig verwendet C# Call-by-Value. Mit 'unsafe' können Pointer ('int*') bzw mit 'ref' Referenzen verwendet werden. Pointer erlauben Modifikationen (Pointer-Arithmetik) und Referenzen erlauben nur lesenden Zugriff.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind C# Properties?",
+        "back": "C# Properties sind Wrapper um Attribute die implizit getter und setter verwenden. Auf diese Weise kann Bsp read-only Zugriff auf ein Attribut ermöglicht werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie werden Indizierte Instanz-Variablen in C# implementiert?",
+        "back": "In C# gibt es hierfür Indexer. Diese verhalten sich wie C# Properties.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Typen haben Wert-Semantik in C#?",
+        "back": "enum, struct, int, float, ...",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Lösung hat C# für das Fragile-Base-Class-Problem?",
+        "back": "Methoden in C# können erst überschrieben werden, wenn sowohl in der Eltern-Klasse die Methode mit 'virtual' und in der Kind-Klasse mit 'override' angegeben wird. Dies verhindert, dass Methoden aus Versehen überschrieben oder nicht überschrieben werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Unterschied zwischen dem Methoden-Modifier 'override' und 'new'",
+        "back": "Bei 'override' wird immer die Kind-Klassen Implementation ausgeführt. Bei 'new' wird vom Kontext abhängig eine andere Methode aufgerufen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Unterstützt C# beschränkte parametrische Polymorphie?",
+        "back": "Ja, mit 'Class C<T> where T : U'",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie werden Objekte in C++ erzeugt?",
+        "back": "Es muss eine Klasse angelegt werden. Diese Klasse erzeugt zunächst jedoch 'struct'/'records's; also Werte. Erst wenn ein Pointer auf das struct erzeugt wird, kann man tatsächlich von einem Objekt mit Identität sprechen. 'A* a = new A();'",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Auto boxing?",
+        "back": "Auto boxing macht aus einem Wert-Typen einen Referenz-Typen. (int -> Integer)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Verwendet C++ Call-by-Value oder Call-by-Reference?",
+        "back": "C++ verwendet standardmäßig Call-by-Value (Pointer werden kopiert). Für Call-by-Reference schreibt man 'void f(A** a)' oder 'void f(A* &a)'",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie können in C++ stark zusammenhängende Klassen auf Attribute von einander zugreifen?",
+        "back": "Die ist möglich durch 'friend class A', was der Klasse A erlaubt auf private Attribute zuzugreifen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Auswirkung hat die mehrfach-vererbung in C++?",
+        "back": "Aufrufe von dynamisches-binden wird komplizierter zum nachvollziehen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie werden Methoden in Java, C# und C++ gebunden?",
+        "back": "Java: dynamisch\nC# & C++: statisch (dynamisch durch 'virtual')",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Worin unterscheiden sich die Java und C++ hinsichtlich Klassen mit Typ-Parameter?",
+        "back": "Java Generics erzeugen genau eine Klasse.\nC++ Templates erzeugen für jeden Belegung des Typ-Parameter eine Klasse.",
+        "hint": "Generics (Java) vs Templates (C++)"
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie kann das Typ-System in C++ umgangen werden?",
+        "back": "Über Casts in C++. Diese sind jedoch gefährlich. Es sollte die Funktion 'dynamic_cast<T>' vorgezogen werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Gibt es Zugriffs-Modifier in Eiffel?",
+        "back": "In Eiffel sind alle Instanz-Variablen nur vom Objekt selbst zugreifbar, es braucht deswegen keine. Methoden können zu bestimmten Mengen an Klassen exportiert werden. (Darf auch leere Menge sein)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie funktioniert Überladung und Überschreiben in Eiffel?",
+        "back": "Überladen geht in Eiffel nicht, nur Überschreiben. zwei Methoden können gemeinsam in einer Klasse stehen, indem diese über ein rename umbenannt werden. Über den Typ der Klasse hat die Methode noch den gleiche Namen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind wichtige Eigenschaften von Eiffels Typsystem?",
+        "back": "Mehrfachvererbung, Generizität, Löschen von Methoden und kovariante Redefinition",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welches Problem hat das Beispiel mit Skiern?",
+        "back": "Da die Kind-Klassen Zuweisungs-kompatibel sind mit Skier, kann die Methode share vom Skier aufgerufen werden, und das Typsystem wird umgangen. Um dies zu verhindern müssen entweder die Kind-Klassen nicht Zuweisungs-kompatibel mit die Eltern-Klasse sein, die dynamische Bindung darf es nicht geben oder das Programm muss komplett auf Typ-Korrektheit überprüft werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Verwendet Eiffel Pass-by-Reference oder Pass-by-Value?",
+        "back": "Standardmäßig verwendet Eiffel Pass-by-Reference. Mit 'expanded' ist Pass-by-Value möglich, sollte jedoch nur bei Teil-Ganzes Beziehungen verwendet werden. Bei Zuweisungen zwischen Referenzen und Werten werden immer Kopien erstellt.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind CAT-Calls in Eiffel und was haben sie mit dynamischer Bindung zu tun?",
+        "back": "Change-Available-Type bei einer Methode sorgt dafür, dass die Methode nicht mehr dynamisch gebunden werden darf, weil Parameter-Typen überschrieben wurden. Nur durch eine Typprüfung und Cast kann eine dynamische Bindung emuliert werden.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Probleme gibt es in der Objekt orientierten Programmierung?",
+        "back": "Problem der Substituierbarkeit,\nFragile-base-class-Problem,\nschlechte Tracebarkeit,\neindimensionalen Strukturierung,\nmangelnde Kapselung,\nmangelnde Skalierbarkeit,\nmangelnde Eignung",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist das Problem der Substituierbarkeit?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist das Fragile-base-class-Problem?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso haben Objekt Orientierte Programme eine schlechte Tracebarkeit?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was versteht man unter dem Problem der eindimensionalen Strukturierung?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso gibt es das Problem der mangelnden Kapselung?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso gibt es das Problem der mangelnden Skalierbarkeit?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso gibt es das Problem der mangelnden Eignung?",
+        "back": "",
+        "hint": ""
     }
 ]
