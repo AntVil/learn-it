@@ -736,5 +736,101 @@
         "front": "Wieso gibt es das Problem der mangelnden Eignung?",
         "back": "Klassen-basierte OOP ist nicht für Algorithmen oder lineare Abfolgen am besten geeignet. Datenbanken und OOP haben komplett andere Konstrukte. Selbst für GUI-Programmierung ist Prototyp-basierte OOP besser geeignet.",
         "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Unterschied zwischen identisch und gleich?",
+        "back": "Identisch bedeutet, dass zwei Zeiger auf die gleiche Stelle im Speicher zeigen, also auf ein und dasselbe Objekt. Gleich gibt an ob zwei Objekt das gleiche Repräsentieren. (zB zwei String-Objekte mit gleichem Zeichenfolgen)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Weswegen werden manche Objekte mit Wert-Semantik versehen?",
+        "back": "Der Sinn dahinter ist, dass keine Aliase für dieses Objekt erzeugt werden, sondern lediglich Kopien. Objekte mit Wert-Semantik stehen meistens in einer Teil-Ganzes-Beziehung.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie können Objekte in SMALLTALK in Beziehung mit einander stehen?",
+        "back": "Objekte stehen in Beziehung mit einander, wenn eine Referenz vom Einem im Anderen in Form eine Instanzvariablen existiert. Es kann sich dabei um eine benannte oder indizierte Instanz-Variable handeln.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie kann man die Komposition in objektorientierten Programmiersprachen umsetzen?",
+        "back": "Hierfür gibt es in den meisten Programmier-Sprachen keine speziellen Konstrukte. Meist ist die Komposition ein Objekt einer Klasse, welche zur Laufzeit dynamisch zu einem Komposition zusammengesetzt wird. Nützlich ist hierfür jedoch die Wert-Semantik, welche dafür sorgt, dass die Lebensdauer der Teile auf jeden Fall mit der Lebensdauer des Ganzen endet.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Zustand von Objekten und wie wird er in SMALLTALK geändert?",
+        "back": "Der Zustand ist die Summe aller Instanz-Variablen eines Objekts. Nur über einen Nachrichtenversand und dann eine Zuweisung zu den Instanzvariablen kann den Zustand des Objekt ändern.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche beiden Formen von Ausdrücken gibt es in der objektorientierten Programmierung?",
+        "back": "Zuweisung und Nachrichten-Ausdruck",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wieso besitzt jede Klasse genau eine Meta-Klasse in SMALLTALK?",
+        "back": "Der Sinn dahinter ist, dass die Klassen, als Instanzen der Meta-Klasse, eigene Instanz-Variablen und Methoden haben sollen, ohne, dass dabei an andere Klassen gedacht werden muss.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Factory-Methoden?",
+        "back": "Factory-Methoden sind Methoden, welche Instanzen verschiedener Klassen zurückliefern. In Sprachen wie SMALLTALK, in denen sich Klassenmethoden und Konstruktoren nicht wirklich unterscheiden sind solche Factory-Methoden leicht zu implementieren.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Unterschied zwischen Generalisierung und Spezialisierung?",
+        "back": "Während die Generalisierung Eigenschaften weglässt oder generalisiert (Abstraktion), fügt die Spezialisierung Eigenschaften hinzu oder spezialisiert bereits vorhandene.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie hängen Generalisierung/Spezialisierung und Vererbung zusammen?",
+        "back": "Vererbung ist eine Art, wie man Generalisierung und Spezialisierung umsetzen kann. Dabei ist die Klasse von der geerbt wird die Generalisierung von der Klasse die erbt, welche wiederum eine Spezialisierung ist.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was versteht man in der objektorientierten Programmierung unter Vererbung?",
+        "back": "In der Objekt Orientierung bezeichnet Vererbung eine Möglichkeit den Code eine Klasse in einer anderen Klasse wieder zu verwenden. Dabei übernimmt die Klasse, welche erbt alle Eigenschaften der anderen Klasse.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist offene Rekursion?",
+        "back": "Ein Objekt ruft eine abstrakte Methode auf sich selbst auf. Es ist dabei rekursiv, weil das Objekt die Methode auf sich aufruft und offen, weil noch nicht bekannt ist, weile Implementation aufgerufen wird.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Typen?",
+        "back": "Typen sind abstrakte Spezifikationen, die zum einen den Wertebereich von Variablen einschränken und zum anderen das Protokoll (den Funktionsumfang) von Objekten angeben.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Zu welchem Zeitpunkt führt die Verwendung eines parametrisch definierten Typs zu einer Zuweisung an die Typ-Variable?",
+        "back": "Zur Übersetzungszeit",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was sind Repräsentations-Objekte?",
+        "back": "Repräsentations-Objekte gehören zu einem Ganzen und machen dessen Implementierung aus und bleiben hinter diesem Verborgen.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist das Gesetz von Demeter",
+        "back": "Sprich nicht mit Fremden. Es dürfen Methoden nur auf Instanz-Variablen und Parametern von Funktionen aufgerufen werden. (Hat praktische Grenzen)",
+        "hint": ""
     }
 ]
