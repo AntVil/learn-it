@@ -674,43 +674,67 @@
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Problem der Substituierbarkeit?",
-        "back": "",
+        "back": "Es geht darum, dass nicht immer gewährleistet werden kann, dass ein Sub-Typ immer an der Stelle eines Super-Typ stehen darf. Hierbei geht es um das Verhalten bzw. vor- und nach-Bedingungen die erfüllt sein müssen. Dies ist nicht immer prüfbar und sowieso Programm abhängig. (Bsp Set & Bag)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist der Unterschied zwischen Substituierbarkeit und Zuweisungskompatibilität?",
+        "back": "Zuweisungskompatibilität bedeutet, dass ein Typ die gleichen Nachrichten versteht wie ein anderer Typ und somit theoretisch an gleichen Stellen verwendet werden kann. Substituierbarkeit ist strenger und verlangt, dass die beiden Typen das gleiche Verhalten haben, also praktisch ausgetauscht werden können.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist das Liskov-Substitutions-Prinzip?",
+        "back": "Jede Eigenschaft die für ein Objekt des Typ T beweisbar ist, muss für alle Sub-Typen beweisbar sein.",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Probleme hat das Liskov-Substitutions-Prinzip?",
+        "back": "Nur definiert für Objekte,\nRestriktiv (betrachtet nicht Kontext)\nSub-Typen fast gleich, wozu dann Sub-Typen?",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Fragile-base-class-Problem?",
-        "back": "",
+        "back": "Das Fragile-base-class-Problem beschreibt Probleme die Auftreten, wenn in der Super-Klasse verhalten geändert wird, auf welches sich Sub-Klassen stützten. (Bsp: Sub-Klassen erwarten, dass Methode aufgerufen wird)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Welche Möglichkeiten gibt es gegen das Fragile-base-class-Problem vorzugehen?",
+        "back": "Es wird eine Art Vererbungs-Interface benötigt. Erste Ansätze sind 'protected' und 'virtual'/'override'. Diese Schlüsselwörter sollen verhindern, dass Methoden und Attribute in Sub-Klassen verwendet werden.",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso haben Objekt Orientierte Programme eine schlechte Tracebarkeit?",
-        "back": "",
+        "back": "Die schlechte Tracebarkeit kommt daher, dass Sub-Typen unterschiedliche Methoden aufrufen und es nicht eindeutig ist, welche Implementation zu einem bestimmten Zeitpunkt aufgerufen wird. (dynamisches Binden)",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter dem Problem der eindimensionalen Strukturierung?",
-        "back": "",
+        "back": "Der gesamte Code wird ist Klassen geschrieben, welche von einander Erben und mit einander in Beziehung stehen. Es gibt meist viele Möglichkeiten die Klassen zu strukturieren, welche jedoch alle gewisse Nachteile haben.",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Kapselung?",
-        "back": "",
+        "back": "Die Vererbung durchbricht die Kapselung. Aliase können ebenfalls die Kapselung durchbrechen. Aliase sind viel zu nützlich, als dass man sie verbieten möchte (zB durch Wert-Typen)",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Skalierbarkeit?",
-        "back": "",
+        "back": "Innere-Klassen werden kaum genutzt, Pakete Gruppieren nur Klassen jedoch werden Komponenten benötigt, die Aggregationen von Klassen ausdrücken.",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Eignung?",
-        "back": "",
+        "back": "Klassen-basierte OOP ist nicht für Algorithmen oder lineare Abfolgen am besten geeignet. Datenbanken und OOP haben komplett andere Konstrukte. Selbst für GUI-Programmierung ist Prototyp-basierte OOP besser geeignet.",
         "hint": ""
     }
 ]
