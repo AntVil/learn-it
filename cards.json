@@ -500,7 +500,7 @@
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie kann Code in Java strukturiert werden?",
-        "back": "Java erlaubt es Code in Klassen und Inneren-Klassen, Packeten (Namespaces) und Modulen (Packet-Sammlung) zu strukturieren. Mit 'public', 'private' und 'protected' und Modulen können Sichtbarkeiten/Schnittstellen festgelegt werden.",
+        "back": "Java erlaubt es Code in Klassen und Inneren-Klassen, Paketen (Namespaces) und Modulen (Packet-Sammlung) zu strukturieren. Mit 'public', 'private' und 'protected' und Modulen können Sichtbarkeiten/Schnittstellen festgelegt werden.",
         "hint": ""
     },
     {
