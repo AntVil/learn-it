@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +25,10 @@
 }
 
 @media (prefers-reduced-motion) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         transition: none !important;
     }
 }
@@ -32,7 +37,8 @@ input {
     display: none;
 }
 
-button, label {
+button,
+label {
     cursor: pointer;
 }
 
@@ -136,7 +142,8 @@ button {
     background-color: #0000;
     border: none;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         position: absolute;
         inset: 0;
         font-size: 20px;
