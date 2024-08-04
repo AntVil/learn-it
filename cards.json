@@ -824,13 +824,19 @@
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Repräsentations-Objekte?",
-        "back": "Repräsentations-Objekte gehören zu einem Ganzen und machen dessen Implementierung aus und bleiben hinter diesem Verborgen.",
+        "back": "Repräsentations-Objekte machen die Implementierung eines anderen Objekt aus und bleiben hinter diesem Verborgen. (Bsp: Stack verwendet Array)",
         "hint": ""
     },
     {
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Gesetz von Demeter",
         "back": "Sprich nicht mit Fremden. Es dürfen Methoden nur auf Instanz-Variablen und Parametern von Funktionen aufgerufen werden. (Hat praktische Grenzen)",
+        "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was gehört zu einem guten objektorientierten Stil?",
+        "back": "Gute Bezeichner (Kommentare vermeiden, Abkürzungen Nutzen), Projekt Namens-/Formatierungs- Konventionen, Kurze Methoden, Deklarativ (eher Was statt Wie), Bibliotheken verwenden, Kurze Klassen, Nur Abstrakte Super-Klassen",
         "hint": ""
     }
 ]
