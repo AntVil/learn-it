@@ -125,6 +125,8 @@ h1 {
 }
 
 main {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
     width: 100svw;
     display: flex;
     overflow-x: scroll;
@@ -132,6 +134,7 @@ main {
     gap: 40px;
     padding: 100px 20px;
     scrollbar-width: none;
+    isolation: isolate;
 }
 
 /* using pseudo elements to not mirrored text when flipped */
@@ -179,4 +182,24 @@ button.flip {
         transform: rotateY(0deg);
         content: attr(data-back);
     }
+}
+
+footer {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    z-index: -1;
+}
+
+#progress {
+    --completed-count: 0;
+
+    position: absolute;
+    top: 60px;
+    left: calc((100svw - 100px) / 2);
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(90deg, #AE3, calc(100% * mod(var(--completed-count), 6) / 5), #FFF 0);
+    transition: all 0.2s;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8' fill='%23000' /%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8' fill='%23000' /%3E%3C/svg%3E");
 }

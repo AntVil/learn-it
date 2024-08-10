@@ -4,6 +4,8 @@ let main;
 let button1;
 let button2;
 let motionCompleted = false;
+let completed = 0;
+let progressElement;
 
 document.addEventListener("gesturestart", function (e) {
     e.preventDefault();
@@ -18,6 +20,7 @@ window.onload = async () => {
     main = document.getElementsByTagName("main")[0];
     button1 = main.children[0];
     button2 = main.children[1];
+    progressElement = document.getElementById("progress");
 
     const cards = await (await fetch("cards.json")).json();
 
@@ -75,6 +78,9 @@ function next() {
     button1.classList.remove("flip");
     button1.setAttribute("data-front", button2.getAttribute("data-front"));
     button1.setAttribute("data-back", button2.getAttribute("data-back"));
+
+    completed++;
+    progressElement.style.setProperty("--completed-count", completed);
 
     setCard(button2);
 }
