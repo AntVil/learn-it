@@ -838,5 +838,11 @@
         "front": "Was gehört zu einem guten objektorientierten Stil?",
         "back": "Gute Bezeichner (Kommentare vermeiden, Abkürzungen Nutzen), Projekt Namens-/Formatierungs- Konventionen, Kurze Methoden, Deklarativ (eher Was statt Wie), Bibliotheken verwenden, Kurze Klassen, Nur Abstrakte Super-Klassen",
         "hint": ""
+    },
+    {
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was ist Type-Branding?",
+        "back": "Type-Branding wird bei struktureller Typ-Äquivalenz verwendet, um zu vermeiden, dass semantisch unterschiedliche Objekte vertauscht werden. Dabei wird den Typen eine charakteristische Eigenschaft wie eine Methode gegeben, sodass diese nicht mehr Typ-Äquivalent zu ähnlichen Typen sind.",
+        "hint": ""
     }
 ]
