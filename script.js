@@ -65,6 +65,7 @@ function openFolder(folderName, folder) {
     currentFolder = folder;
     folderElement.innerText = folderName;
     button1.classList.remove("flip");
+    completed = 0;
 
     setCard(button1);
     setCard(button2);
