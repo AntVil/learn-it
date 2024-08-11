@@ -2,13 +2,13 @@
     {
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat Sortieren durch Vergleiche die Zeitkomplexität Theta(n log n)?",
-        "back": "",
-        "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum"
+        "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleiche Schritte durchführen. Die Schritte können als ein Entscheidungsbaum gesehen werden mit n! Blättern. Die mindest-höhe beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
+        "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum (log2(x))"
     },
     {
         "folder": "Algorithmische Geometrie",
         "front": "Erklären Sie das Prinzip der Reduktion, die Herleitung einer unteren Schranke für ein Problem aus einer unteren Schranke für ein anderes Problem.",
-        "back": "",
+        "back": "Wenn jede Eingabe für ein Problem transformiert werden kann auf die Eingabe eines bekannten Problem und die Ausgabe wieder zurück auf das eigentliche Problem, dann ist das eine Problem auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die Untere Schranke des bekannten Problem.",
         "hint": ""
     },
     {
