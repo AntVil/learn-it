@@ -22,7 +22,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
     event.respondWith(
         fetch(event.request).then((response) => {
-            let copy = response.clone();
+            const copy = response.clone();
             caches.open(cacheName).then((cache) => {
                 cache.put(event.request, copy);
             });

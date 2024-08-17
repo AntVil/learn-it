@@ -1,5 +1,4 @@
 /**
- *
  * @param {[Card]} cards
  */
 function initializeNavigation(cards) {
@@ -26,7 +25,6 @@ function initializeNavigation(cards) {
 }
 
 /**
- *
  * @param {[Card]} cards
  * @returns {[Folder]}
  */
@@ -36,7 +34,6 @@ function getFolders(cards) {
 }
 
 /**
- *
  * @param {Folder} folder
  * @param {[Card]} cards
  */

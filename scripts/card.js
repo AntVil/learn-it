@@ -1,7 +1,6 @@
 const cardObjectSymbol = Symbol("card object");
 
 /**
- *
  * @returns {HTMLElement}
  */
 function createCard() {
@@ -15,10 +14,12 @@ function createCard() {
 
     cardSideToggle.classList.add("side-toggle");
     cardSideToggle.setAttribute("type", "checkbox");
+    cardStarToggle.setAttribute("aria-label", "card showing back");
     cardSideToggle.setAttribute("autocomplete", "off");
 
     cardStarToggle.classList.add("star-toggle");
     cardStarToggle.setAttribute("type", "checkbox");
+    cardStarToggle.setAttribute("aria-label", "card is starred");
     cardStarToggle.setAttribute("autocomplete", "off");
     cardStarToggle.addEventListener("click", () => {
         toggleStar(cardElement[cardObjectSymbol]);
@@ -30,7 +31,6 @@ function createCard() {
 }
 
 /**
- *
  * @param {HTMLElement} cardElement
  * @param {Card} card
  */
@@ -46,5 +46,5 @@ function fillCard(cardElement, card) {
 
     cardElement.children[1].innerText = card.front;
     cardElement.children[2].innerText = backContent;
-    cardElement.children[3].checked = card.stared;
+    cardElement.children[3].checked = card.isStared;
 }

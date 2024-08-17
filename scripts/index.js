@@ -1,7 +1,6 @@
-/**
- * @type {[CardId]}
+/** @type {[CardId]}
  */
-let stared;
+let staredCards;
 
 document.addEventListener("gesturestart", function (e) {
     e.preventDefault();
@@ -12,34 +11,46 @@ window.onload = async () => {
         navigator.serviceWorker.register("./service-worker.js");
     }
 
-    stared = JSON.parse(localStorage.getItem("learn-it-stared") ?? "[]")
+    staredCards = JSON.parse(localStorage.getItem("learn-it-stared") || "[]")
 
     /**
      * @type {[RawCard]}
      */
     const cardsResponse = await (await fetch("cards.json")).json();
-    cards = cardsResponse.map(r => {
-        let c = structuredClone(r);
-        c.stared = stared.includes(c.id);
+    const cards = cardsResponse.map(r => {
+        const c = structuredClone(r);
+        c.isStared = staredCards.includes(c.id);
         return c;
     });
+
+    cleanStaredCardsUsing(cards);
 
     initializeSwipeCard();
     initializeNavigation(cards);
 }
 
 /**
- *
  * @param {Card} card
  */
 function toggleStar(card) {
-    card.stared = !card.stared;
-    let index = stared.findIndex(s => s === card.id);
+    card.isStared = !card.isStared;
+    const index = staredCards.findIndex(s => s === card.id);
     if(index === -1) {
-        stared.push(card.id);
+        staredCards.push(card.id);
     } else {
-        stared.splice(index, 1);
+        staredCards.splice(index, 1);
     }
 
-    localStorage.setItem("learn-it-stared", JSON.stringify(stared));
+    localStorage.setItem("learn-it-stared", JSON.stringify(staredCards));
+}
+
+/**
+ * @param {[Card]} cards
+ */
+function cleanStaredCardsUsing(cards) {
+    const cardIds = cards.map(c => c.id);
+
+    staredCards.filter(c => cardIds.includes(c));
+
+    localStorage.setItem("learn-it-stared", JSON.stringify(staredCards));
 }

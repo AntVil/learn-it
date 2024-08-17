@@ -7,9 +7,9 @@ let completedCardsCount;
 let progressElement;
 
 function initializeSwipeCard() {
-    let container = document.getElementById("card-swipe").nextElementSibling;
+    const container = document.getElementById("card-swipe").nextElementSibling;
     swipeFolderElement = container.children[0].children[1];
-    let cardContainer = container.children[1];
+    const cardContainer = container.children[1];
     progressElement = cardContainer.nextElementSibling;
     swipeCardElement1 = createCard();
     swipeCardElement2 = createCard();
@@ -43,7 +43,6 @@ function initializeSwipeCard() {
 }
 
 /**
- *
  * @param {[Card]} cards
  */
 function openCardSwipe(cards) {
@@ -53,7 +52,7 @@ function openCardSwipe(cards) {
 
     swipeFolderElement.innerText = cards[0].folder;
 
-    let currentSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
+    const currentSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
     nextSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
 
     fillCard(swipeCardElement1, currentSwipeCard);
@@ -63,7 +62,14 @@ function openCardSwipe(cards) {
 function toNextSwipeCard() {
     fillCard(swipeCardElement1, nextSwipeCard);
 
-    nextSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
+    const staredSwipeCards = swipeCards.filter(c => c.isStared);
+    if(staredSwipeCards.length > 0 && !nextSwipeCard.isStared) {
+        // at least every second card is stared
+        nextSwipeCard = staredSwipeCards[Math.floor(Math.random() * staredSwipeCards.length)];
+    } else {
+        nextSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
+    }
+
     completedCardsCount++;
     progressElement.style.setProperty("--completed-count", completedCardsCount);
 

@@ -1,5 +1,4 @@
 /**
- *
  * @param {[Card]} cards
  */
 function openCardList(cards) {
@@ -9,7 +8,7 @@ function openCardList(cards) {
     cardList.scrollLeft = 0;
 
     const cardElements = cards.map(card => {
-        let cardElement = createCard();
+        const cardElement = createCard();
         fillCard(cardElement, card);
         return cardElement;
     });
