@@ -32,9 +32,11 @@
     }
 
     &>section {
+        /* reserved space for all cards */
+        --card-count: 0;
+
         display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 100svw;
+        grid-template-columns: repeat(var(--card-count), 100svw);
         overflow-x: auto;
         scroll-snap-type: x mandatory;
     }
