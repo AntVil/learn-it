@@ -1,0 +1,41 @@
+#card-list+* {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--theme-color-4);
+
+    &>header {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        height: 50px;
+        background-color: var(--theme-color-1);
+        border-bottom: 1px solid var(--theme-color-3);
+
+        &>label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 60%;
+                height: 60%;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' fill='%23DDD'%3E%3Cpath d='M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z'/%3E%3Cpath d='m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        &::after {
+            content: attr(data-folder);
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &>section {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100svw;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+}

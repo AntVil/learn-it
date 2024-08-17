@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--theme-color-2);
+    transition: all 0.2s;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-overflow: ellipsis;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --theme-color-1: #333;
+    --theme-color-2: #FFF;
+    --theme-color-3: #555;
+    --theme-color-4: #222;
+}
+
+@media (prefers-reduced-motion) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+body {
+    background-color: var(--theme-color-4);
+    touch-action: none;
+    overflow: hidden;
+}
+
+button,
+label {
+    cursor: pointer;
+}

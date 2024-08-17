@@ -2,8 +2,16 @@ const cacheName = "challenge-app";
 const filesToCache = [
     "/learn-it/",
     "/learn-it/index.html",
-    "/learn-it/style.css",
-    "/learn-it/script.js",
+    "/learn-it/styles/index.css",
+    "/learn-it/styles/navigation.css",
+    "/learn-it/styles/card-swipe.css",
+    "/learn-it/styles/card-list.css",
+    "/learn-it/styles/card.css",
+    "/learn-it/scripts/index.js",
+    "/learn-it/scripts/navigation.js",
+    "/learn-it/scripts/card-swipe.js",
+    "/learn-it/scripts/card-list.js",
+    "/learn-it/scripts/card.js",
     "/learn-it/cards.json"
 ];
 

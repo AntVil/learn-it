@@ -1,0 +1,37 @@
+.card {
+    scroll-snap-align: center;
+    position: relative;
+
+    &>article {
+        position: absolute;
+        inset: 100px 30px;
+        font-size: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        backface-visibility: hidden;
+        border: 1px solid var(--theme-color-3);
+        border-radius: 20px;
+        box-shadow: #000 0 15px 25px;
+        white-space: break-spaces;
+        transform: rotateY(180deg);
+    }
+
+    &>.side-toggle {
+        display: none;
+
+        &:checked+.star-toggle+article+article {
+            transform: rotateY(0deg);
+        }
+
+        &:not(:checked)+.star-toggle+article {
+            transform: rotateY(0deg);
+        }
+    }
+
+    &>.star-toggle {
+        display: none;
+    }
+}

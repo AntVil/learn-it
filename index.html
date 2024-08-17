@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>learn-it</title>
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
@@ -24,27 +23,39 @@
     <link rel="apple-touch-startup-image" href="./images/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" />
     <meta name="description" content="A progressive web app (PWA) for learning using cards.">
     <meta name="keywords" content="learning">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="./styles/card-swipe.css">
+    <link rel="stylesheet" href="./styles/card-list.css">
+    <link rel="stylesheet" href="./styles/card.css">
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/navigation.js"></script>
+    <script src="./scripts/card-swipe.js"></script>
+    <script src="./scripts/card-list.js"></script>
+    <script src="./scripts/card.js"></script>
 </head>
 <body>
-    <input type="checkbox" name="navigation-toggle" id="navigation-toggle" />
+    <input id="navigation" type="radio" name="navigation" autocomplete="off" checked />
     <nav></nav>
 
+    <input id="card-swipe" type="radio" name="navigation" autocomplete="off" />
     <section>
         <header>
-            <label for="navigation-toggle"></label>
-            <h1 id="folder"></h1>
+            <label for="navigation"></label>
+        </header>
+        <main></main>
+        <section></section>
+    </section>
+
+    <input id="card-list" type="radio" name="navigation" autocomplete="off" />
+    <section>
+        <header>
+            <label for="navigation"></label>
         </header>
 
-        <main>
-            <button onclick="flip()" data-front="" data-back="" aria-label="learn card"></button>
-            <button data-front="" data-back="" aria-label="next learn card"></button>
-        </main>
-
-        <footer>
-            <div id="progress"></div>
-        </footer>
+        <section></section>
     </section>
 </body>
 </html>
