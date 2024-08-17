@@ -36,7 +36,7 @@ function createCard() {
  */
 function fillCard(cardElement, card) {
     let backContent;
-    if(card.hint !== null && card.hint !== "") {
+    if (card.hint !== null && card.hint !== "") {
         backContent = `${card.hint}\n\n${card.back || "no content"}`;
     } else {
         backContent = card.back || "no content"

@@ -35,7 +35,7 @@ window.onload = async () => {
 function toggleStar(card) {
     card.isStared = !card.isStared;
     const index = staredCards.findIndex(s => s === card.id);
-    if(index === -1) {
+    if (index === -1) {
         staredCards.push(card.id);
     } else {
         staredCards.splice(index, 1);

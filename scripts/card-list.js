@@ -11,7 +11,7 @@ function openCardList(cards) {
 
     // dynamically insert card when user is close (prevent huge DOM)
     const cardElements = [];
-    for(let i=0;i<cards.length;i++) {
+    for (let i = 0; i < cards.length; i++) {
         const cardElement = createCard();
         fillCard(cardElement, cards[i]);
         cardElement.style.setProperty("grid-column", `${i + 1} / span 1`);
@@ -29,7 +29,7 @@ function openCardList(cards) {
         let index1 = Math.max(midIndex - CARD_LIST_BUFFER_SIZE, 0);
         let index2 = Math.min(midIndex + CARD_LIST_BUFFER_SIZE, cardElements.length);
 
-        if(currentIndex1 === index1 && currentIndex2 === index2) {
+        if (currentIndex1 === index1 && currentIndex2 === index2) {
             // nothing to do (skip)
             return;
         }
@@ -40,7 +40,7 @@ function openCardList(cards) {
         cardList.replaceChildren(
             ...(cardElements.slice(currentIndex1, currentIndex2))
         );
-    }, { passive: true})
+    }, { passive: true })
 
     cardList.replaceChildren(
         ...(cardElements.slice(currentIndex1, currentIndex2))

@@ -63,7 +63,7 @@ function toNextSwipeCard() {
     fillCard(swipeCardElement1, nextSwipeCard);
 
     const staredSwipeCards = swipeCards.filter(c => c.isStared);
-    if(staredSwipeCards.length > 0 && !nextSwipeCard.isStared) {
+    if (staredSwipeCards.length > 0 && !nextSwipeCard.isStared) {
         // at least every second card is stared
         nextSwipeCard = staredSwipeCards[Math.floor(Math.random() * staredSwipeCards.length)];
     } else {
