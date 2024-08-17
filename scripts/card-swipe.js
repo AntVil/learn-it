@@ -16,7 +16,7 @@ function initializeSwipeCard() {
     cardContainer.replaceChildren(
         swipeCardElement1,
         swipeCardElement2
-    )
+    );
 
     cardContainer.addEventListener("touchstart", () => {
         motionCompleted = false;

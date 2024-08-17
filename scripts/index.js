@@ -11,7 +11,7 @@ window.onload = async () => {
         navigator.serviceWorker.register("./service-worker.js");
     }
 
-    staredCards = JSON.parse(localStorage.getItem("learn-it-stared") || "[]")
+    staredCards = JSON.parse(localStorage.getItem("learn-it-stared") || "[]");
 
     /**
      * @type {[RawCard]}

@@ -39,11 +39,12 @@ function fillCard(cardElement, card) {
     if (card.hint !== null && card.hint !== "") {
         backContent = `${card.hint}\n\n${card.back || "no content"}`;
     } else {
-        backContent = card.back || "no content"
+        backContent = card.back || "no content";
     }
 
     cardElement[cardObjectSymbol] = card;
 
+    cardElement.children[0].checked = false;
     cardElement.children[1].innerText = card.front;
     cardElement.children[2].innerText = backContent;
     cardElement.children[3].checked = card.isStared;
