@@ -6,6 +6,8 @@
     box-sizing: border-box;
     color: var(--theme-color-2);
     transition: all 0.2s;
+    font-weight: normal;
+    font-size: inherit;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     -webkit-touch-callout: none;
     -webkit-user-select: none;

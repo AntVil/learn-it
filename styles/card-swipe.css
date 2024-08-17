@@ -24,8 +24,7 @@
             }
         }
 
-        &::after {
-            content: attr(data-folder);
+        &>h1 {
             display: flex;
             align-items: center;
         }
