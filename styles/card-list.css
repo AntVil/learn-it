@@ -39,5 +39,12 @@
         grid-template-columns: repeat(var(--card-count), 100svw);
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+
+        &::before {
+            content: "";
+            pointer-events: none;
+            grid-column: 1 / span var(--card-count);
+            grid-row: 1 / span 1;
+        }
     }
 }

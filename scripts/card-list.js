@@ -15,6 +15,7 @@ function openCardList(cards) {
         const cardElement = createCard();
         fillCard(cardElement, cards[i]);
         cardElement.style.setProperty("grid-column", `${i + 1} / span 1`);
+        cardElement.style.setProperty("grid-row", "1 / span 1");
         cardElements.push(cardElement);
     }
 
