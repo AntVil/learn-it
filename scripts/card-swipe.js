@@ -4,9 +4,11 @@ let swipeCardElement1;
 let swipeCardElement2;
 let nextSwipeCard;
 let completedCards;
+let progressElement;
 
 function initializeSwipeCard() {
     cardSwipe = document.getElementById("card-swipe").nextElementSibling.children[1];
+    progressElement = cardSwipe.nextElementSibling;
     swipeCardElement1 = createCard();
     swipeCardElement2 = createCard();
     cardSwipe.replaceChildren(
@@ -44,6 +46,7 @@ function initializeSwipeCard() {
  */
 function openCardSwipe(cards) {
     completedCards = 0;
+    progressElement.style.setProperty("--completed-count", completedCards);
     swipeCards = cards;
 
     const cardSwipeContainer = document.getElementById("card-swipe").nextElementSibling;
@@ -61,7 +64,7 @@ function toNextSwipeCard() {
 
     nextSwipeCard = swipeCards[Math.floor(Math.random() * swipeCards.length)];
     completedCards++;
-    cardSwipe.nextElementSibling.style.setProperty("--completed-count", completedCards);
+    progressElement.style.setProperty("--completed-count", completedCards);
 
     fillCard(swipeCardElement2, nextSwipeCard);
 }
