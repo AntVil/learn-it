@@ -1,845 +1,986 @@
 [
     {
+        "id": 0,
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat Sortieren durch Vergleiche die Zeitkomplexität Theta(n log n)?",
         "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleiche Schritte durchführen. Die Schritte können als ein Entscheidungsbaum gesehen werden mit n! Blättern. Die mindest-höhe beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
         "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum (log2(x))"
     },
     {
+        "id": 1,
         "folder": "Algorithmische Geometrie",
         "front": "Erklären Sie das Prinzip der Reduktion, die Herleitung einer unteren Schranke für ein Problem aus einer unteren Schranke für ein anderes Problem.",
         "back": "Wenn jede Eingabe für ein Problem transformiert werden kann auf die Eingabe eines bekannten Problem und die Ausgabe wieder zurück auf das eigentliche Problem, dann ist das eine Problem auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die Untere Schranke des bekannten Problem.",
         "hint": ""
     },
     {
+        "id": 2,
         "folder": "Algorithmische Geometrie",
         "front": "Auf welche untere Schranke stützt sich der Beweis, dass die Bestimmung des kleinsten Abstands zwischen n Punkten in der Ebene (dichtestes Paar) mindestens Omega(n log n) Zeit braucht?",
         "back": "",
         "hint": "epsilon-closeness"
     },
     {
+        "id": 3,
         "folder": "Algorithmische Geometrie",
         "front": "Wie lautet die Eulersche Formel für kreuzungsfreie geometrische Graphen in der Ebene? Beweis?",
         "back": "v - e + f = c + 1",
         "hint": "Knoten, Kanten, Flächen, Zusammenhangs-Komponenten"
     },
     {
+        "id": 4,
         "folder": "Algorithmische Geometrie",
         "front": "Was ist das charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
         "back": "Ein Sweep-Verfahren verwandelt in einem statischen d-dimensionalen Problem eine dimension in eine zeitliche und läuft diese Dimension ab. (In der Ebene erfolgt dies meist mit der Sweep-Line.) Dabei wird eine Sweep-Status-Struktur mitgeführt, welche bei gewissen Ereignissen ggf. aktualisiert wird.",
         "hint": ""
     },
     {
+        "id": 5,
         "folder": "Algorithmische Geometrie",
         "front": "Wie kann man alle Schnittpunkte von n Liniensegmenten in der Ebene durch ein Sweep-Verfahren berechnen? Erklären Sie die Laufzeit von O((n+k)log n). Warum stimmt hier also O(n log n) nicht ganz?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 6,
         "folder": "Algorithmische Geometrie",
         "front": "Wie würden Sie alle Schnittpunkte von n Geraden in der Ebene berechnen?",
         "back": "",
         "hint": "Je zwei Geraden schneiden sich, also k=Theta(n*n), lohnt sich da noch der Sweep?"
     },
     {
+        "id": 7,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie das Sweep-Verfahren für die Bestimmung des dichtesten Paars von n Punkten in der Ebene. Warum genügt es, ist es für die Laufzeit wichtig, dass man sich während des Sweeps nur die Punkte im vertikalen Streifen links von der sweep line merkt? Wie kann man das Verfahren auf höhere Dimensionen erweitern?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 8,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie einen O(n log n)-Algorithmus zur Konstruktion der konvexen Hülle von n Punkten in der Ebene, und begründen Sie sein Laufzeitverhalten.",
         "back": "",
         "hint": "Inkrementell, randomisiert, D & C, Kontur, ..."
     },
     {
+        "id": 9,
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat die Berechnung der konvexen Hülle von n Punkten in der Ebene die Zeitkomplexität Omega(n log n)? Beweis?",
         "back": "",
         "hint": "Reduktion vom Sortierproblem, Punkte auf Parabel"
     },
     {
+        "id": 10,
         "folder": "Algorithmische Geometrie",
         "front": "Wenn für eine Menge von n Punkten in der Ebene bereits bekannt ist, dass alle Punkte auf der konvexen Hülle liegen, kann dann die konvexe Hülle in linearer Zeit berechnet werden? Und was ist, wenn die Punkte bereits sortiert vorliegen?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 11,
         "folder": "Algorithmische Geometrie",
         "front": "Bestimmen Sie den Kern eines Beispielpolygons nach dem im Kurs angegebenen Verfahren. Wie viel Zeit benötigt das Verfahren?",
         "back": "",
         "hint": "Drehwinkelbedingung, F- und B-Kantenfolgen, Schnitt von unteren Halbebenen, konvexe Hülle von sortierten Punktmengen"
     },
     {
+        "id": 12,
         "folder": "Algorithmische Geometrie",
         "front": "Wie viele Wächter benötigt man zur Bewachung eines konvexen, eines sternförmigen, eines beliebigen einfachen Polygons?",
         "back": "konvex & sternförmig: genau 1\nbeliebig einfach: max v / 3",
         "hint": "Toblerone-Polygon"
     },
     {
+        "id": 13,
         "folder": "Algorithmische Geometrie",
         "front": "Mit wie vielen Wächtern kommt man bei einem einfachen Polygon immer aus und wo sollen sie platziert werden?",
         "back": "Es reichen immer v / 3 aus und sind manchmal sogar nötig. Durch Triangulation und 3-Färbung des Polygon kann eine der Farben gewählt werden (meist mit minialster Anzahl) und auf jeden Knoten mit dieser Farbe ein Wächter platziert werden.",
         "hint": "Triangulierung, 3-Färbung"
     },
     {
+        "id": 14,
         "folder": "Algorithmische Geometrie",
         "front": "Zur 3-Färbung: was genau wird gefärbt, nach welcher Regel, warum ist dies immer möglich?",
         "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer Möglich, weil per Definition eine Triangulation eines einfachen Polygon nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor.",
         "hint": ""
     },
     {
+        "id": 15,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie ein Verfahren zur Triangulierung eines einfachen Polygons.",
         "back": "",
         "hint": ""
     },
     {
+        "id": 16,
         "folder": "Algorithmische Geometrie",
         "front": "Vergleichen Sie die geometrischen Datenstrukturen k-d-Baum und Bereichsbaum.",
         "back": "",
         "hint": ""
     },
     {
+        "id": 17,
         "folder": "Algorithmische Geometrie",
         "front": "Wie hoch ist der Aufwand einer Halbstreifenanfrage unter Verwendung eines Prioritäts-Suchbaumes? Beweis? Kann der Prioritäts-Suchbaum auch für rechteckige Anfragen nützlich sein?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 18,
         "folder": "Algorithmische Geometrie",
         "front": "Zeichnen Sie das Voronoi-Diagramm zu vier oder fünf vorgegebenen Punkten",
         "back": "",
         "hint": "zur üblichen euklidischen Distanz, fangen Sie mit den Bi-Sektoren zwischen benachbarten Punkten an"
     },
     {
+        "id": 19,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie einige Anwendungen von Voronoi-Diagrammen.",
         "back": "Berechnung der Delaunay Triangulation: Für die Punkte wird das Voronoi-Diagramm berechnet und anschließend der Duale-Graph bestimmt. Der Duale-Graph entspricht der Delaunay-Triangulation",
         "hint": ""
     },
     {
+        "id": 20,
         "folder": "Algorithmische Geometrie",
         "front": "Was ist die Delaunay-Triangulation? Wie und in welcher Zeit kann man die Delaunay-Triangulation in das Voronoi-Diagramm umrechnen?",
         "back": "",
         "hint": "Dualität zwischen den beiden"
     },
     {
+        "id": 21,
         "folder": "Algorithmische Geometrie",
         "front": "Beweisen Sie den Zusammenhang zwischen dem Voronoi-Diagramm und der konvexen Hülle der Punkte.",
         "back": "Für jede Kante der Konvexen-Hülle gilt, dass sie die Ebene in zwei Hälften unterteilt, wobei nur eine Hälfte alle Punkte enthält. Somit kann es keinen Punkt auf der anderen Halb-Ebenen geben. Aus diesem Grund ist die Voronoi-Kante, welche durch die Beiden Punkte der Kante der Konvexen-Hülle gebildet wird unbeschränkt.",
         "hint": "Punkt auf konvexer Hülle <=> unbeschränkte Region"
     },
     {
+        "id": 22,
         "folder": "Algorithmische Geometrie",
         "front": "Für welche Punktmengen hat das euklidische Voronoi-Diagramm die Struktur eines Baumes?",
         "back": "Alle Punkte, für die gilt, dass alle Punkte auf der Konvexen-Hülle liegen, haben die Eigenschaft, dass das Voronoi-Diagramm einen Baum bildet. Dass liegt daran, dass alle Voronoi-Regionen Unbeschränkt sein müssen, damit ein Baum entsteht und nur Knoten auf der Konvexen Hülle bilden Unbeschränkte Regionen.",
         "hint": ""
     },
     {
+        "id": 23,
         "folder": "Algorithmische Geometrie",
         "front": "Zeichnen Sie zu zwei vorgegebenen Liniensegmenten den Bi-Sektor bezüglich der euklidischen Metrik, aus wie vielen Teilstücken kann der Bi-Sektor bestehen?",
         "back": "Bi-Sektor verläuft geradlinig außerhalb von Orthogonalen Bereichen. Der Bi-Sektor von zwei Liniensegmenten kann maximal aus 7 Teilstücken bestehen. (Bsp: '|-')",
         "hint": ""
     },
     {
+        "id": 24,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren Divide and Conquer zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
         "back": "",
         "hint": "Wie findet man beim Divide-and-Conquer-Verfahren die Endstücke von B(L,R)?"
     },
     {
+        "id": 25,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren inkrementelle Konstruktion (edge flip) zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
         "back": "",
         "hint": "Zwei Phasen beim Einfügen jedes Punktes (Lokalisierung, Einbauen). Was ist ein edge flip, wie viele davon sind im schlimmsten Fall nötig, welche Aussage haben wir über die Laufzeit des Verfahrens?"
     },
     {
+        "id": 26,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren Sweep zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
         "back": "",
         "hint": "Was versteht man im Sweep-Verfahren unter der Wellenfront? Aus wie vielen Stücken kann sie bestehen und wie wird sie verwaltet? Was ist ein Spike-Event, wann wird es bemerkt, und wo wird es in die Ereignisstruktur eingefügt?"
     },
     {
+        "id": 27,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren geometrische Transformation zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
         "back": "",
         "hint": "Wie wird die Umkreis-Eigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
     },
     {
+        "id": 28,
         "folder": "Algorithmische Geometrie",
         "front": "Was verstehen wir unter einem kompetitiven Verfahren, in welchen Zusammenhängen sind solche Verfahren interessant?",
         "back": "",
         "hint": "NP-schwere Probleme und solche mit unvollständigen Informationen"
     },
     {
+        "id": 29,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
         "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durch probiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1,7.",
         "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
     },
     {
+        "id": 30,
         "folder": "Algorithmische Geometrie",
         "front": "Wir suchen die Tür in der Wand. Welchen kompetitiven Faktor können wir erreichen, wie und warum? Kann es noch besser gehen?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 31,
         "folder": "Algorithmische Geometrie",
         "front": "Skizzieren Sie einen Algorithmus zum Verlassen eines Labyrinths.",
         "back": "Beim Pledge-Algorithmus wird Anfangs eine Richtung gewählt und ein Winkelzähler auf 0 gesetzt. Diese Richtung wird verfolgt, bis eine Wand im Weg ist. Der Wand wird im Uhrzeigersinn gefolgt und dabei wird der Winkelzähler aktualisiert. Sobald der Winkelzähler einen positiven Wert annehmen würde, wird die Wand verlassen und die Richtung wird weiter verfolgt. Dies wiederholt sich so lange, bis das Labyrinth verlassen wurde.",
         "hint": ""
     },
     {
+        "id": 32,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie das Suchverfahren der CAB-Strategie. Was sind selbst-nähernde Kurven? Was lässt sich über ihre Länge sagen?",
         "back": "",
         "hint": ""
     },
     {
+        "id": 33,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der zustand eines Objekts?",
         "back": "Die Menge aller Instanz-Variablen. Es sind alle bekannten Objekte, mit denen das Objekt in Beziehung steht.",
         "hint": ""
     },
     {
+        "id": 34,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Pass/Call-by-Reference?",
         "back": "Es wird einer Funktion eine Referenz (Pointer) übergeben, welche auf den übergebenen Wert zeigt.",
         "hint": ""
     },
     {
+        "id": 35,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Pass/Call-by-Value?",
         "back": "Es wird einer Funktion der momentane Wert übergeben.",
         "hint": ""
     },
     {
+        "id": 36,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Nachrichten-Selektor und wie ist er in SMALLTALK aufgebaut?",
         "back": "Ein Nachrichten-Selektor identifiziert eine Methode. Aufbau: '#parameter:parameter:'",
         "hint": ""
     },
     {
+        "id": 37,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Protokoll und ein Interface?",
         "back": "Das Interface gibt alle verstandenen Nachrichten an. Das Protokoll enthält den Nachrichten-Katalog und Kommentare.",
         "hint": ""
     },
     {
+        "id": 38,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Nachrichten-Typen gibt es in SMALLTALK?",
         "back": "Unär (Nur implizites Argument), Binär (Spezielle Nachrichten wie '+') und Schlüsselwort (Nachrichten mit mehreren Argumenten)",
         "hint": ""
     },
     {
+        "id": 39,
         "folder": "Objekt Orientierte Programmierung",
         "front": "In welcher Beziehung stehen Instanz, Klasse, Meta-Klasse?",
         "back": "Eine Instanz ist Objekt, dass von einer Klasse erzeugt wurde. Da Klassen auch Objekte sind (zumindest in SMALLTALK) haben Klassen auch Klasse, nämlich eine Meta-Klasse.",
         "hint": ""
     },
     {
+        "id": 40,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist die Extension und Intension einer Klasse?",
         "back": "Extension ist die Menge aller Objekte die zu der Klasse gehören. Intension sind die Bedingungen die benötigt werden um zur Klasse zu gehören.",
         "hint": ""
     },
     {
+        "id": 41,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Literal und welche gibt es in SMALLTALK?",
         "back": "Ein Literal ist ein Objekt, dass während der Übersetzungszeit erzeugt wird. Es gibt Zahlen-, String-, Symbol- und Array-Literale.",
         "hint": ""
     },
     {
+        "id": 42,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Aliase?",
         "back": "Aliase sind Variablen/Namen die auf das gleiche Objekt zeigen. Sie werden durch Zuweisungen (:=) erzeugt und zeigen somit auf die gleiche Speicheradresse.",
         "hint": ""
     },
     {
+        "id": 43,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Garbage Collection? Warum ist es wichtig für OOP?",
         "back": "Garbage Collection deallokiert Speicher von Objekten die nicht mehr verwendet werden zu einem unbestimmten Zeitpunkt. Es ist wichtig, da Objekte an vielen verschiedenen erzeugt und 'entfernt' werden. (Es werden nur Aliase gelöscht)",
         "hint": ""
     },
     {
+        "id": 44,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Instanz- und was Klassen-Variablen?",
         "back": "Instanz-Variablen gehören der Instanz und Klassen-Variablen der Klasse. Wird die Klasse als Instanz einer Meta-Klasse betrachtet werden dessen Variablen auch Instanz-Variablen genannt. Instanz-Variablen können nur von der Instanz gelesen und verändert werden.",
         "hint": ""
     },
     {
+        "id": 45,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind pseudo-variablen in SMALLTALK?",
         "back": "Pseudo-Variablen sind Variablen die nur gelesen werden können und ersetzen Schlüsselwörter anderer Sprachen. (Bsp: 'true', 'false', 'nil', ...)",
         "hint": ""
     },
     {
+        "id": 46,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Beziehungen in OOP? Was haben Zwischen-Objekte damit zu tun?",
         "back": "Beziehungen in OOP geben an welche Objekte sich kennen. Es gibt 1-Beziehungen und n-Beziehungen. Für n-Beziehungen werden meist Zwischen-Objekte benötigt, welche die Beziehung pflegen. Zwischen-Objekte sind meistens Collections.",
         "hint": ""
     },
     {
+        "id": 47,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Vorteile von Kapselung?",
         "back": "Nur das Objekt selbst kann den eigenen Zustand ändern. Implementation von Methoden kann jederzeit angepasst werden ohne mehrere Klassen anpassen zu müssen.",
         "hint": ""
     },
     {
+        "id": 48,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter Kaskadieren von Ausdrücken in SMALLTALK?",
         "back": "Da Ausdrücke immer Objekte liefern, können diesen erneut Nachrichten geschickt werden. Das Ergebnis eines Ausdrucks wird somit im nächsten Ausdruckt direkt verwendet. Falls ein Ausdruck keinen Rückgabewert mit '^' angibt, wird implizit das momentane Objekt zurückgeliefert.",
         "hint": "Chaining"
     },
     {
+        "id": 49,
         "folder": "Objekt Orientierte Programmierung",
         "front": "In welcher Reihenfolge werden Ausdrücke in SMALLTALK ausgeführt? Was ist ein Problem hierbei?",
         "back": "Klammer Ausdrücke zuerst, danach von links nach rechts. Die Regel Punkt-vor-Strich gilt deshalb nicht und kann zu unerwarteten Ergebnissen führen.",
         "hint": ""
     },
     {
+        "id": 50,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter dynamisches Binden? Was ist der unterschied zum statischen Binden?",
         "back": "Beim dynamischen Binden wird zur Laufzeit des Programms entschieden, welche Methode aufgerufen wird. Es ist bedeutend für die Polymorphie. Beim statischen Binden werden Methoden bereits zur Übersetzungs-Zeit ausgewählt",
         "hint": ""
     },
     {
+        "id": 51,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Varianten von Instanz-Variablen gibt es? Worin unterscheiden sie sich?",
         "back": "Es gibt benannte und indizierte Instanz Variablen. Benannte werden über einen Namen zugegriffen und indizierte über einen Index (beginnt in SMALLTALK bei 1)",
         "hint": ""
     },
     {
+        "id": 52,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Nutzen von Konstanten-Methoden?",
         "back": "Konstante Methoden liefern einen Konstanten wert. Auf diese weise kann der Wert nicht verändert werden.",
         "hint": "Bsp: pi"
     },
     {
+        "id": 53,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wofür werden Blöcke in SMALLTALK verwendet?",
         "back": "Blöcke sind anonyme Funktions-Objekte (Closures), welche die bei der Erzeugung vorhandenen Variablen einfangen. Sie werden in SMALLTALK zusammen mit dem dynamischen Binden verwendet um Kontrollstrukturen zu bilden.",
         "hint": ""
     },
     {
+        "id": 54,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was unterscheidet eine direkte von einer Indirekten Instanz einer Klasse?",
         "back": "Eine Instanz ist direkte Instanz genau einer Klasse und indirekte Instanz aller Generalisierungen dieser Klasse.",
         "hint": ""
     },
     {
+        "id": 55,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was gibt die Klassendefinition an?",
         "back": "Sie gibt die Intension der Klasse an und damit die benötigten Eigenschaft die Objekte brauchen um zu dieser Klasse zu gehören.",
         "hint": ""
     },
     {
+        "id": 56,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Konstruktor und was macht ihn besonders?",
         "back": "Ein Konstruktor ist eine Methode einer Klasse und erzeugt ein Objekt dieser Klasse. In vielen Sprachen hat der Konstruktor die Möglichkeit auf die Felder des zu erzeugenden Objekt zuzugreifen. In SMALLTALK muss dazu jedoch eine Methode auf dem neuen Objekt aufgerufen werden, da selbst Klassen nicht auf die Felder von ihren Objekten zugreifen können.",
         "hint": ""
     },
     {
+        "id": 57,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was unterscheidet Klassifikation, Generalisierung und Spezialisierung?",
         "back": "Klassifikation sagt aus, dass ein Objekt genau zu einer Klasse gehört. Generalisierung ist eine Verallgemeinerung von einer Klasse und Spezialisierung das Gegenteil. Klassifikation ist, anders als Generalisierung, nicht transitiv. (Instanz einer Klasse kann nicht Instanz der Meta-Klasse sein)",
         "hint": ""
     },
     {
+        "id": 58,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Zusammenhang zwischen Spezialisierung/Generalisierung und Vererbung?",
         "back": "Generalisierung/Spezialisierung sind theoretische Ansätze. Vererbung ist primär für die wiederverwendung von Code gedacht. Ist die Vererbung keine Generalisierung/Spezialisierung, so kommt es schnell/häufig zu Problemen. (Pinguin ist nicht ein spezieller Vogel, da er nicht fliegen kann)",
         "hint": ""
     },
     {
+        "id": 59,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Worin unterscheiden sich Überschreiben und Überladen?",
         "back": "Überschreiben ändern das Verhalten einer geerbten Methode ab. Überladen gibt mehrere mögliche Methode mit gleichem Namen an, welche ja nach Parameter-Typ aufgerufen werden.",
         "hint": ""
     },
     {
+        "id": 60,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind abstrakte Klassen?",
         "back": "Eine abstrakte Klasse kann keine Instanzen erzeugen, da dessen Definition unvollständig ist. Das Gegenstück zu abstrakten Klassen sind konkrete Klassen.",
         "hint": ""
     },
     {
+        "id": 61,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter offene Rekursion?",
         "back": "Bei offener Rekursion ruft eine Methode die in einer Eltern-Klasse definiert wurde auf dem gleichen Objekt eine Methode auf, welche in der Kind-Klasse definiert wird. Hierfür wird dynamisches Binden benötigt.",
         "hint": ""
     },
     {
+        "id": 62,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Double-Dispatch und wann wird es benötigt?",
         "back": "Beim Double-Dispatch wird in einer Methode mit vertauschten Empfänger aufgerufen, damit die korrekte Implementation ausgeführt wird. (Bsp: Operation zwischen 'int' und 'float') In typisierten Sprachen ist Double-Dispatch meist nicht nötig, da die korrekte Implementation durch Überladung aufgerufen wird.",
         "hint": ""
     },
     {
+        "id": 63,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Vorteil von Delegation?",
         "back": "Bei delegation verwendet ein Objekt ein anderes Objekt. Zum Beispiel kann ein Stack eine Liste verwenden. Hierbei besteht keine Vererbung und ein Stack besitzt nicht alle Methoden der Liste.",
         "hint": ""
     },
     {
+        "id": 64,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Typ und wofür werden Typ-systeme verwendet?",
         "back": "Ein Typ ist ein Name mit einem zugehörigen Protokoll. Es gibt alle verstandenen Nachrichten an. Typsysteme sollen verhindern, dass Objekte Nachrichten erhalten, die sie nicht verstehen.",
         "hint": ""
     },
     {
+        "id": 65,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wann ist ein Programm typ-korrekt?",
         "back": "Für die Typ-Korrektheit müssen alle Zuweisungen im Programm überprüft werden. Falls keine Typ-Invariante verletzt wurde ist das Programm typ-korrekt. Typ-Invarianten geben an, welche Werte ein Typ annehmen kann.",
         "hint": ""
     },
     {
+        "id": 66,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wann werden statische und wann dynamische Typ-Prüfungen durch geführt?",
         "back": "Statische Typ-Prüfungen werden zur Übersetzungs-Zeit durch geführt. Dynamische zur Laufzeit. Dynamische Prüfungen sind nötig wenn zu einem Zeitpunkt nicht bekannt ist, mit welchem Typ man arbeitet.",
         "hint": ""
     },
     {
+        "id": 67,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen Definition und Deklaration?",
         "back": "Deklaration gibt einem Bezeichner einen Typ. Definition gibt eine Speicherstelle (und manchmal auch Wert).",
         "hint": ""
     },
     {
+        "id": 68,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Collections?",
         "back": "Collections sind Klassen/Objekte, welche n-Beziehungen pflegen. Sie speichern somit meist beliebig viele Objekte und geben verschiedene Arten Objekte hinzuzufügen, zu entfernen und zuzugreifen. (Bsp: List, Stack, Bag, ...)",
         "hint": ""
     },
     {
+        "id": 69,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Arten gibt es Objekte zu erzeugen?",
         "back": "Objekte können über Literale, Abändern von bestehenden Objekten (Prototyp-Ansatz), Konstruktoren und Instanziierung von Klassen erzeugt werden.",
         "hint": ""
     },
     {
+        "id": 70,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Warum ist es in den meisten (typisierten) Sprachen nicht möglich Methoden/Eigenschaften in Sub-Typen zu löschen?",
         "back": "Sub-Typen sollten als solche alle Nachrichten verstehen die deren Super-Typ versteht. Ansonsten könnte vom Typ-System nicht garantiert werden, dass jede Methode auf einem Typ stets Aufgerufen werden kann.",
         "hint": ""
     },
     {
+        "id": 71,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Warum ist die Klassen-Hierarchie in SMALLTALK keine Generalisierungs-Hierarchie",
         "back": "Weil manche Collection Subklassen Methoden löschen.",
         "hint": ""
     },
     {
+        "id": 72,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Vorteile hat ein Typ-System?",
         "back": "Weniger Laufzeitfehler, bessere Optimierungen, bessere Speichernutzung (weniger bedeutend wegen Referenz-Semantik), bessere Lesbarkeit",
         "hint": ""
     },
     {
+        "id": 73,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Nachteile hat ein Typ-system?",
         "back": "Mehr schreibarbeit, Laufzeitfehler weiterhin möglich (casting / Division mit 0)",
         "hint": ""
     },
     {
+        "id": 74,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind nominale und strukturelle Zuweisungs-Kompatibilität und Typ-Äquivalenz?",
         "back": "Nominal bezieht sich auf den Namen und strukturell nur auf die Struktur. Typ-Äquivalenz bedeutet, dass zwei Typen gleich sind. Zuweisungs-Kompatibilität verlangt, dass zwei Typen gleich oder zumindest der eine Sub-Typ vom anderen ist.",
         "hint": ""
     },
     {
+        "id": 75,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Kovarianz und Kontravarianz?",
         "back": "Kovarianz bedeutet, dass ein Sub-Typ in einer Überschriebenen Methoden auch einen Sub-Typ zurück liefert. Kontravarianz bedeutet, dass ein Sub-Typ in einer Überschriebenen Methode einen Super-Typ annimmt.",
         "hint": ""
     },
     {
+        "id": 76,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Arten von Polymorphie gibt es?",
         "back": "Inklusions-Polymorphie (Subtyp-Polymorphie), einfache, rekursiv und rekursiv beschränkte Parametrische-Polymorphie (Generische-Typen)",
         "hint": ""
     },
     {
+        "id": 77,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Warum sind in Java Sub-Typen Beziehungen von Klassen in Arrays von diesen Klassen ebenfalls Sub-Typen? Worin besteht das Problem?",
         "back": "Auf ein Array von Sub-Typen kann man lesend genau gleich zugreifen. Schreibend ist dies jedoch nur beschränkt möglich weswegen dynamische Typprüfungen durch Java durchgeführt werden, welche zu einem Laufzeitfehler führen. Bei der Parametrische-Polymorphie wurde diese Lücke im Typ-System nicht wiederholt.",
         "hint": ""
     },
     {
+        "id": 78,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Weshalb ist Java nicht streng genommen rein Objekt-Orientiert?",
         "back": "Java hat Primitive-Datentypen ('int', 'boolean', ...) die keine Objekte sind.",
         "hint": ""
     },
     {
+        "id": 79,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Besonderheit haben Konstruktoren in Java?",
         "back": "Konstruktoren sind zwischen Klassen- und Instanz-Methoden.",
         "hint": ""
     },
     {
+        "id": 80,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welchen Nutzen hat das Schlüsselwort 'final' in Java?",
         "back": "Das Schlüsselwort 'final' kann verwendet werden um Vererbung von Klassen und Überschreiben von Methoden zu verhindern.",
         "hint": ""
     },
     {
+        "id": 81,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie und warum kann Überladen in Java schief gehen?",
         "back": "Java schränkt zur Übersetzungszeit die Anzahl an passenden Methoden ein. Wenn bei einem Methodenaufruf mehrere Methoden passen und Java nicht entscheiden kann welche Methode aufgerufen werden soll, erhält man den Compiler-Fehler 'ambiguous'.",
         "hint": ""
     },
     {
+        "id": 82,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Verwendet Java Call-by-Reference oder Call-by-Value?",
         "back": "Java verwendet Call-by-Value.",
         "hint": ""
     },
     {
+        "id": 83,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie kann Code in Java strukturiert werden?",
         "back": "Java erlaubt es Code in Klassen und Inneren-Klassen, Paketen (Namespaces) und Modulen (Packet-Sammlung) zu strukturieren. Mit 'public', 'private' und 'protected' und Modulen können Sichtbarkeiten/Schnittstellen festgelegt werden.",
         "hint": ""
     },
     {
+        "id": 84,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Java unterstützt zwar keine mehrfach-Vererbung, aber wie kann etwas ähnliches emuliert werden?",
         "back": "Java erlaubt es mehrere Interfaces in einer Klasse zu Implementieren. Durch 'default' können Interfaces sogar Implementation gegeben werden.",
         "hint": ""
     },
     {
+        "id": 85,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wofür können Interfaces (in Java) verwendet werden?",
         "back": "Interfaces können verwendet werden um Implementations-Details zu verstecken oder um Schnittstellen zu definieren. Interfaces können auch zum Gruppieren/Tagging verwendet werden.",
         "hint": ""
     },
     {
+        "id": 86,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wofür kann eine Liste vom Typ 'List<? extends A>' verwendet werden?",
         "back": "Die Liste enthält nur Sub-Typen von A. Es kann nur Lesend zugegriffen werden.",
         "hint": ""
     },
     {
+        "id": 87,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wofür kann eine Liste vom Typ 'List<? super A>' verwendet werden?",
         "back": "Die Liste enthält nur Super-Typen von A. Es kann nur Schreibend zugegriffen werden.",
         "hint": ""
     },
     {
+        "id": 88,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Wild-Card in Java und wofür gibt es es?",
         "back": "Wild-Cards werden mit '?' als Typ-Variable angegeben. 'List<?>' bezeichnet eine Liste mit beliebigen Elementen. Wild-Cards existieren um Typ-Sicher mit Parametrischer Polymorphie zu arbeiten.",
         "hint": ""
     },
     {
+        "id": 89,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso ist es nicht möglich in einer Überschriebenen Methode neue Fehler einzuführen?",
         "back": "Einführen von neuen Fehlern wäre kovariantes Überschreiben von Methoden was in Sprachen wie Java nicht erlaubt ist.",
         "hint": ""
     },
     {
+        "id": 90,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Ist in C# Call-by-Reference oder Call-by-Value?",
         "back": "Standardmäßig verwendet C# Call-by-Value. Mit 'unsafe' können Pointer ('int*') bzw mit 'ref' Referenzen verwendet werden. Pointer erlauben Modifikationen (Pointer-Arithmetik) und Referenzen erlauben nur lesenden Zugriff.",
         "hint": ""
     },
     {
+        "id": 91,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind C# Properties?",
         "back": "C# Properties sind Wrapper um Attribute die implizit getter und setter verwenden. Auf diese Weise kann Bsp read-only Zugriff auf ein Attribut ermöglicht werden.",
         "hint": ""
     },
     {
+        "id": 92,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie werden Indizierte Instanz-Variablen in C# implementiert?",
         "back": "In C# gibt es hierfür Indexer. Diese verhalten sich wie C# Properties.",
         "hint": ""
     },
     {
+        "id": 93,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Typen haben Wert-Semantik in C#?",
         "back": "enum, struct, int, float, ...",
         "hint": ""
     },
     {
+        "id": 94,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Lösung hat C# für das Fragile-Base-Class-Problem?",
         "back": "Methoden in C# können erst überschrieben werden, wenn sowohl in der Eltern-Klasse die Methode mit 'virtual' und in der Kind-Klasse mit 'override' angegeben wird. Dies verhindert, dass Methoden aus Versehen überschrieben oder nicht überschrieben werden.",
         "hint": ""
     },
     {
+        "id": 95,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen dem Methoden-Modifier 'override' und 'new'",
         "back": "Bei 'override' wird immer die Kind-Klassen Implementation ausgeführt. Bei 'new' wird vom Kontext abhängig eine andere Methode aufgerufen.",
         "hint": ""
     },
     {
+        "id": 96,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Unterstützt C# beschränkte parametrische Polymorphie?",
         "back": "Ja, mit 'Class C<T> where T : U'",
         "hint": ""
     },
     {
+        "id": 97,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie werden Objekte in C++ erzeugt?",
         "back": "Es muss eine Klasse angelegt werden. Diese Klasse erzeugt zunächst jedoch 'struct'/'records's; also Werte. Erst wenn ein Pointer auf das struct erzeugt wird, kann man tatsächlich von einem Objekt mit Identität sprechen. 'A* a = new A();'",
         "hint": ""
     },
     {
+        "id": 98,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Auto boxing?",
         "back": "Auto boxing macht aus einem Wert-Typen einen Referenz-Typen. (int -> Integer)",
         "hint": ""
     },
     {
+        "id": 99,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Verwendet C++ Call-by-Value oder Call-by-Reference?",
         "back": "C++ verwendet standardmäßig Call-by-Value (Pointer werden kopiert). Für Call-by-Reference schreibt man 'void f(A** a)' oder 'void f(A* &a)'",
         "hint": ""
     },
     {
+        "id": 100,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie können in C++ stark zusammenhängende Klassen auf Attribute von einander zugreifen?",
         "back": "Die ist möglich durch 'friend class A', was der Klasse A erlaubt auf private Attribute zuzugreifen.",
         "hint": ""
     },
     {
+        "id": 101,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Auswirkung hat die mehrfach-vererbung in C++?",
         "back": "Aufrufe von dynamisches-binden wird komplizierter zum nachvollziehen.",
         "hint": ""
     },
     {
+        "id": 102,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie werden Methoden in Java, C# und C++ gebunden?",
         "back": "Java: dynamisch\nC# & C++: statisch (dynamisch durch 'virtual')",
         "hint": ""
     },
     {
+        "id": 103,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Worin unterscheiden sich die Java und C++ hinsichtlich Klassen mit Typ-Parameter?",
         "back": "Java Generics erzeugen genau eine Klasse.\nC++ Templates erzeugen für jeden Belegung des Typ-Parameter eine Klasse.",
         "hint": "Generics (Java) vs Templates (C++)"
     },
     {
+        "id": 104,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie kann das Typ-System in C++ umgangen werden?",
         "back": "Über Casts in C++. Diese sind jedoch gefährlich. Es sollte die Funktion 'dynamic_cast<T>' vorgezogen werden.",
         "hint": ""
     },
     {
+        "id": 105,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Gibt es Zugriffs-Modifier in Eiffel?",
         "back": "In Eiffel sind alle Instanz-Variablen nur vom Objekt selbst zugreifbar, es braucht deswegen keine. Methoden können zu bestimmten Mengen an Klassen exportiert werden. (Darf auch leere Menge sein)",
         "hint": ""
     },
     {
+        "id": 106,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie funktioniert Überladung und Überschreiben in Eiffel?",
         "back": "Überladen geht in Eiffel nicht, nur Überschreiben. zwei Methoden können gemeinsam in einer Klasse stehen, indem diese über ein rename umbenannt werden. Über den Typ der Klasse hat die Methode noch den gleiche Namen.",
         "hint": ""
     },
     {
+        "id": 107,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind wichtige Eigenschaften von Eiffels Typsystem?",
         "back": "Mehrfachvererbung, Generizität, Löschen von Methoden und kovariante Redefinition",
         "hint": ""
     },
     {
+        "id": 108,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welches Problem hat das Beispiel mit Skiern?",
         "back": "Da die Kind-Klassen Zuweisungs-kompatibel sind mit Skier, kann die Methode share vom Skier aufgerufen werden, und das Typsystem wird umgangen. Um dies zu verhindern müssen entweder die Kind-Klassen nicht Zuweisungs-kompatibel mit die Eltern-Klasse sein, die dynamische Bindung darf es nicht geben oder das Programm muss komplett auf Typ-Korrektheit überprüft werden.",
         "hint": ""
     },
     {
+        "id": 109,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Verwendet Eiffel Pass-by-Reference oder Pass-by-Value?",
         "back": "Standardmäßig verwendet Eiffel Pass-by-Reference. Mit 'expanded' ist Pass-by-Value möglich, sollte jedoch nur bei Teil-Ganzes Beziehungen verwendet werden. Bei Zuweisungen zwischen Referenzen und Werten werden immer Kopien erstellt.",
         "hint": ""
     },
     {
+        "id": 110,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind CAT-Calls in Eiffel und was haben sie mit dynamischer Bindung zu tun?",
         "back": "Change-Available-Type bei einer Methode sorgt dafür, dass die Methode nicht mehr dynamisch gebunden werden darf, weil Parameter-Typen überschrieben wurden. Nur durch eine Typprüfung und Cast kann eine dynamische Bindung emuliert werden.",
         "hint": ""
     },
     {
+        "id": 111,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Probleme gibt es in der Objekt orientierten Programmierung?",
         "back": "Problem der Substituierbarkeit,\nFragile-base-class-Problem,\nschlechte Tracebarkeit,\neindimensionalen Strukturierung,\nmangelnde Kapselung,\nmangelnde Skalierbarkeit,\nmangelnde Eignung",
         "hint": ""
     },
     {
+        "id": 112,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Problem der Substituierbarkeit?",
         "back": "Es geht darum, dass nicht immer gewährleistet werden kann, dass ein Sub-Typ immer an der Stelle eines Super-Typ stehen darf. Hierbei geht es um das Verhalten bzw. vor- und nach-Bedingungen die erfüllt sein müssen. Dies ist nicht immer prüfbar und sowieso Programm abhängig. (Bsp Set & Bag)",
         "hint": ""
     },
     {
+        "id": 113,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen Substituierbarkeit und Zuweisungskompatibilität?",
         "back": "Zuweisungskompatibilität bedeutet, dass ein Typ die gleichen Nachrichten versteht wie ein anderer Typ und somit theoretisch an gleichen Stellen verwendet werden kann. Substituierbarkeit ist strenger und verlangt, dass die beiden Typen das gleiche Verhalten haben, also praktisch ausgetauscht werden können.",
         "hint": ""
     },
     {
+        "id": 114,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Liskov-Substitutions-Prinzip?",
         "back": "Jede Eigenschaft die für ein Objekt des Typ T beweisbar ist, muss für alle Sub-Typen beweisbar sein.",
         "hint": ""
     },
     {
+        "id": 115,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Probleme hat das Liskov-Substitutions-Prinzip?",
         "back": "Nur definiert für Objekte,\nRestriktiv (betrachtet nicht Kontext)\nSub-Typen fast gleich, wozu dann Sub-Typen?",
         "hint": ""
     },
     {
+        "id": 116,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Fragile-base-class-Problem?",
         "back": "Das Fragile-base-class-Problem beschreibt Probleme die Auftreten, wenn in der Super-Klasse verhalten geändert wird, auf welches sich Sub-Klassen stützten. (Bsp: Sub-Klassen erwarten, dass Methode aufgerufen wird)",
         "hint": ""
     },
     {
+        "id": 117,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Möglichkeiten gibt es gegen das Fragile-base-class-Problem vorzugehen?",
         "back": "Es wird eine Art Vererbungs-Interface benötigt. Erste Ansätze sind 'protected' und 'virtual'/'override'. Diese Schlüsselwörter sollen verhindern, dass Methoden und Attribute in Sub-Klassen verwendet werden.",
         "hint": ""
     },
     {
+        "id": 118,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso haben Objekt Orientierte Programme eine schlechte Tracebarkeit?",
         "back": "Die schlechte Tracebarkeit kommt daher, dass Sub-Typen unterschiedliche Methoden aufrufen und es nicht eindeutig ist, welche Implementation zu einem bestimmten Zeitpunkt aufgerufen wird. (dynamisches Binden)",
         "hint": ""
     },
     {
+        "id": 119,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter dem Problem der eindimensionalen Strukturierung?",
         "back": "Der gesamte Code wird ist Klassen geschrieben, welche von einander Erben und mit einander in Beziehung stehen. Es gibt meist viele Möglichkeiten die Klassen zu strukturieren, welche jedoch alle gewisse Nachteile haben.",
         "hint": ""
     },
     {
+        "id": 120,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Kapselung?",
         "back": "Die Vererbung durchbricht die Kapselung. Aliase können ebenfalls die Kapselung durchbrechen. Aliase sind viel zu nützlich, als dass man sie verbieten möchte (zB durch Wert-Typen)",
         "hint": ""
     },
     {
+        "id": 121,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Skalierbarkeit?",
         "back": "Innere-Klassen werden kaum genutzt, Pakete Gruppieren nur Klassen jedoch werden Komponenten benötigt, die Aggregationen von Klassen ausdrücken.",
         "hint": ""
     },
     {
+        "id": 122,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Eignung?",
         "back": "Klassen-basierte OOP ist nicht für Algorithmen oder lineare Abfolgen am besten geeignet. Datenbanken und OOP haben komplett andere Konstrukte. Selbst für GUI-Programmierung ist Prototyp-basierte OOP besser geeignet.",
         "hint": ""
     },
     {
+        "id": 123,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen identisch und gleich?",
         "back": "Identisch bedeutet, dass zwei Zeiger auf die gleiche Stelle im Speicher zeigen, also auf ein und dasselbe Objekt. Gleich gibt an ob zwei Objekt das gleiche Repräsentieren. (zB zwei String-Objekte mit gleichem Zeichenfolgen)",
         "hint": ""
     },
     {
+        "id": 124,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Weswegen werden manche Objekte mit Wert-Semantik versehen?",
         "back": "Der Sinn dahinter ist, dass keine Aliase für dieses Objekt erzeugt werden, sondern lediglich Kopien. Objekte mit Wert-Semantik stehen meistens in einer Teil-Ganzes-Beziehung.",
         "hint": ""
     },
     {
+        "id": 125,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie können Objekte in SMALLTALK in Beziehung mit einander stehen?",
         "back": "Objekte stehen in Beziehung mit einander, wenn eine Referenz vom Einem im Anderen in Form eine Instanzvariablen existiert. Es kann sich dabei um eine benannte oder indizierte Instanz-Variable handeln.",
         "hint": ""
     },
     {
+        "id": 126,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie kann man die Komposition in objektorientierten Programmiersprachen umsetzen?",
         "back": "Hierfür gibt es in den meisten Programmier-Sprachen keine speziellen Konstrukte. Meist ist die Komposition ein Objekt einer Klasse, welche zur Laufzeit dynamisch zu einem Komposition zusammengesetzt wird. Nützlich ist hierfür jedoch die Wert-Semantik, welche dafür sorgt, dass die Lebensdauer der Teile auf jeden Fall mit der Lebensdauer des Ganzen endet.",
         "hint": ""
     },
     {
+        "id": 127,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Zustand von Objekten und wie wird er in SMALLTALK geändert?",
         "back": "Der Zustand ist die Summe aller Instanz-Variablen eines Objekts. Nur über einen Nachrichtenversand und dann eine Zuweisung zu den Instanzvariablen kann den Zustand des Objekt ändern.",
         "hint": ""
     },
     {
+        "id": 128,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche beiden Formen von Ausdrücken gibt es in der objektorientierten Programmierung?",
         "back": "Zuweisung und Nachrichten-Ausdruck",
         "hint": ""
     },
     {
+        "id": 129,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso besitzt jede Klasse genau eine Meta-Klasse in SMALLTALK?",
         "back": "Der Sinn dahinter ist, dass die Klassen, als Instanzen der Meta-Klasse, eigene Instanz-Variablen und Methoden haben sollen, ohne, dass dabei an andere Klassen gedacht werden muss.",
         "hint": ""
     },
     {
+        "id": 130,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Factory-Methoden?",
         "back": "Factory-Methoden sind Methoden, welche Instanzen verschiedener Klassen zurückliefern. In Sprachen wie SMALLTALK, in denen sich Klassenmethoden und Konstruktoren nicht wirklich unterscheiden sind solche Factory-Methoden leicht zu implementieren.",
         "hint": ""
     },
     {
+        "id": 131,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen Generalisierung und Spezialisierung?",
         "back": "Während die Generalisierung Eigenschaften weglässt oder generalisiert (Abstraktion), fügt die Spezialisierung Eigenschaften hinzu oder spezialisiert bereits vorhandene.",
         "hint": ""
     },
     {
+        "id": 132,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie hängen Generalisierung/Spezialisierung und Vererbung zusammen?",
         "back": "Vererbung ist eine Art, wie man Generalisierung und Spezialisierung umsetzen kann. Dabei ist die Klasse von der geerbt wird die Generalisierung von der Klasse die erbt, welche wiederum eine Spezialisierung ist.",
         "hint": ""
     },
     {
+        "id": 133,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man in der objektorientierten Programmierung unter Vererbung?",
         "back": "In der Objekt Orientierung bezeichnet Vererbung eine Möglichkeit den Code eine Klasse in einer anderen Klasse wieder zu verwenden. Dabei übernimmt die Klasse, welche erbt alle Eigenschaften der anderen Klasse.",
         "hint": ""
     },
     {
+        "id": 134,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist offene Rekursion?",
         "back": "Ein Objekt ruft eine abstrakte Methode auf sich selbst auf. Es ist dabei rekursiv, weil das Objekt die Methode auf sich aufruft und offen, weil noch nicht bekannt ist, weile Implementation aufgerufen wird.",
         "hint": ""
     },
     {
+        "id": 135,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Typen?",
         "back": "Typen sind abstrakte Spezifikationen, die zum einen den Wertebereich von Variablen einschränken und zum anderen das Protokoll (den Funktionsumfang) von Objekten angeben.",
         "hint": ""
     },
     {
+        "id": 136,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Zu welchem Zeitpunkt führt die Verwendung eines parametrisch definierten Typs zu einer Zuweisung an die Typ-Variable?",
         "back": "Zur Übersetzungszeit",
         "hint": ""
     },
     {
+        "id": 137,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Repräsentations-Objekte?",
         "back": "Repräsentations-Objekte machen die Implementierung eines anderen Objekt aus und bleiben hinter diesem Verborgen. (Bsp: Stack verwendet Array)",
         "hint": ""
     },
     {
+        "id": 138,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist das Gesetz von Demeter",
         "back": "Sprich nicht mit Fremden. Es dürfen Methoden nur auf Instanz-Variablen und Parametern von Funktionen aufgerufen werden. (Hat praktische Grenzen)",
         "hint": ""
     },
     {
+        "id": 139,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was gehört zu einem guten objektorientierten Stil?",
         "back": "Gute Bezeichner (Kommentare vermeiden, Abkürzungen Nutzen), Projekt Namens-/Formatierungs- Konventionen, Kurze Methoden, Deklarativ (eher Was statt Wie), Bibliotheken verwenden, Kurze Klassen, Nur Abstrakte Super-Klassen",
         "hint": ""
     },
     {
+        "id": 140,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Type-Branding?",
         "back": "Type-Branding wird bei struktureller Typ-Äquivalenz verwendet, um zu vermeiden, dass semantisch unterschiedliche Objekte vertauscht werden. Dabei wird den Typen eine charakteristische Eigenschaft wie eine Methode gegeben, sodass diese nicht mehr Typ-Äquivalent zu ähnlichen Typen sind.",

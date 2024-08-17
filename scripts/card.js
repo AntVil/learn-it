@@ -1,3 +1,5 @@
+const cardObjectSymbol = Symbol("card object");
+
 /**
  *
  * @returns {HTMLElement}
@@ -18,8 +20,11 @@ function createCard() {
     cardStarToggle.classList.add("star-toggle");
     cardStarToggle.setAttribute("type", "checkbox");
     cardStarToggle.setAttribute("autocomplete", "off");
+    cardStarToggle.addEventListener("click", () => {
+        toggleStar(cardElement[cardObjectSymbol]);
+    });
 
-    cardElement.replaceChildren(cardSideToggle, cardStarToggle, cardFront, cardBack);
+    cardElement.replaceChildren(cardSideToggle, cardFront, cardBack, cardStarToggle);
 
     return cardElement;
 }
@@ -37,7 +42,9 @@ function fillCard(cardElement, card) {
         backContent = card.back || "no content"
     }
 
-    cardElement.children[1].checked = card.stared;
-    cardElement.children[2].innerText = card.front;
-    cardElement.children[3].innerText = backContent;
+    cardElement[cardObjectSymbol] = card;
+
+    cardElement.children[1].innerText = card.front;
+    cardElement.children[2].innerText = backContent;
+    cardElement.children[3].checked = card.stared;
 }
