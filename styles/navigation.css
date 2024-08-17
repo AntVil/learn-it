@@ -1,7 +1,5 @@
 nav {
-    left: 0 !important;
-    width: 100svw;
-    height: 100svh;
+    translate: 0 !important;
 
     display: grid;
     grid-auto-rows: 50px;
@@ -42,13 +40,11 @@ input[name="navigation"] {
 
     &+* {
         position: fixed;
-        left: 100svw;
-        top: 0;
         width: 100svw;
         height: 100svh;
     }
 
-    &:checked+* {
-        left: 0;
+    &:not(:checked)+* {
+        translate: 100svw 0;
     }
 }
