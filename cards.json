@@ -3,14 +3,14 @@
         "id": 0,
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat Sortieren durch Vergleiche die Zeitkomplexität Theta(n log n)?",
-        "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleiche Schritte durchführen. Die Schritte können als ein Entscheidungsbaum gesehen werden mit n! Blättern. Die mindest-höhe beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
+        "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleichen Schritte durchführen. Die Schritte können als ein Entscheidungsbaum gesehen werden mit n! Blättern. Die mindest-höhe beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
         "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum (log2(x))"
     },
     {
         "id": 1,
         "folder": "Algorithmische Geometrie",
         "front": "Erklären Sie das Prinzip der Reduktion, die Herleitung einer unteren Schranke für ein Problem aus einer unteren Schranke für ein anderes Problem.",
-        "back": "Wenn jede Eingabe für ein Problem transformiert werden kann auf die Eingabe eines bekannten Problem und die Ausgabe wieder zurück auf das eigentliche Problem, dann ist das eine Problem auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die Untere Schranke des bekannten Problem.",
+        "back": "Wenn jede Eingabe für ein Problem transformiert werden kann auf die Eingabe eines bekannten Problems und die Ausgabe wieder zurück auf das eigentliche Problem, dann ist das eine Problem auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die Untere Schranke des bekannten Problems.",
         "hint": ""
     },
     {
@@ -30,7 +30,7 @@
     {
         "id": 4,
         "folder": "Algorithmische Geometrie",
-        "front": "Was ist das charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
+        "front": "Was ist das Charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
         "back": "Ein Sweep-Verfahren verwandelt in einem statischen d-dimensionalen Problem eine dimension in eine zeitliche und läuft diese Dimension ab. (In der Ebene erfolgt dies meist mit der Sweep-Line.) Dabei wird eine Sweep-Status-Struktur mitgeführt, welche bei gewissen Ereignissen ggf. aktualisiert wird.",
         "hint": ""
     },
@@ -94,14 +94,14 @@
         "id": 13,
         "folder": "Algorithmische Geometrie",
         "front": "Mit wie vielen Wächtern kommt man bei einem einfachen Polygon immer aus und wo sollen sie platziert werden?",
-        "back": "Es reichen immer v / 3 aus und sind manchmal sogar nötig. Durch Triangulation und 3-Färbung des Polygon kann eine der Farben gewählt werden (meist mit minialster Anzahl) und auf jeden Knoten mit dieser Farbe ein Wächter platziert werden.",
+        "back": "Es reichen immer v / 3 aus und sind manchmal sogar nötig. Durch Triangulation und 3-Färbung des Polygons kann eine der Farben gewählt werden (meist mit minialster Anzahl) und auf jeden Knoten mit dieser Farbe ein Wächter platziert werden.",
         "hint": "Triangulierung, 3-Färbung"
     },
     {
         "id": 14,
         "folder": "Algorithmische Geometrie",
         "front": "Zur 3-Färbung: was genau wird gefärbt, nach welcher Regel, warum ist dies immer möglich?",
-        "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer Möglich, weil per Definition eine Triangulation eines einfachen Polygon nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor.",
+        "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer möglich, weil per Definition eine Triangulation eines einfachen Polygons nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor.",
         "hint": ""
     },
     {
@@ -206,7 +206,7 @@
         "id": 29,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
-        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durch probiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1,7.",
+        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durchprobiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1,7.",
         "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
     },
     {
@@ -220,7 +220,7 @@
         "id": 31,
         "folder": "Algorithmische Geometrie",
         "front": "Skizzieren Sie einen Algorithmus zum Verlassen eines Labyrinths.",
-        "back": "Beim Pledge-Algorithmus wird Anfangs eine Richtung gewählt und ein Winkelzähler auf 0 gesetzt. Diese Richtung wird verfolgt, bis eine Wand im Weg ist. Der Wand wird im Uhrzeigersinn gefolgt und dabei wird der Winkelzähler aktualisiert. Sobald der Winkelzähler einen positiven Wert annehmen würde, wird die Wand verlassen und die Richtung wird weiter verfolgt. Dies wiederholt sich so lange, bis das Labyrinth verlassen wurde.",
+        "back": "Beim Pledge-Algorithmus wird Anfangs eine Richtung gewählt und ein Winkelzähler auf 0 gesetzt. Diese Richtung wird verfolgt, bis eine Wand im Weg ist. Der Wand wird im Uhrzeigersinn gefolgt und dabei wird der Winkelzähler aktualisiert. Sobald der Winkelzähler einen positiven Wert annehmen würde, wird die Wand verlassen und die Richtung wird weiterverfolgt. Dies wiederholt sich so lange, bis das Labyrinth verlassen wurde.",
         "hint": ""
     },
     {
@@ -233,7 +233,7 @@
     {
         "id": 33,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist der zustand eines Objekts?",
+        "front": "Was ist der Zustand eines Objekts?",
         "back": "Die Menge aller Instanz-Variablen. Es sind alle bekannten Objekte, mit denen das Objekt in Beziehung steht.",
         "hint": ""
     },
@@ -352,7 +352,7 @@
     {
         "id": 50,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was versteht man unter dynamisches Binden? Was ist der unterschied zum statischen Binden?",
+        "front": "Was versteht man unter dynamisches Binden? Was ist der Unterschied zum statischen Binden?",
         "back": "Beim dynamischen Binden wird zur Laufzeit des Programms entschieden, welche Methode aufgerufen wird. Es ist bedeutend für die Polymorphie. Beim statischen Binden werden Methoden bereits zur Übersetzungs-Zeit ausgewählt",
         "hint": ""
     },
@@ -367,7 +367,7 @@
         "id": 52,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Nutzen von Konstanten-Methoden?",
-        "back": "Konstante Methoden liefern einen Konstanten wert. Auf diese weise kann der Wert nicht verändert werden.",
+        "back": "Konstante Methoden liefern einen Konstanten wert. Auf diese Weise kann der Wert nicht verändert werden.",
         "hint": "Bsp: pi"
     },
     {
@@ -380,7 +380,7 @@
     {
         "id": 54,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was unterscheidet eine direkte von einer Indirekten Instanz einer Klasse?",
+        "front": "Was unterscheidet eine Direkte von einer Indirekten Instanz einer Klasse?",
         "back": "Eine Instanz ist direkte Instanz genau einer Klasse und indirekte Instanz aller Generalisierungen dieser Klasse.",
         "hint": ""
     },
@@ -388,14 +388,14 @@
         "id": 55,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was gibt die Klassendefinition an?",
-        "back": "Sie gibt die Intension der Klasse an und damit die benötigten Eigenschaft die Objekte brauchen um zu dieser Klasse zu gehören.",
+        "back": "Sie gibt die Intension der Klasse an und damit die benötigten Eigenschaften die Objekte brauchen um zu dieser Klasse zu gehören.",
         "hint": ""
     },
     {
         "id": 56,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist ein Konstruktor und was macht ihn besonders?",
-        "back": "Ein Konstruktor ist eine Methode einer Klasse und erzeugt ein Objekt dieser Klasse. In vielen Sprachen hat der Konstruktor die Möglichkeit auf die Felder des zu erzeugenden Objekt zuzugreifen. In SMALLTALK muss dazu jedoch eine Methode auf dem neuen Objekt aufgerufen werden, da selbst Klassen nicht auf die Felder von ihren Objekten zugreifen können.",
+        "back": "Ein Konstruktor ist eine Methode einer Klasse und erzeugt ein Objekt dieser Klasse. In vielen Sprachen hat der Konstruktor die Möglichkeit auf die Felder des zu erzeugenden Objekts zuzugreifen. In SMALLTALK muss dazu jedoch eine Methode auf dem neuen Objekt aufgerufen werden, da selbst Klassen nicht auf die Felder von ihren Objekten zugreifen können.",
         "hint": ""
     },
     {
@@ -409,7 +409,7 @@
         "id": 58,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Zusammenhang zwischen Spezialisierung/Generalisierung und Vererbung?",
-        "back": "Generalisierung/Spezialisierung sind theoretische Ansätze. Vererbung ist primär für die wiederverwendung von Code gedacht. Ist die Vererbung keine Generalisierung/Spezialisierung, so kommt es schnell/häufig zu Problemen. (Pinguin ist nicht ein spezieller Vogel, da er nicht fliegen kann)",
+        "back": "Generalisierung/Spezialisierung sind theoretische Ansätze. Vererbung ist primär für die Wiederverwendung von Code gedacht. Ist die Vererbung keine Generalisierung/Spezialisierung, so kommt es schnell/häufig zu Problemen. (Pinguin ist nicht ein spezieller Vogel, da er nicht fliegen kann)",
         "hint": ""
     },
     {
@@ -437,14 +437,14 @@
         "id": 62,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist Double-Dispatch und wann wird es benötigt?",
-        "back": "Beim Double-Dispatch wird in einer Methode mit vertauschten Empfänger aufgerufen, damit die korrekte Implementation ausgeführt wird. (Bsp: Operation zwischen 'int' und 'float') In typisierten Sprachen ist Double-Dispatch meist nicht nötig, da die korrekte Implementation durch Überladung aufgerufen wird.",
+        "back": "Beim Double-Dispatch wird in einer Methode mit vertauschtem Empfänger aufgerufen, damit die korrekte Implementation ausgeführt wird. (Bsp: Operation zwischen 'int' und 'float') In typisierten Sprachen ist Double-Dispatch meist nicht nötig, da die korrekte Implementation durch Überladung aufgerufen wird.",
         "hint": ""
     },
     {
         "id": 63,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Vorteil von Delegation?",
-        "back": "Bei delegation verwendet ein Objekt ein anderes Objekt. Zum Beispiel kann ein Stack eine Liste verwenden. Hierbei besteht keine Vererbung und ein Stack besitzt nicht alle Methoden der Liste.",
+        "back": "Bei Delegation verwendet ein Objekt ein anderes Objekt. Zum Beispiel kann ein Stack eine Liste verwenden. Hierbei besteht keine Vererbung und ein Stack besitzt nicht alle Methoden der Liste.",
         "hint": ""
     },
     {
@@ -464,8 +464,8 @@
     {
         "id": 66,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Wann werden statische und wann dynamische Typ-Prüfungen durch geführt?",
-        "back": "Statische Typ-Prüfungen werden zur Übersetzungs-Zeit durch geführt. Dynamische zur Laufzeit. Dynamische Prüfungen sind nötig wenn zu einem Zeitpunkt nicht bekannt ist, mit welchem Typ man arbeitet.",
+        "front": "Wann werden statische und wann dynamische Typ-Prüfungen durchgeführt?",
+        "back": "Statische Typ-Prüfungen werden zur Übersetzungs-Zeit durchgeführt. Dynamische zur Laufzeit. Dynamische Prüfungen sind nötig, wenn zu einem Zeitpunkt nicht bekannt ist, mit welchem Typ man arbeitet.",
         "hint": ""
     },
     {
@@ -514,7 +514,7 @@
         "id": 73,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Nachteile hat ein Typ-system?",
-        "back": "Mehr schreibarbeit, Laufzeitfehler weiterhin möglich (casting / Division mit 0)",
+        "back": "Mehr Schreibarbeit, Laufzeitfehler weiterhin möglich (casting / Division mit 0)",
         "hint": ""
     },
     {
@@ -618,7 +618,7 @@
     {
         "id": 88,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was ist das Wild-Card in Java und wofür gibt es es?",
+        "front": "Was ist das Wild-Card in Java und wofür gibt es das?",
         "back": "Wild-Cards werden mit '?' als Typ-Variable angegeben. 'List<?>' bezeichnet eine Liste mit beliebigen Elementen. Wild-Cards existieren um Typ-Sicher mit Parametrischer Polymorphie zu arbeiten.",
         "hint": ""
     },
@@ -702,7 +702,7 @@
     {
         "id": 100,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Wie können in C++ stark zusammenhängende Klassen auf Attribute von einander zugreifen?",
+        "front": "Wie können in C++ stark zusammenhängende Klassen auf Attribute voneinander zugreifen?",
         "back": "Die ist möglich durch 'friend class A', was der Klasse A erlaubt auf private Attribute zuzugreifen.",
         "hint": ""
     },
@@ -710,7 +710,7 @@
         "id": 101,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Welche Auswirkung hat die mehrfach-vererbung in C++?",
-        "back": "Aufrufe von dynamisches-binden wird komplizierter zum nachvollziehen.",
+        "back": "Aufrufe von dynamisches-binden wird komplizierter zum Nachvollziehen.",
         "hint": ""
     },
     {
@@ -723,7 +723,7 @@
     {
         "id": 103,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Worin unterscheiden sich die Java und C++ hinsichtlich Klassen mit Typ-Parameter?",
+        "front": "Worin unterscheiden sich Java und C++ hinsichtlich Klassen mit Typ-Parameter?",
         "back": "Java Generics erzeugen genau eine Klasse.\nC++ Templates erzeugen für jeden Belegung des Typ-Parameter eine Klasse.",
         "hint": "Generics (Java) vs Templates (C++)"
     },
@@ -745,7 +745,7 @@
         "id": 106,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie funktioniert Überladung und Überschreiben in Eiffel?",
-        "back": "Überladen geht in Eiffel nicht, nur Überschreiben. zwei Methoden können gemeinsam in einer Klasse stehen, indem diese über ein rename umbenannt werden. Über den Typ der Klasse hat die Methode noch den gleiche Namen.",
+        "back": "Überladen geht in Eiffel nicht, nur Überschreiben. zwei Methoden können gemeinsam in einer Klasse stehen, indem diese über ein rename umbenannt werden. Über den Typ der Klasse hat die Methode noch den gleichen Namen.",
         "hint": ""
     },
     {
@@ -836,7 +836,7 @@
         "id": 119,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was versteht man unter dem Problem der eindimensionalen Strukturierung?",
-        "back": "Der gesamte Code wird ist Klassen geschrieben, welche von einander Erben und mit einander in Beziehung stehen. Es gibt meist viele Möglichkeiten die Klassen zu strukturieren, welche jedoch alle gewisse Nachteile haben.",
+        "back": "Der gesamte Code wird ist Klassen geschrieben, welche voneinander Erben und mit einander in Beziehung stehen. Es gibt meist viele Möglichkeiten die Klassen zu strukturieren, welche jedoch alle gewisse Nachteile haben.",
         "hint": ""
     },
     {
@@ -850,7 +850,7 @@
         "id": 121,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wieso gibt es das Problem der mangelnden Skalierbarkeit?",
-        "back": "Innere-Klassen werden kaum genutzt, Pakete Gruppieren nur Klassen jedoch werden Komponenten benötigt, die Aggregationen von Klassen ausdrücken.",
+        "back": "Höhere Sprachkonstrukte als Klasse gibt es nicht wirklich. Innere-Klassen werden kaum genutzt, Pakete Gruppieren nur Klassen jedoch werden Komponenten benötigt, die Aggregationen von Klassen ausdrücken.",
         "hint": ""
     },
     {
@@ -864,7 +864,7 @@
         "id": 123,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Unterschied zwischen identisch und gleich?",
-        "back": "Identisch bedeutet, dass zwei Zeiger auf die gleiche Stelle im Speicher zeigen, also auf ein und dasselbe Objekt. Gleich gibt an ob zwei Objekt das gleiche Repräsentieren. (zB zwei String-Objekte mit gleichem Zeichenfolgen)",
+        "back": "Identisch bedeutet, dass zwei Zeiger auf die gleiche Stelle im Speicher zeigen, also auf ein und dasselbe Objekt. Gleich gibt an ob zwei Objekt das gleiche Repräsentieren. (zB zwei String-Objekte mit gleichen Zeichenfolgen)",
         "hint": ""
     },
     {
@@ -878,21 +878,21 @@
         "id": 125,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie können Objekte in SMALLTALK in Beziehung mit einander stehen?",
-        "back": "Objekte stehen in Beziehung mit einander, wenn eine Referenz vom Einem im Anderen in Form eine Instanzvariablen existiert. Es kann sich dabei um eine benannte oder indizierte Instanz-Variable handeln.",
+        "back": "Objekte stehen in Beziehung mit einander, wenn eine Referenz vom Einem im Anderen in Form einer Instanzvariablen existiert. Es kann sich dabei um eine benannte oder indizierte Instanz-Variable handeln.",
         "hint": ""
     },
     {
         "id": 126,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Wie kann man die Komposition in objektorientierten Programmiersprachen umsetzen?",
-        "back": "Hierfür gibt es in den meisten Programmier-Sprachen keine speziellen Konstrukte. Meist ist die Komposition ein Objekt einer Klasse, welche zur Laufzeit dynamisch zu einem Komposition zusammengesetzt wird. Nützlich ist hierfür jedoch die Wert-Semantik, welche dafür sorgt, dass die Lebensdauer der Teile auf jeden Fall mit der Lebensdauer des Ganzen endet.",
+        "back": "Hierfür gibt es in den meisten Programmier-Sprachen keine speziellen Konstrukte. Meist ist die Komposition ein Objekt einer Klasse, welche zur Laufzeit dynamisch zu einer Komposition zusammengesetzt wird. Nützlich ist hierfür jedoch die Wert-Semantik, welche dafür sorgt, dass die Lebensdauer der Teile auf jeden Fall mit der Lebensdauer des Ganzen endet.",
         "hint": ""
     },
     {
         "id": 127,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was ist der Zustand von Objekten und wie wird er in SMALLTALK geändert?",
-        "back": "Der Zustand ist die Summe aller Instanz-Variablen eines Objekts. Nur über einen Nachrichtenversand und dann eine Zuweisung zu den Instanzvariablen kann den Zustand des Objekt ändern.",
+        "back": "Der Zustand ist die Summe aller Instanz-Variablen eines Objekts. Nur über einen Nachrichtenversand und dann eine Zuweisung zu den Instanzvariablen kann den Zustand des Objekts ändern.",
         "hint": ""
     },
     {
@@ -962,7 +962,7 @@
         "id": 137,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was sind Repräsentations-Objekte?",
-        "back": "Repräsentations-Objekte machen die Implementierung eines anderen Objekt aus und bleiben hinter diesem Verborgen. (Bsp: Stack verwendet Array)",
+        "back": "Repräsentations-Objekte machen die Implementierung eines anderen Objekts aus und bleiben hinter diesem Verborgen. (Bsp: Stack verwendet Array)",
         "hint": ""
     },
     {
@@ -976,7 +976,7 @@
         "id": 139,
         "folder": "Objekt Orientierte Programmierung",
         "front": "Was gehört zu einem guten objektorientierten Stil?",
-        "back": "Gute Bezeichner (Kommentare vermeiden, Abkürzungen Nutzen), Projekt Namens-/Formatierungs- Konventionen, Kurze Methoden, Deklarativ (eher Was statt Wie), Bibliotheken verwenden, Kurze Klassen, Nur Abstrakte Super-Klassen",
+        "back": "Gute Bezeichner (Kommentare vermeiden, Abkürzungen Nutzen), Projekt Namens-/Formatierungs- Konventionen, Kurze Methoden, Deklarativ (eher Was statt Wie), Bibliotheken verwenden, Kurze Klassen, nur Abstrakte Super-Klassen",
         "hint": ""
     },
     {
