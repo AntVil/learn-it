@@ -985,5 +985,19 @@
         "front": "Was ist Type-Branding?",
         "back": "Type-Branding wird bei struktureller Typ-Äquivalenz verwendet, um zu vermeiden, dass semantisch unterschiedliche Objekte vertauscht werden. Dabei wird den Typen eine charakteristische Eigenschaft wie eine Methode gegeben, sodass diese nicht mehr Typ-Äquivalent zu ähnlichen Typen sind.",
         "hint": ""
+    },
+    {
+        "id": 141,
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Wie wurde die Lücke im Typ-System von Arrays mit Sub-Typen bei der Paramtetische Polymorphie behoben?",
+        "back": "Durch das Wild-Card (*)",
+        "hint": ""
+    },
+    {
+        "id": 141,
+        "folder": "Objekt Orientierte Programmierung",
+        "front": "Was unterscheidet den paramterischen von beschränkten parametrischen Polymorphismus?",
+        "back": "Bei der Definition des Typen können Zusicherungen gemacht werden.",
+        "hint": ""
     }
 ]
