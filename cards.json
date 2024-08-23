@@ -989,14 +989,14 @@
     {
         "id": 141,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Wie wurde die Lücke im Typ-System von Arrays mit Sub-Typen bei der Paramtetische Polymorphie behoben?",
+        "front": "Wie wurde die Lücke im Typ-System von Arrays mit Sub-Typen bei der parametrische Polymorphie behoben?",
         "back": "Durch das Wild-Card (*)",
         "hint": ""
     },
     {
         "id": 141,
         "folder": "Objekt Orientierte Programmierung",
-        "front": "Was unterscheidet den paramterischen von beschränkten parametrischen Polymorphismus?",
+        "front": "Was unterscheidet den parametrischen von beschränkten parametrischen Polymorphismus?",
         "back": "Bei der Definition des Typen können Zusicherungen gemacht werden.",
         "hint": ""
     }
