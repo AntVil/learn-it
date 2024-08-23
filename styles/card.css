@@ -7,7 +7,7 @@
         inset: 100px 30px;
         font-size: 20px;
         padding: 20px;
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -17,6 +17,7 @@
         box-shadow: #000 0 15px 25px;
         white-space: break-spaces;
         transform: rotateY(180deg);
+        overflow-y: auto;
     }
 
     &>.side-toggle {

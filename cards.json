@@ -10,14 +10,14 @@
         "id": 1,
         "folder": "Algorithmische Geometrie",
         "front": "Erklären Sie das Prinzip der Reduktion, die Herleitung einer unteren Schranke für ein Problem aus einer unteren Schranke für ein anderes Problem.",
-        "back": "Wenn jede Eingabe für ein Problem transformiert werden kann auf die Eingabe eines bekannten Problems und die Ausgabe wieder zurück auf das eigentliche Problem, dann ist das eine Problem auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die Untere Schranke des bekannten Problems.",
+        "back": "Wenn jede Eingabe für ein Problem A transformiert werden kann auf die Eingabe eines unbekannten Problems B und die Ausgabe wieder zurück auf das eigentliche Problem A, dann ist das eine Problem A auf das andere reduzierbar. Die Transformationen dürfen dabei aber nicht eine höhere Komplexität haben, als die untere Schranke des bekannten Problems A. Die untere Schranke darf nicht im Widerspruch stehen, sonst wäre Problem A durch Transformation und Lösung von Problem B schneller zu lösen, was nicht sein kann.",
         "hint": ""
     },
     {
         "id": 2,
         "folder": "Algorithmische Geometrie",
         "front": "Auf welche untere Schranke stützt sich der Beweis, dass die Bestimmung des kleinsten Abstands zwischen n Punkten in der Ebene (dichtestes Paar) mindestens Omega(n log n) Zeit braucht?",
-        "back": "",
+        "back": "Er stützt sich auf der Reduktion von epsilon-closeness (in Zahlenfolge) auf closest pair. Epsilon-closeness hat die Komplexität Omega(n log n). Die Transformationen von Zahlen auf Punkte und von dichtestem Paar auf ob ein Abstand kleiner epsilon ist, sind schneller lösbar. Also muss closest pair die untere Schranke Omega(n log n) haben, sonst wäre epsilon-closeness schneller lösbar, was nicht möglich ist.",
         "hint": "epsilon-closeness"
     },
     {
@@ -45,35 +45,35 @@
         "id": 6,
         "folder": "Algorithmische Geometrie",
         "front": "Wie würden Sie alle Schnittpunkte von n Geraden in der Ebene berechnen?",
-        "back": "",
+        "back": "Ein Sweep-Verfahren anzuwenden wäre überflüssig, da jede Gerade sich sowieso mit jeder anderen Gerade schneidet. Es ist also möglich direkt alle Schnittpunkte zu berechnen.",
         "hint": "Je zwei Geraden schneiden sich, also k=Theta(n*n), lohnt sich da noch der Sweep?"
     },
     {
         "id": 7,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie das Sweep-Verfahren für die Bestimmung des dichtesten Paars von n Punkten in der Ebene. Warum genügt es, ist es für die Laufzeit wichtig, dass man sich während des Sweeps nur die Punkte im vertikalen Streifen links von der sweep line merkt? Wie kann man das Verfahren auf höhere Dimensionen erweitern?",
-        "back": "",
+        "back": "Es wird eine Sweep-line mit einem vertikalen Streifen dahinter verwendet. der Streifen hat dabei die Größe des bisher dichtesten Paars und speichert Punkte in einem balancierten Binärbaum. Er enthält also die einzig möglichen Kandidaten, welche einen geringeren Abstand haben können. Pro Ereignis müssen dabei nur maximal konstant viele (< 11) Punkte betrachtet werden. Es kommt deswegen zur Laufzeit O(n log n). Bei höheren Dimensionen wie im Raum wird eine Datenstruktur benötigt, welche Bereichsabfragen in der Ebene in möglichst effizienter Zeit berechnen kann. Das Verfahren funktioniert dann Analog nur mit einem Quader statt Rechteck.",
         "hint": ""
     },
     {
         "id": 8,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie einen O(n log n)-Algorithmus zur Konstruktion der konvexen Hülle von n Punkten in der Ebene, und begründen Sie sein Laufzeitverhalten.",
-        "back": "",
+        "back": "Die Konstruktion der konvexen Hülle mit dem Kontur-Verfahren erfolgt durch sortieren und erstellen des Kontur-Polygon von links und rechts. Danach kann in linearer Zeit die Konvexe Hülle aus der Kontur berechnet werden durch zurück-laufen auf dem Kontur-Polygon. Dabei ist es lineare Zeit, weil jeder Punkt der zurückgelaufen wird nie wieder besucht wird.",
         "hint": "Inkrementell, randomisiert, D & C, Kontur, ..."
     },
     {
         "id": 9,
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat die Berechnung der konvexen Hülle von n Punkten in der Ebene die Zeitkomplexität Omega(n log n)? Beweis?",
-        "back": "",
+        "back": "Sortieren kann auf konvexe Hülle reduziert werden. Die Punkte werden auf eine Parabel projiziert und danach wird die Hülle abgelaufen. Die Transformationen sind schneller als Omega(n log n). Berechnen der Konvexen Hülle kann nicht schneller als Omega(n log n) sein, da sonst Sortieren nicht die untere Schranke Omega(n log n) hätte, was ein Widerspruch wäre.",
         "hint": "Reduktion vom Sortierproblem, Punkte auf Parabel"
     },
     {
         "id": 10,
         "folder": "Algorithmische Geometrie",
         "front": "Wenn für eine Menge von n Punkten in der Ebene bereits bekannt ist, dass alle Punkte auf der konvexen Hülle liegen, kann dann die konvexe Hülle in linearer Zeit berechnet werden? Und was ist, wenn die Punkte bereits sortiert vorliegen?",
-        "back": "",
+        "back": "Sind die Punkte sortiert, kann das Kontur-Polygon verfahren verwendet werden, welches sowohl die Kontur, als auch die Hülle daraus in linearer Zeit berechnet, bei einer bereits sortieren Punkte-Menge. Sind alle Punkte der Hülle bekannt ist es nicht möglich in linearer Zeit die Hülle zu bilden, da die Anordnung der Punkte nicht bekannt ist und die korrekte Anordnung nicht in linearer Zeit berechnet werden kann.",
         "hint": ""
     },
     {
@@ -87,7 +87,7 @@
         "id": 12,
         "folder": "Algorithmische Geometrie",
         "front": "Wie viele Wächter benötigt man zur Bewachung eines konvexen, eines sternförmigen, eines beliebigen einfachen Polygons?",
-        "back": "konvex & sternförmig: genau 1\nbeliebig einfach: max v / 3",
+        "back": "konvex / sternförmig: genau 1\nbeliebig einfach: max v / 3",
         "hint": "Toblerone-Polygon"
     },
     {
@@ -143,7 +143,7 @@
         "id": 20,
         "folder": "Algorithmische Geometrie",
         "front": "Was ist die Delaunay-Triangulation? Wie und in welcher Zeit kann man die Delaunay-Triangulation in das Voronoi-Diagramm umrechnen?",
-        "back": "",
+        "back": "Die Delaunay Triangulation ist eine Triangulation einer Punkte-Menge, bei dem die Umkreise von allen Dreiecken keine anderen Punkte enthalten. Der Duale-Graph der Delaunay-Triangulation ist das Voronoi-Diagram. Die Umwandlung ist in linearer Zeit möglich.",
         "hint": "Dualität zwischen den beiden"
     },
     {
@@ -168,38 +168,17 @@
         "hint": ""
     },
     {
-        "id": 24,
-        "folder": "Algorithmische Geometrie",
-        "front": "Beschreiben Sie das Verfahren Divide and Conquer zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
-        "back": "",
-        "hint": "Wie findet man beim Divide-and-Conquer-Verfahren die Endstücke von B(L,R)?"
-    },
-    {
-        "id": 25,
-        "folder": "Algorithmische Geometrie",
-        "front": "Beschreiben Sie das Verfahren inkrementelle Konstruktion (edge flip) zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
-        "back": "",
-        "hint": "Zwei Phasen beim Einfügen jedes Punktes (Lokalisierung, Einbauen). Was ist ein edge flip, wie viele davon sind im schlimmsten Fall nötig, welche Aussage haben wir über die Laufzeit des Verfahrens?"
-    },
-    {
-        "id": 26,
-        "folder": "Algorithmische Geometrie",
-        "front": "Beschreiben Sie das Verfahren Sweep zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
-        "back": "",
-        "hint": "Was versteht man im Sweep-Verfahren unter der Wellenfront? Aus wie vielen Stücken kann sie bestehen und wie wird sie verwaltet? Was ist ein Spike-Event, wann wird es bemerkt, und wo wird es in die Ereignisstruktur eingefügt?"
-    },
-    {
         "id": 27,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren geometrische Transformation zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
-        "back": "",
+        "back": "Bei der geometrischen Transformation werden alle Punkte in der Ebene in den Raum projiziert mit Hilfe eines Paraboloid. Wegen der konvexen Eigenschaft des Paraboloid liegen alle Punkte auf der konvexen Hülle. Außerdem gilt die Umkreis-Eigenschaft, dass kein Punkt innerhalb des Umkreises eines Dreiecks ist, auf dem Paraboloid ebenfalls. Durch projizieren auf die Ebene erhält man die Delaunay-Triangulation und durch die Dualität auch das Voronoi-Diagramm.",
         "hint": "Wie wird die Umkreis-Eigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
     },
     {
         "id": 28,
         "folder": "Algorithmische Geometrie",
         "front": "Was verstehen wir unter einem kompetitiven Verfahren, in welchen Zusammenhängen sind solche Verfahren interessant?",
-        "back": "",
+        "back": "Verfahren, welche das Optimum meist nicht erreichen, aber nahe kommen und angewendet werden können bei NP-schweren Problemen bzw. Problemen mit unvollständigen Informationen.",
         "hint": "NP-schwere Probleme und solche mit unvollständigen Informationen"
     },
     {
@@ -213,7 +192,7 @@
         "id": 30,
         "folder": "Algorithmische Geometrie",
         "front": "Wir suchen die Tür in der Wand. Welchen kompetitiven Faktor können wir erreichen, wie und warum? Kann es noch besser gehen?",
-        "back": "",
+        "back": "Der optimale Kompetitive-Faktor liegt bei 9. Hierbei wird die Wand von beiden Seiten abwechselnd abgesucht. Die Such-Tiefe wird dabei nach jedem Richtungswechsel verdoppelt. Im schlimmsten Fall verfehlt man die Tür knapp und macht einen weiteren Durchlauf mehr.",
         "hint": ""
     },
     {
