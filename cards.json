@@ -38,14 +38,14 @@
         "id": 5,
         "folder": "Algorithmische Geometrie",
         "front": "Wie kann man alle Schnittpunkte von n Liniensegmenten in der Ebene durch ein Sweep-Verfahren berechnen? Erklären Sie die Laufzeit von O((n+k)log n). Warum stimmt hier also O(n log n) nicht ganz?",
-        "back": "",
+        "back": "Eine Sweep-line bewegt sich über die Ebene und speichert in der Sweep-Status-Struktur die Ordnung der geschnittenen Segmente. Die Ereignisse sind linker Endpunkt, rechter Endpunkt und Schnittpunkt.",
         "hint": ""
     },
     {
         "id": 6,
         "folder": "Algorithmische Geometrie",
         "front": "Wie würden Sie alle Schnittpunkte von n Geraden in der Ebene berechnen?",
-        "back": "Ein Sweep-Verfahren anzuwenden wäre überflüssig, da jede Gerade sich sowieso mit jeder anderen Gerade schneidet. Es ist also möglich direkt alle Schnittpunkte zu berechnen.",
+        "back": "Ein Sweep-Verfahren anzuwenden wäre überflüssig, da jede Gerade sich sowieso mit jeder anderen Gerade schneidet. Es ist also möglich direkt alle Schnittpunkte zu berechnen. Die Output-Sensitivität des Sweep-Verfahren Hilft nicht.",
         "hint": "Je zwei Geraden schneiden sich, also k=Theta(n*n), lohnt sich da noch der Sweep?"
     },
     {
@@ -108,28 +108,28 @@
         "id": 15,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie ein Verfahren zur Triangulierung eines einfachen Polygons.",
-        "back": "",
+        "back": "Ein (y-)monotones Polygon kann in linearer Zeit trianguliert werden mit Hilfe eines Stapels. Dabei werden Schrittweise Dreiecke aus dem Polygon geschnitten. Einfache Polygone können in eine Menge von (y-)monotonen Polygone in Zeit O(n log n) umgewandelt werden. Dabei wird ein Sweep von oben und von unten durchgeführt um horizontale spitze Ecken zu beseitigen.",
         "hint": ""
     },
     {
         "id": 16,
         "folder": "Algorithmische Geometrie",
         "front": "Vergleichen Sie die geometrischen Datenstrukturen k-d-Baum und Bereichsbaum.",
-        "back": "",
+        "back": "k-d-Baum split in unterschiedlichen Dimensionen bis einelementige Punkte-Mengen. Speicherbedarf linear, Bereichsabfragen in O(n^(1 - 1/k) + a) wenn balanciert. Bereichsbaum besteht aus einer Menge an balancierten Binär-Bäumen bei dem jeder Baum Bereiche einer Dimension Speichert, wobei Referenzen zu anderen Bäumen gespeichert werden. Wenn geringer Speicherbedarf wichtiger ist, dann sollte ein k-d-Baum einem Bereichsbaum vorgezogen werden, ansonsten wenn Laufzeit wichtiger ist, dann ist ein Bereichsbaum besser.",
         "hint": ""
     },
     {
         "id": 17,
         "folder": "Algorithmische Geometrie",
         "front": "Wie hoch ist der Aufwand einer Halbstreifenanfrage unter Verwendung eines Prioritäts-Suchbaumes? Beweis? Kann der Prioritäts-Suchbaum auch für rechteckige Anfragen nützlich sein?",
-        "back": "",
+        "back": "Prioritäts-Suchbaum speichert Punkte in Binär-Baum, wobei y-Koordinaten stets steigen. Die Halbstreifenanfrage benötigt O(log n + a). Rechteckige Anfragen sind mit mehreren Bäumen möglich, wenn das Rechteck feste Höhe hat. Dabei werden Bereiche mit dieser Höhe gebildet, in denen jeweils eine Halbstreifenanfrage nach oben und unten möglich ist. Bei einer Anfrage werden die beiden geschnittenen Bereiche abgefragt und zusammengefügt.",
         "hint": ""
     },
     {
         "id": 18,
         "folder": "Algorithmische Geometrie",
         "front": "Zeichnen Sie das Voronoi-Diagramm zu vier oder fünf vorgegebenen Punkten",
-        "back": "",
+        "back": "Unbegrenzte Regionen außen, Bi-Sektoren zwischen benachbarten Punkten, danach Sektoren verbinden.",
         "hint": "zur üblichen euklidischen Distanz, fangen Sie mit den Bi-Sektoren zwischen benachbarten Punkten an"
     },
     {
