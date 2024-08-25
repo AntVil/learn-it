@@ -13,8 +13,9 @@
         "Liskov",
         "Prioritäts",
         "Sichtbarkeiten",
+        "Sichtbarkeitspolygon",
         "Tracebarkeit",
-        "voronoi",
+        "voronoi"
     ],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,

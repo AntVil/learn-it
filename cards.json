@@ -38,7 +38,7 @@
         "id": 5,
         "folder": "Algorithmische Geometrie",
         "front": "Wie kann man alle Schnittpunkte von n Liniensegmenten in der Ebene durch ein Sweep-Verfahren berechnen? Erklären Sie die Laufzeit von O((n+k)log n). Warum stimmt hier also O(n log n) nicht ganz?",
-        "back": "Eine Sweep-line bewegt sich über die Ebene und speichert in der Sweep-Status-Struktur die Ordnung der geschnittenen Segmente. Die Ereignisse sind linker Endpunkt, rechter Endpunkt und Schnittpunkt.",
+        "back": "Eine Sweep-line bewegt sich über die Ebene und speichert in der Sweep-Status-Struktur die Ordnung der geschnittenen Segmente. Die Ereignisse sind linker Endpunkt, rechter Endpunkt und Schnittpunkt. Die Laufzeit beträgt O((n+k)log n), weil die Berechnung proportional zu Anzahl der Schnittpunkte ist. Treten mehr Schnittpunkte auf müssen mehr Ereignisse von dem Sweep-Verfahren beachtet werden. Das Verfahren ist deswegen Output-Sensitiv",
         "hint": ""
     },
     {
@@ -80,7 +80,7 @@
         "id": 11,
         "folder": "Algorithmische Geometrie",
         "front": "Bestimmen Sie den Kern eines Beispielpolygons nach dem im Kurs angegebenen Verfahren. Wie viel Zeit benötigt das Verfahren?",
-        "back": "",
+        "back": "Naiv den Schnitt aller Halbebenen, definiert durch die Kanten, zu berechnen benötigt O(n log n). Durch Berechnung der Wesentlichen Kantenfolgen erhält man zwei nach Winkeln sortierte Kantenfolgen und kann danach die Geraden zu deren dualen Punkten transformieren und daraus zwei Konvexe Hüllen berechnen. Der Schnitt dieser Hüllen entspricht dem Kern. Es ist zwar nötig zwei Kanten mit maximalem Drehwinkel zu bestimmen, aber das und alle anderen Schritte sind in O(n) möglich.",
         "hint": "Drehwinkelbedingung, F- und B-Kantenfolgen, Schnitt von unteren Halbebenen, konvexe Hülle von sortierten Punktmengen"
     },
     {
@@ -206,7 +206,7 @@
         "id": 32,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie das Suchverfahren der CAB-Strategie. Was sind selbst-nähernde Kurven? Was lässt sich über ihre Länge sagen?",
-        "back": "",
+        "back": "Die CAB-Strategie ist eine Strategie den Kern eines Polygon zu bestimmen, wenn ein Roboter sich in einem Polygon befindet und dabei nur das Sichtbarkeitspolygon zur Verfügung hat. Auf dem Weg zum Kern vergrößert sich das Polygon, die CAB-Strategie nutzt dieses Phänomen. Hierzu folgt der Roboter den Winkelhalbierenden der wesentlichen Punkten. Die Wege die der Roboter dabei einschlägt sind selbst-nährend. Anschaulich bedeutet das, dass für drei aufeinanderfolgende Punkte a, b & c b näher an c liegt als a. Selbst-nähernde Kurven benötigen viel Platz um sich zu winden. Der Abstand zu den Endpunkten kann höchstens ~5.3331-mal so lang sein wie der direkte Weg.",
         "hint": ""
     },
     {
