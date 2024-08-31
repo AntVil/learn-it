@@ -3,7 +3,7 @@
         "id": 0,
         "folder": "Algorithmische Geometrie",
         "front": "Warum hat Sortieren durch Vergleiche die Zeitkomplexität Theta(n log n)?",
-        "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleichen Schritte durchführen. Die Schritte können als ein Entscheidungsbaum gesehen werden mit n! Blättern. Die mindest-höhe beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
+        "back": "Ein deterministischer Algorithmus wird für eine gegebene Folge immer die gleichen Schritte durchführen. Die Schritte können als ein Entscheidungsbaum (Ablaufplan) gesehen werden mit n! Blättern. Das liegt daran, dass es n! viele Verschiedene Folgen zu sortieren gibt. Die mindest-höhe (also Laufzeit) beträgt log2(n!) >= 1/3n log2(n). Da zB Heap-sort O(n log(n)) benötigt, hat Sortieren durch Vergleiche Theta(n log n).",
         "hint": "Entscheidungsbaum, Mindestlänge des längsten Wegs in einem binären Baum (log2(x))"
     },
     {
@@ -31,14 +31,14 @@
         "id": 4,
         "folder": "Algorithmische Geometrie",
         "front": "Was ist das Charakteristische an allen Sweep-Verfahren? Wie heißen die Datenstrukturen, die dabei immer verwendet werden?",
-        "back": "Ein Sweep-Verfahren verwandelt in einem statischen d-dimensionalen Problem eine dimension in eine zeitliche und läuft diese Dimension ab. (In der Ebene erfolgt dies meist mit der Sweep-Line.) Dabei wird eine Sweep-Status-Struktur mitgeführt, welche bei gewissen Ereignissen ggf. aktualisiert wird.",
+        "back": "Ein Sweep-Verfahren verwandelt in einem statischen d-dimensionalen Problem eine dimension in eine zeitliche und läuft diese Dimension ab. (In der Ebene erfolgt dies meist mit der Sweep-Line.) Dabei wird eine Sweep-Status-Struktur mitgeführt, welche bei gewissen Ereignissen ggf. aktualisiert wird. Die Ereignisse liegen in einer Ereignis Struktur vor, die in manchen Fällen dynamisch ist.",
         "hint": ""
     },
     {
         "id": 5,
         "folder": "Algorithmische Geometrie",
         "front": "Wie kann man alle Schnittpunkte von n Liniensegmenten in der Ebene durch ein Sweep-Verfahren berechnen? Erklären Sie die Laufzeit von O((n+k)log n). Warum stimmt hier also O(n log n) nicht ganz?",
-        "back": "Eine Sweep-line bewegt sich über die Ebene und speichert in der Sweep-Status-Struktur die Ordnung der geschnittenen Segmente. Die Ereignisse sind linker Endpunkt, rechter Endpunkt und Schnittpunkt. Die Laufzeit beträgt O((n+k)log n), weil die Berechnung proportional zu Anzahl der Schnittpunkte ist. Treten mehr Schnittpunkte auf müssen mehr Ereignisse von dem Sweep-Verfahren beachtet werden. Das Verfahren ist deswegen Output-Sensitiv",
+        "back": "Eine Sweep-line bewegt sich über die Ebene und speichert in der Sweep-Status-Struktur die Ordnung der geschnittenen Segmente. Die Ereignisse sind linker Endpunkt, rechter Endpunkt und Schnittpunkt. Die Laufzeit beträgt O((n+k)log n), weil die Berechnung proportional zur Anzahl der Schnittpunkte ist. Treten mehr Schnittpunkte auf müssen mehr Ereignisse von dem Sweep-Verfahren beachtet werden (dynamische Ereignis Struktur). Das Verfahren ist deswegen Output-Sensitiv.",
         "hint": ""
     },
     {
@@ -52,7 +52,7 @@
         "id": 7,
         "folder": "Algorithmische Geometrie",
         "front": "Erläutern Sie das Sweep-Verfahren für die Bestimmung des dichtesten Paars von n Punkten in der Ebene. Warum genügt es, ist es für die Laufzeit wichtig, dass man sich während des Sweeps nur die Punkte im vertikalen Streifen links von der sweep line merkt? Wie kann man das Verfahren auf höhere Dimensionen erweitern?",
-        "back": "Es wird eine Sweep-line mit einem vertikalen Streifen dahinter verwendet. der Streifen hat dabei die Größe des bisher dichtesten Paars und speichert Punkte in einem balancierten Binärbaum. Er enthält also die einzig möglichen Kandidaten, welche einen geringeren Abstand haben können. Pro Ereignis müssen dabei nur maximal konstant viele (< 11) Punkte betrachtet werden. Es kommt deswegen zur Laufzeit O(n log n). Bei höheren Dimensionen wie im Raum wird eine Datenstruktur benötigt, welche Bereichsabfragen in der Ebene in möglichst effizienter Zeit berechnen kann. Das Verfahren funktioniert dann Analog nur mit einem Quader statt Rechteck.",
+        "back": "Es wird eine Sweep-line mit einem vertikalen Streifen dahinter verwendet. der Streifen hat dabei die Größe des bisher dichtesten Paars und speichert Punkte in einem balancierten Binärbaum. Er enthält also die einzig möglichen Kandidaten, welche einen geringeren Abstand haben können. Pro Ereignis müssen dabei nur maximal konstant viele (<= 6) Punkte betrachtet werden. Es kommt deswegen zur Laufzeit O(n log n). Bei höheren Dimensionen wie im Raum wird eine Datenstruktur benötigt, welche Bereichsabfragen in der Ebene in möglichst effizienter Zeit berechnen kann. Das Verfahren funktioniert dann Analog nur mit einem Quader statt Rechteck.",
         "hint": ""
     },
     {
@@ -88,7 +88,7 @@
         "folder": "Algorithmische Geometrie",
         "front": "Wie viele Wächter benötigt man zur Bewachung eines konvexen, eines sternförmigen, eines beliebigen einfachen Polygons?",
         "back": "konvex / sternförmig: genau 1\nbeliebig einfach: max v / 3",
-        "hint": "Toblerone-Polygon"
+        "hint": "Toblerone-Polygon (Polygon mit Zacken getrennt durch horizontale Kanten)"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "id": 14,
         "folder": "Algorithmische Geometrie",
         "front": "Zur 3-Färbung: was genau wird gefärbt, nach welcher Regel, warum ist dies immer möglich?",
-        "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer möglich, weil per Definition eine Triangulation eines einfachen Polygons nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor.",
+        "back": "Die Konten einer Triangulation werden so gefärbt, dass benachbarte Knoten (Knoten die durch eine Kante verbunden sind) nicht die gleiche Farbe haben. Dies ist immer möglich, weil per Definition eine Triangulation eines einfachen Polygons nur aus Dreiecken besteht. Bei jedem Dreieck kommt dabei jede Farbe genau einmal vor. Das ist möglich, da die Triangulation einen Nachbarschafts Graph erzeugt in Form eines Baums.",
         "hint": ""
     },
     {
@@ -136,21 +136,21 @@
         "id": 19,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie einige Anwendungen von Voronoi-Diagrammen.",
-        "back": "Berechnung der Delaunay Triangulation: Für die Punkte wird das Voronoi-Diagramm berechnet und anschließend der Duale-Graph bestimmt. Der Duale-Graph entspricht der Delaunay-Triangulation",
+        "back": "Berechnung der Delaunay Triangulation: Für die Punkte wird das Voronoi-Diagramm berechnet und anschließend der Duale-Graph bestimmt. Der Duale-Graph entspricht der Delaunay-Triangulation. Nächst gelegenen Punkt bestimmen für beliebigen Punkt. Jede Voronoi Region ist Konvex.",
         "hint": ""
     },
     {
         "id": 20,
         "folder": "Algorithmische Geometrie",
         "front": "Was ist die Delaunay-Triangulation? Wie und in welcher Zeit kann man die Delaunay-Triangulation in das Voronoi-Diagramm umrechnen?",
-        "back": "Die Delaunay Triangulation ist eine Triangulation einer Punkte-Menge, bei dem die Umkreise von allen Dreiecken keine anderen Punkte enthalten. Der Duale-Graph der Delaunay-Triangulation ist das Voronoi-Diagram. Die Umwandlung ist in linearer Zeit möglich.",
+        "back": "Die Delaunay Triangulation ist der duale Graph des Voronoi Diagram. Sie ist eine Triangulation einer Punkte-Menge, bei dem die Umkreise von allen Dreiecken keine anderen Punkte enthalten. Eigenschaft ergibt sich aus Voronoi-Diagram, da Umkreise Voronoi-Knoten sind. Die Umwandlung von Voronoi zu Delaunay ist in beide Richtungen in linearer Zeit möglich.",
         "hint": "Dualität zwischen den beiden"
     },
     {
         "id": 21,
         "folder": "Algorithmische Geometrie",
         "front": "Beweisen Sie den Zusammenhang zwischen dem Voronoi-Diagramm und der konvexen Hülle der Punkte.",
-        "back": "Für jede Kante der Konvexen-Hülle gilt, dass sie die Ebene in zwei Hälften unterteilt, wobei nur eine Hälfte alle Punkte enthält. Somit kann es keinen Punkt auf der anderen Halb-Ebenen geben. Aus diesem Grund ist die Voronoi-Kante, welche durch die Beiden Punkte der Kante der Konvexen-Hülle gebildet wird unbeschränkt.",
+        "back": "Für jede Kante der Konvexen-Hülle gilt, dass sie die Ebene in zwei Hälften unterteilt, wobei nur eine Hälfte alle Punkte enthält. Somit kann es keinen Punkt auf der anderen Halb-Ebenen geben. Aus diesem Grund ist die Voronoi-Kante, welche durch die Beiden Punkte der Kante der Konvexen-Hülle gebildet wird unbeschränkt. Genauso gilt, dass zu jedem Punkt auf der Hülle, die Normale zur Gerade durch den Punkt eine Halbgerade und somit unbeschränkt ist.",
         "hint": "Punkt auf konvexer Hülle <=> unbeschränkte Region"
     },
     {
@@ -164,7 +164,7 @@
         "id": 23,
         "folder": "Algorithmische Geometrie",
         "front": "Zeichnen Sie zu zwei vorgegebenen Liniensegmenten den Bi-Sektor bezüglich der euklidischen Metrik, aus wie vielen Teilstücken kann der Bi-Sektor bestehen?",
-        "back": "Bi-Sektor verläuft geradlinig außerhalb von Orthogonalen Bereichen. Der Bi-Sektor von zwei Liniensegmenten kann maximal aus 7 Teilstücken bestehen. (Bsp: '|-')",
+        "back": "Bi-Sektor verläuft geradlinig außerhalb von Orthogonalen Bereichen und innerhalb beider Orthogonalen Bereiche (Winkelhalbierende). Ansonsten Verläuft er Parabel-Förmig. Der Bi-Sektor von zwei Liniensegmenten kann maximal aus 7 Teilstücken bestehen. (Bsp: '|-') Anwendung: zB durch Hindernisse schlüpfen.",
         "hint": ""
     },
     {
@@ -178,14 +178,14 @@
         "id": 28,
         "folder": "Algorithmische Geometrie",
         "front": "Was verstehen wir unter einem kompetitiven Verfahren, in welchen Zusammenhängen sind solche Verfahren interessant?",
-        "back": "Verfahren, welche das Optimum meist nicht erreichen, aber nahe kommen und angewendet werden können bei NP-schweren Problemen bzw. Problemen mit unvollständigen Informationen.",
+        "back": "Verfahren, welche das Optimum meist nicht erreichen, aber nahe kommen und angewendet werden können bei NP-schweren Problemen bzw. Problemen mit unvollständigen Informationen. Kosten_strategie(problem) <= CompetitiverFactor * kosten_optimum(problem) + Andere Für alle probleme aus P",
         "hint": "NP-schwere Probleme und solche mit unvollständigen Informationen"
     },
     {
         "id": 29,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
-        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durchprobiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1,7.",
+        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durchprobiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1.7. Beweis für 2: Bin Packing macht höchstens einen Behälter nicht Halb-Voll. Optimum kann höchstens alle Behälter voll machen.",
         "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
     },
     {
