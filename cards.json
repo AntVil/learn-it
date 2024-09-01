@@ -171,28 +171,28 @@
         "id": 27,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das Verfahren geometrische Transformation zur Berechnung des Voronoi-Diagramms und skizzieren Sie die Laufzeitabschätzung.",
-        "back": "Bei der geometrischen Transformation werden alle Punkte in der Ebene in den Raum projiziert mit Hilfe eines Paraboloid. Wegen der konvexen Eigenschaft des Paraboloid liegen alle Punkte auf der konvexen Hülle. Außerdem gilt die Umkreis-Eigenschaft, dass kein Punkt innerhalb des Umkreises eines Dreiecks ist, auf dem Paraboloid ebenfalls. Durch projizieren auf die Ebene erhält man die Delaunay-Triangulation und durch die Dualität auch das Voronoi-Diagramm.",
+        "back": "Bei der geometrischen Transformation werden alle Punkte in der Ebene in den Raum projiziert mit Hilfe eines Paraboloid. (x, y) -> (x, y, x^2+y^2). Wegen der konvexen Eigenschaft des Paraboloid liegen alle Punkte auf der konvexen Hülle. Außerdem gilt die Umkreis-Eigenschaft, dass kein Punkt innerhalb des Umkreises eines Dreiecks ist, auf dem Paraboloid ebenfalls. Durch projizieren auf die Ebene erhält man die Delaunay-Triangulation und durch die Dualität auch das Voronoi-Diagramm. Schnitte mit der Tangential-Ebene von Dreiecken geben Ellipsen und zurück-transformiert wieder Kreise.",
         "hint": "Wie wird die Umkreis-Eigenschaft der Delaunay-Triangulation ausgenutzt, was hat dies mit der konvexen Hülle in drei Dimensionen zu tun?"
     },
     {
         "id": 28,
         "folder": "Algorithmische Geometrie",
         "front": "Was verstehen wir unter einem kompetitiven Verfahren, in welchen Zusammenhängen sind solche Verfahren interessant?",
-        "back": "Verfahren, welche das Optimum meist nicht erreichen, aber nahe kommen und angewendet werden können bei NP-schweren Problemen bzw. Problemen mit unvollständigen Informationen. Kosten_strategie(problem) <= CompetitiverFactor * kosten_optimum(problem) + Andere Für alle probleme aus P",
+        "back": "Verfahren, welche das Optimum meist nicht erreichen, aber nahe kommen und angewendet werden können bei NP-schweren Problemen bzw. Problemen mit unvollständigen Informationen. Kosten_Strategie(problem) <= KompetitiverFactor * kosten_optimum(problem) + Andere Für alle Probleme aus P",
         "hint": "NP-schwere Probleme und solche mit unvollständigen Informationen"
     },
     {
         "id": 29,
         "folder": "Algorithmische Geometrie",
         "front": "Beschreiben Sie das First-Fit-Verfahren für das Bin-Packing-Problem. Welcher kompetitive Faktor wird erreicht, warum?",
-        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durchprobiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1.7. Beweis für 2: Bin Packing macht höchstens einen Behälter nicht Halb-Voll. Optimum kann höchstens alle Behälter voll machen.",
+        "back": "Beim First-Fit-Verfahren wird immer in der gleichen Reihenfolge jeder Bin durchprobiert, bis ein passender gefunden ist. Der kompetitive Faktor liegt mindestens bei 2, weil maximal doppelt so viele Bins verwendet werden. Die Scharfe Schranke liegt sogar bei 1.7. Beweis für 2: Bin Packing macht höchstens einen Behälter nicht Halb-Voll. Optimum kann höchstens alle Behälter voll machen. First-Fit decreasing 1.22.",
         "hint": "anschaulich zu argumentieren ist hier einfacher als mit Formeln."
     },
     {
         "id": 30,
         "folder": "Algorithmische Geometrie",
         "front": "Wir suchen die Tür in der Wand. Welchen kompetitiven Faktor können wir erreichen, wie und warum? Kann es noch besser gehen?",
-        "back": "Der optimale Kompetitive-Faktor liegt bei 9. Hierbei wird die Wand von beiden Seiten abwechselnd abgesucht. Die Such-Tiefe wird dabei nach jedem Richtungswechsel verdoppelt. Im schlimmsten Fall verfehlt man die Tür knapp und macht einen weiteren Durchlauf mehr.",
+        "back": "Der optimale Kompetitive-Faktor liegt bei 9. Hierbei wird die Wand von beiden Seiten abwechselnd abgesucht. Die Such-Tiefe wird dabei nach jedem Richtungswechsel verdoppelt. Im schlimmsten Fall verfehlt man die Tür knapp und macht einen weiteren Durchlauf mehr. 2 * (1 + ... + 2^n + 2^n+1) + 2^n + epsilon = 2 * (2^(n+2) - 1) + 2^n + epsilon = 9 * 2^n + epsilon - 2",
         "hint": ""
     },
     {
