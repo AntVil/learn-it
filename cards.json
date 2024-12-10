@@ -973,10 +973,745 @@
         "hint": ""
     },
     {
-        "id": 141,
-        "folder": "Objekt Orientierte Programmierung",
-        "front": "Was unterscheidet den parametrischen von beschränkten parametrischen Polymorphismus?",
-        "back": "Bei der Definition des Typen können Zusicherungen gemacht werden.",
+        "id": 142,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist ein Algorithmus?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 143,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie misst man die Rechenzeit eines Algorithmus?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 144,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie lautet die Erweiterte Churche These?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 145,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie unterscheiden sich Registermaschinen und Turingmaschinen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 146,
+        "folder": "Komplexitäts Theorie",
+        "front": "Nenne wichtige Probleme aus der Komplexitätstheorie.",
+        "back": "Traveling-Sales-Man (TSP), (Directed) Hamilton-Circle, SAT, Knapsack-Problem, Bin-Packing, CLIQUE, Anti-Clique (Independent Set)",
+        "hint": ""
+    },
+    {
+        "id": 147,
+        "folder": "Komplexitäts Theorie",
+        "front": "Welche Komplexitäts-Klassen erlauben Versagen?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 148,
+        "folder": "Komplexitäts Theorie",
+        "front": "Welche Komplexitäts-Klassen erlauben einseitige Fehler?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 149,
+        "folder": "Komplexitäts Theorie",
+        "front": "Welche Komplexitäts-Klassen erlauben beidseitige Fehler?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 150,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist der Unterschied zwischen Turing-Reduktion und Polynomiell-Reduktion?",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 151,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird SAT auf 3SAT turing-reduziert?",
+        "back": "",
+        "hint": "SAT <=T 3SAT"
+    },
+    {
+        "id": 152,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf CLIQUE polynomiell-reduziert?",
+        "back": "",
+        "hint": "3SAT <=P CLIQUE (Teilmenge jeder kennt jeden)"
+    },
+    {
+        "id": 153,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf DHC polynomiell-reduziert?",
+        "back": "",
+        "hint": "3SAT <=P DHC (Directed Hamilton Circle)"
+    },
+    {
+        "id": 154,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was bedeutet C-vollständig, C-schwer und C-äquivalent?",
+        "back": "C-schwer:\nmind so schwer wie alle aus C\nC-Vollständig:\nSchwerstes Problem aus C\nC-äquivalent:\nC enthält Problem",
+        "hint": ""
+    },
+    {
+        "id": 155,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist eine alternative Definition von NP?",
+        "back": "Algorithmus erzeugt randomisiert eine potenzielle Lösung. In polynomieller Zeit kann die Lösung überprüft werden. Die Fehlerwahrscheinlichkeit ist extrem hoch.",
+        "hint": "Verifikation"
+    },
+    {
+        "id": 156,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie beweist man die NP-Vollständigkeit eines Problems?",
+        "back": "Es genügt zu zeigen, dass das Problem in NP enthalten ist und ein beliebiges anderes NP-Vollständiges Problem (zB SAT) auf das Problem zu reduzieren.",
+        "hint": ""
+    },
+    {
+        "id": 157,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Beweisidee vom Satz von Cook?",
+        "back": "Das Verhalten einer Turing-Maschine wird durch Klauseln beschrieben. Die Klauseln stellen sicher, dass die Maschine korrekt startet, fortfährt und schlussendlich in einem akzeptierenden Zustand landet. Die entstandene Formel kann dann als Eingabe für SAT verwendet werden.",
+        "hint": "SAT ist NP-vollständig (Wenn SAT in P, genau dann NP = P)"
+    },
+    {
+        "id": 158,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf SSS polynomiell-reduziert?",
+        "back": "Pro Variable x_i werden zwei Zahlen a & b erzeugt. Die Zahlen a haben eine 1 an der Nachkommastelle i und 1ser an den j-ten Stellen, wenn sie in der j-ten Klausel nicht-negiert vorkommen. Die Zahlen b haben die gleichen Nachkommastellen aber werden auf die negierte Klausel angewandt. Die Zahlen a & b repräsentieren, ob eine Variable wahr oder falsch ist und ob eine Klausel erfüllt ist. Damit eine Formel erfüllt ist, müssen alle Nachkommastellen 1 haben. Die Zahlen vor dem Komma müssen mindestens 1 sein, damit jede Klausel erfüllt ist. Zum auffüllen gibt es pro Klausel zwei Zahlen d & e, welche an der j-ten Stelle 1 haben. So ist die Summe vor dem Komma immer genau 3 wenn eine Formel erfüllbar ist.",
+        "hint": "3SAT <=P SSS (Subset Sum Problem)"
+    },
+    {
+        "id": 159,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird SSS auf PARTITION polynomiell-reduziert?",
+        "back": "Es werden zwei Zahlen a & b hinzugenommen (Erzwingende Komponente). Wenn S der Ziel-Summen-Wert ist und S* die gesamt Summen ist, dann ist a = 2S*-S und b = S*+S. Bei den Partitionen wird a zwangsläufig in einer und b in der anderen Partition landen, weil a + b über der neuen Gesamt-Summe 4S* liegt. Löst man PARTITION und lässt danach a & b weg, hat man eine Lösung für SSS.",
+        "hint": "SSS (Subset Sum Problem) <=P PARTITION (Aufteilen in zwei Summen mit gleicher Größe)"
+    },
+    {
+        "id": 160,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird PARTITION auf SWI polynomiell-reduziert?",
+        "back": "Jede Zahl wird Abgebildet auf eine Aufgabe, welche so lange Dauert. Die Deadline wird für alle auf die Gesamt Summe + 1 gesetzt. Es wird eine Aufgabe hinzugefügt (Erzwingende Komponente), welche genau in der Mitte der Gesamt-Zeit bearbeitet werden muss und die Zeit 1 benötigt. Die Aufgaben müssen also in zwei Intervalle mit gleicher Größe Aufgeteilt werden welche davor und danach geschehen müssen.",
+        "hint": "PARTITION (Aufteilen in zwei Summen mit gleicher Größe) <=P SWI (Sequencing with intervals)"
+    },
+    {
+        "id": 161,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf GC polynomiell-reduziert?",
+        "back": "Jedes Literal wird mit zwei Knoten repräsentiert die Verbunden werden und diese sind alle mit einem Knoten v3 verbunden, welcher die dritte Farbe hat. Somit wird erzwungen, dass jedes Literal die erste und zweite Farbe hat und damit negiert oder nicht gewählt wird. v3 bildet mit v1 & v2 zusätzlich noch ein Dreieck. Für jede Klausel wird eine Struktur (≡⪩=⪧<) aufgebaut, welche erzwingt, dass mindestens eines der Literale mit der ersten Farbe gefärbt werden muss. Wenn die Dreifärbung gelingt, ist die Formel erfüllbar.",
+        "hint": "3SAT <=P GC (Graph Coloring)"
+    },
+    {
+        "id": 162,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf 3-DM polynomiell-reduziert?",
+        "back": "Jedes Literal wird durch je 4 Personen x_i und 4 Personen ¬x_i aus Gruppe 1 repräsentiert. Durch je 4 Personen aus Gruppe 2 & 3 (Auswahlkomponente) werden die Personen verknüpft, sodass nur Gruppen mit x_i oder Gruppen mit ¬x_i gebildet werden. Für jede Klausel gibt es zwei Personen aus Gruppe 2 & 3, welche nur mit einer Person aus der Klausel eine Gruppe bilden können. Dies repräsentiert die Erfüllbarkeit einer Klausel. Zum auffüllen gibt es nur weitere Personen aus Gruppe 2 & 3.",
+        "hint": "3SAT <=P 3-DM (3/k-dimensional matching)"
+    },
+    {
+        "id": 163,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie wird 3SAT auf (0,1,3)-CP polynomiell-reduziert?",
+        "back": "",
+        "hint": "3SAT <=P (0,1,3)-CP ((0,1,3-CHampionship-problem)"
+    },
+    {
+        "id": 164,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was bedeutet starte NP-Vollständigkeit und pseudo-polynomieller Algorithmus?",
+        "back": "Starke NP-Vollständigkeit bedeutet, dass ein NP-vollständiges Problem, für Eingaben, welche durch ein Polynom beschränkt sind, weiterhin NP-vollständig sind. Ein Beispiel wäre TSP, da TSP mit Distanzen 1 & 2 bereits NP-vollständig ist. Existiert ein pseudo-polynomieller Algorithmus für ein Problem, so ist das Problem nicht stark NP-vollständig.",
+        "hint": ""
+    },
+    {
+        "id": 165,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie funktioniert der pseudo-polynomielle Algorithmus für KP und welche Bedeutung hat dieser?",
+        "back": "Der Algorithmus baut eine Tabelle auf mit der Zeilen-Anzahl n und der Spalten-Anzahl V, wobei V die Summe aller Werte der Gegenstände ist. Dabei bedeutet die k-te Zeile, dass die ersten k Gegenstände verfügbar sind. Die j-te Spalte sagt aus, welches Gewicht nötig ist ein exaktes Gewicht zu erhalten. Die Tabelle wird Zeilenweise ausgefüllt, wobei Ergebnisse aus vorherigen Zeilen wiederverwendet werden. Die Laufzeit ist polynomiell, wenn die Gesamt-Summe V polynomiell in n ist. Wegen diesem Algorithmus ist KP nicht stark NP-vollständig.",
+        "hint": "KP (knapsack-problem)"
+    },
+    {
+        "id": 166,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Approximations-Güte eines Algorithmus und wie misst man diese?",
+        "back": "Die Approximations-Güte r_A(x) eines Algorithmus ist der Quotient, welcher angibt, wie nahe die Approximierte Lösung für eine bestimmte Eingabe am Optimum liegt. Am wichtigsten ist meist die maximale Approximations-Güte. Zudem gibt es die asymptotische maximale Approximations-Güte r_A^inf.",
+        "hint": ""
+    },
+    {
+        "id": 167,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Klasse APX?",
+        "back": "APX enthält Algorithmen, welche einen exakten konstanten Faktor c vom Optimum entfernt sind.",
+        "hint": ""
+    },
+    {
+        "id": 168,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Klasse PTAS?",
+        "back": "PTAS enthält Algorithmen, welche für ein gewähltes konstantes epsilon polynomielle Laufzeit haben und eine Approximations-Güte von 1 + epsilon besitzen.",
+        "hint": ""
+    },
+    {
+        "id": 169,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Klasse FPTAS?",
+        "back": "FPTAS enthält Algorithmen, welche für ein gewähltes konstantes epsilon polynomielle Laufzeit in der Eingabe als auch in 1/epsilon haben und eine Approximations-Güte von 1 + epsilon besitzen.",
+        "hint": ""
+    },
+    {
+        "id": 170,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist Klasse NPO?",
+        "back": "NPO ist das Gegenstück zu NP angewandt auf Optimierungsprobleme. Für eine Eingabe ist in polynomieller Zeit möglich die Zulässigkeit und den Wert zu berechnen. MAX-NPO und MIN-NPO sind die Probleme für Maximierung und Minimierung. Ein Problem aus MAX-NPO ist MAX-W-SAT (SAT mit Gewichten pro Klausel insgesamt maximieren) und ein Problem aus MIN-NPO ist MIN-W-SAT (SAT mit Gewichten pro Klausel insgesamt minimieren).",
+        "hint": ""
+    },
+    {
+        "id": 171,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wieso ist MAX-W-SAT NPO-vollständig?",
+        "back": "Offensichtlich gehört MAX-W-SAT zu MAX-NPO. Eine Nicht-deterministische Turing-maschine kann eine Lösung mit Polynomieller Länge erzeugen falls eine existiert. Die Lösung und der Wert der Lösung kann auf das Band geschrieben werden. Diese Turingmaschine kann wie im Beweis von Cook durch eine Logische Formel repräsentiert werden. Die Gewichte werden so gewählt, dass v(x, s) entsteht. Diese Formel ist eine Eingabe für MAX-W-SAT.",
+        "hint": ""
+    },
+    {
+        "id": 172,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist <=_PTAS?",
+        "back": "Ein Optimierungs-Problem wird auf ein anderes Optimierungsproblem aus PTAS reduziert. Das Unterprogramm wird dabei nur einmal aufgerufen. APX-Reduktion funktioniert analog. Es werden die Abbildungen f (Eingabe A -> Eingabe B), g ((Eingabe A, Lösung B, epsilon) -> Lösung A), alpha (bildet epsilon ab) benötigt.",
+        "hint": "PTAS-Reduktion"
+    },
+    {
+        "id": 173,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Polynomielle Hierarchie?",
+        "back": "Die Polynomielle Hierarchie ist definiert durch Algorithmen, welche Zugriff auf Orakel bekommen. Ein Orakel kann in konstanter Zeit ein bestimmtes Problem lösen. Dabei sind Σ2=NP(NP(P)) und Π2=coNP(NP(P)) und Δ2=P(NP(P)). Diese Klassen enthalten Probleme, welche durch einen (nicht-)deterministischen polynomiellen Algorithmus mit Zugriff auf ein Orakel aus der jeweiligen Komplexitätsklasse, gelöst werden können. Alle Klassen der Polynomiellen Hierarchie sind in PSPACE (Alle Probleme die mit polynomiellem Speicherplatz gelöst werden können) enthalten.",
+        "hint": ""
+    },
+    {
+        "id": 174,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist ein Interaktives Beweissystem?",
+        "back": "Ein Interaktives Beweissystem besteht aus einem Beweiser und einem Verifizierer, welche je nach Eingabe Abwechselnd Nachrichten senden. Der Beweiser hat dabei unbeschränkte Rechenzeit, während der Verifizierer nur polynomielle Rechenzeit hat. Zum Schluss muss der Verifizierer die Eingabe akzeptieren oder ablehnen. Kleine Fehlerwahrscheinlichkeiten sind erlaubt. Fehler können gesenkt werden, indem eine Nachricht aus polynomiell vielen Sub-Nachrichten bestehen. Die Anzahl der Nachrichten bleibt dabei konstant.",
+        "hint": ""
+    },
+    {
+        "id": 175,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Komplexitätsklasse IP?",
+        "back": "Probleme aus IP können von einem Interaktiven Beweissystem gelöst werden, wobei die Fehler hierbei unter 1/4 in beide Richtungen sein müssen. Bei IP(k) gibt k die Anzahl der Kommunikationsrunden an.IP = PSPACE (Alle Probleme die mit polynomiellem Speicherplatz gelöst werden können).",
+        "hint": ""
+    },
+    {
+        "id": 176,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was sind zero-knowledge proofs?",
+        "back": "Es handelt sich um ein Beweissystem, für ein Entscheidungsproblem, aus zwei Randomisierten Algorithmen B und V. Dabei muss es möglich sein den Algorithmus V auszutauschen, ohne, dass ",
+        "hint": ""
+    },
+    {
+        "id": 177,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was sind computational zero-knowledge proofs?",
+        "back": "Falls es eine Einwegfunktion gibt, sodass B (aus einem Beweissystem) Beweisen kann ohne sein Geheimnis Preis zu geben. (B wendet eine Einwegfunktion auf sein Geheimnis an, und veröffentlicht dies)",
+        "hint": "zero-knowledge-Eigenschaft unter kryptographischen Annahmen"
+    },
+    {
+        "id": 178,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Komplexitätsklasse PCP(r(n), q(n))?",
+        "back": "O(r(n)) random bits und O(q(n)) query bits, wobei jeder Beweisversuch von WAHR klappt und jeder Beweis versuch für FALSCH höchstens die Wahrscheinlichkeit 50% hat. Dabei gilt:\nP = PCP(0, 0)\nNP = PCP(0, poly)\nco-RP = PCP(poly, 0)\nNP = PCP(log n, poly)\nNP = PCP(log n, 1)",
+        "hint": ""
+    },
+    {
+        "id": 179,
+        "folder": "Komplexitäts Theorie",
+        "front": "Was ist die Beweisidee hinter 3-SAT in PCP(n^3, 1) (bzw NP ⊆ PCP(n^3, 1))?",
+        "back": "Die Klauseln werden auf Parität überprüft, wobei zufällig Klauseln ausgeblendet werden. Konkret gibt es dabei mehrere Module, welche insgesamt konstant viele Beweis-Bits lesen.",
+        "hint": ""
+    },
+    {
+        "id": 180,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie stehen Klassen der Polynomielle Hierarchie in Bezug auf randomisierte Klassen?",
+        "back": "P(P) = P\nNP(NP) ?= NP\nBPP(BPP) = BPP\nBPP ⊆ Σ2\nBPP ⊆ RP(NP) ∩ coRP(NP)",
+        "hint": ""
+    },
+    {
+        "id": 181,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 182,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 183,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 184,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 185,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 186,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 187,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 188,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 189,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 190,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 191,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 192,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 193,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 194,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 195,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 196,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 197,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 198,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 199,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 200,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 201,
+        "folder": "Komplexitäts Theorie",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 202,
+        "folder": "Information Hiding",
+        "front": "Was sind die drei Kern-Konzepte von Information Hiding?",
+        "back": "Capacity/Bandwidth (wie viel?)\nRobustness (zB Error correction)\nSecrecy/Stealthiness/Detectability (wie schwer zu entdecken?)",
+        "hint": ""
+    },
+    {
+        "id": 203,
+        "folder": "Information Hiding",
+        "front": "Wieso bilden Capacity, Robustness und Secrecy ein Dreieck?",
+        "back": "Optimieren eines führt zu Verlust von anderen (Wenn zB Capacity erhöht wird, sinkt Secrecy.)",
+        "hint": ""
+    },
+    {
+        "id": 204,
+        "folder": "Information Hiding",
+        "front": "Was sind einige Themengebiete von Information Hiding?",
+        "back": "Anonymity (Sender/Empfänger verstecken)\nCovert Channel (Informationen in Resource verstecken un-gedacht dafür)\nCryptography (Information unverständlich machen)\nObfuscation (Informationen unkenntlich machen, Programm-Code Funktionalität weiterhin gleich)\nSteganographie (Informationen in Objekt speichern, meist in Covert Channel bei Network)\nWatermarking (Information über Objekt in Objekt speichern, meist erkennbar durch Maschinen)",
+        "hint": ""
+    },
+    {
+        "id": 205,
+        "folder": "Information Hiding",
+        "front": "Welche Arten von Steganographie und Watermarking gibt es?",
+        "back": "Network Stg, Media Stg, Text Stg, Filesystem Stg, Cyber-Physical Systems (mind eine Physische Komponente zB Messbare Temperatur) Stg, Audio Watermarking, Image Watermarking",
+        "hint": ""
+    },
+    {
+        "id": 206,
+        "folder": "Information Hiding",
+        "front": "Ist das anwenden von Information Hiding gut oder schlecht? Wie sieht es mit Gegenmaßnahmen aus?",
+        "back": "Kann für beides verwendet werden.\ngut:\nJournalist schickt Informationen unterdrückt von Regime (Deniability nötig um unentdeckt zu bleiben)\nschlecht:\nCyber-Kriminelle verteilen Informationen über System (Reversibility nötig um zu vertuschen)\n\nFür Gegenmaßnahmen gilt das gleiche.",
+        "hint": ""
+    },
+    {
+        "id": 207,
+        "folder": "Information Hiding",
+        "front": "Wie verfährt man beim entdecken einer neuen Information Hiding Methode?",
+        "back": "Entweder man veröffentlicht nur Oberfläche Informationen oder Details mit Gegenmaßnahmen.",
+        "hint": ""
+    },
+    {
+        "id": 208,
+        "folder": "Information Hiding",
+        "front": "Wo kann Text-Steganographie angewendet werden?",
+        "back": "geschriebener/gedruckter Text, digitales Text-Dokument, Text-Stream (zB Teleprompter)",
+        "hint": ""
+    },
+    {
+        "id": 209,
+        "folder": "Information Hiding",
+        "front": "Was sind Gegenmaßnahmen für LSB Steganographie in Bildern?",
+        "back": "Benachbarte Pixel haben viele LSB wechsel. Gegenmaßnahmen zu Gegenmaßnahmen sind Bereiche im Bild mit konstanter Farbe zu meiden und Nachricht kurz halten",
+        "hint": ""
+    },
+    {
+        "id": 210,
+        "folder": "Information Hiding",
+        "front": "Welche Arten von Text-Steganographie gibt es?",
+        "back": "Semantisch: Wörter/Buchstaben ersetzten\nGraphisch: Symbole einfügen/entfernen\nGeometrisch: Positionen ändern",
+        "hint": ""
+    },
+    {
+        "id": 211,
+        "folder": "Information Hiding",
+        "front": "Was sind physikalische Covert Channels?",
+        "back": "Zwei Prozesse/Computer brauchen eine gemeinsame Resource, wobei ein Prozess lesen und der andere Prozess schreiben können muss. Ressourcen können Dateien, aber auch angeschlossene Hardware sein (zB Camera, Mikro, Lautsprecher, LED, ...).\nDarstellbar als Matrix (Shared Resource Matrix, SRM): Prozesse * Ressourcen",
+        "hint": ""
+    },
+    {
+        "id": 212,
+        "folder": "Information Hiding",
+        "front": "Was ist der Unterschied zwischen Covert und Side Channels?",
+        "back": "Ein Covert Channel ist nicht gedacht für Austausch von Informationen. Ein Side-Channel ist ein Covert-Channel, bei dem der Austausch unbeabsichtigt statt findet. (Algorithmus läuft schneller bei bestimmter Eingabe)",
+        "hint": ""
+    },
+    {
+        "id": 213,
+        "folder": "Information Hiding",
+        "front": "Was sind Steganographische Dateisysteme? Welche Probleme gibt es dabei?",
+        "back": "3 Varianten: Dateisystem in Cover-Objekt speichern, versteckte Nachricht in Dateisystem speichern, verstecktes Dateisystem in Dateisystem speichern\n\nProbleme treten auf, da Dateisysteme nicht statisch sind und deswegen Änderungen möglich sein müssen. Außerdem muss eine gewisse Redundanz vorhanden sein.",
+        "hint": ""
+    },
+    {
+        "id": 214,
+        "folder": "Information Hiding",
+        "front": "Wie können Steganographische Dateisysteme funktionieren?",
+        "back": "XOR-Zwischen verschiedenen Dateien liefert versteckte Datei. Datei Reihenfolge enthält versteckte Nachricht. Versteckte Daten in Datei Meta-Daten oder ungenutzten Speicher-Blöcken speichern. Dateisystem in Sammlung von Bildern auf Server speichern.",
+        "hint": ""
+    },
+    {
+        "id": 215,
+        "folder": "Information Hiding",
+        "front": "Was sind Gegenmaßnahmen zu Steganographische Dateisystemen?",
+        "back": "Entdecken reicht aus (Szenario von Regime: Gewalt reicht für den Rest). Dynamische Analyse während Gebrauch (Nutzer muss dafür auf Geheime Daten zugreifen), Statische Analyse: Analyse von Logs. (Anti-Gegenmaßnahme: Logs modifizieren)",
+        "hint": ""
+    },
+    {
+        "id": 216,
+        "folder": "Information Hiding",
+        "front": "Wie kann ein Covert Channel definiert werden mit Hilfe des Bell-LaPadula (BLP) Modell?",
+        "back": "Prozesse mit höherer Berechtigung dürfen Lesen von Prozessen mit niedriger Berechtigung und Prozesse mit niedriger Berechtigung dürfen Informationen an Höhere senden. Ein Covert-Channel wäre Senden an Niedrigere (write-down) oder Lesen von Höheren (read-up)",
+        "hint": ""
+    },
+    {
+        "id": 217,
+        "folder": "Information Hiding",
+        "front": "Wie können Covert Channel identifiziert oder behindert werden?",
+        "back": "Shared Resource Matrix (Read-Write-Paare finden), extended Resource Matrix, Covert Flow Trees (Source Code analysieren und Sequenzen bilden), Fuzzy-Time: Timing covert-channel wird durch ungenaue Zeitstempel von Virtuellen Maschinen stark gedrosselt, Spurious Process Ansatz: Covert Channel wird durch Prozess gestört, welcher Prozess 1 imitiert und somit Prozess 2 verwirrt",
+        "hint": ""
+    },
+    {
+        "id": 218,
+        "folder": "Information Hiding",
+        "front": "Welche Angriffs-Möglichkeiten gibt es gegen Wasserzeichen?",
+        "back": "Dateiformat oder Auflösung ändern (Wasserzeichen entfernen/beschädigen), verschiedene Varianten mit Wasserzeichen untersuchen und eigenes Wasserzeichen setzen.",
+        "hint": ""
+    },
+    {
+        "id": 219,
+        "folder": "Information Hiding",
+        "front": "Welche Varianten von Wasserzeichen gibt es?",
+        "back": "Robuste Wasserzeichen (Wasserzeichen übersteht starke Änderungen), Fragile Wasserzeichen (Wasserzeichen übersteht nur valide Änderungen) und Digital Fingerprinting (Robust gegen Angriffe sogar wenn mehrere Kopien mit verschiedenen Wasserzeichen vorhanden sind)",
+        "hint": ""
+    },
+    {
+        "id": 220,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 221,
+        "folder": "Information Hiding",
+        "front": "Was ist ein 'Ping Tunnel'?",
+        "back": "Ein 'Ping Tunnel' kann verwendet werden um Daten von einem Client zu einem Ziel zu schicken, wobei das Ziel nicht über TCP direkt erreichbar ist. Es wird dabei eine indirekte Verbindung über einen Proxy hergestellt, welcher ein TCP-Verbindung aufbauen kann. Der Client kommuniziert mit dem Proxy dabei über ICMP.",
+        "hint": ""
+    },
+    {
+        "id": 222,
+        "folder": "Information Hiding",
+        "front": "Was sind storage, timing, noisy, noise-free, aktiv, passiv, direkt, indirekt covert channels?",
+        "back": "storage: Information in Nachricht gespeichert\ntiming: Information zeitlichen 'gespeichert'\nnoisy: Cover-Objekt könnte abgeändert werden (realistisch)\nnoise-free: Cover-Objekt bleibt exakt erhalten (ideal)\naktiv: Sender & Empfänger erzeugen und lesen Nachrichten\npassiv: Sender & Empfänger verwenden Kommunikation von anderen\ndirekt: Sender & Empfänger senden Nachrichten direkt\nindirekt: Sender & Empfänger senden Daten an einen dritten (nimmt unbeabsichtigt Teil)",
+        "hint": ""
+    },
+    {
+        "id": 223,
+        "folder": "Information Hiding",
+        "front": "Was ist 'Steganographic cost'?",
+        "back": "'Steganographic cost' ist ein Maß für die Abänderung/Verzerrung des Cover-Objekt und muss für jede Methode unterschiedlich definiert werden. (Methode welche Paket-Verlust verwendet und Methode die Pakete erneut schickt können nicht die gleiche Definition verwenden)",
+        "hint": ""
+    },
+    {
+        "id": 224,
+        "folder": "Information Hiding",
+        "front": "Was sind 'Hiding Patterns'?",
+        "back": "Ein 'Hiding Pattern' zeigt den Kern eine Methode auf und wird abstrakt gehalten. Es werden somit details weggelassen, wodurch die Terminologie einheitlich bleibt. Sie können mit PLML () beschrieben werden. Der Nutzen eines Pattern ist, dass sehr viele Methoden (zB 109) von wenigen Patterns (zB 11) beschrieben werden können.",
+        "hint": ""
+    },
+    {
+        "id": 225,
+        "folder": "Information Hiding",
+        "front": "Wie werden Network Covert Channel Patterns Unterteilt?",
+        "back": "Covert Timing {Protocol agnostic (unaware), Protocol aware}, Covert Storage {Non-Payload {Structure Modifying, Structure Preserving}, Payload {User-data agnostic (unaware), User-data aware}}",
+        "hint": ""
+    },
+    {
+        "id": 226,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Timing Protocol agnostic Patterns gibt es?",
+        "back": "Inter-packet times, message sequence timing (Pakete mehrfach senden/ack zu bestimmten Zeiten senden), Rate/Throughput Pattern (Datenrate variieren)",
+        "hint": ""
+    },
+    {
+        "id": 227,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Timing Protocol aware Patterns gibt es?",
+        "back": "Artificial Packet loss, Message Ordering (verwendet sequence number), Artificial Re-Transmission, Frame Collision (Kollision muss erkennbar sein), Temperature (Clock wird von Sender erhitzt und kann von Receiver durch polling erkannt werden), Artificial Re-Connection (Sender trennt Verbindungen, Receiver erkennt re-connections), Artificial Resets (Sender erzeugt reset einer Verbindung, Receiver erkennt Verbindungszustand)",
+        "hint": ""
+    },
+    {
+        "id": 228,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Storage Non-payload structure modifying Patterns gibt es?",
+        "back": "Size Modulation (Paket Größe variieren), Sequence Modulation (Reihenfolge innerhalb meta-daten) {Position, Number of Elements}, Add Redundancy (unnötige header hinzufügen)",
+        "hint": ""
+    },
+    {
+        "id": 229,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Storage Non-payload structure preserving Patterns gibt es?",
+        "back": "Random Values (Zufällige werte in Attribut), Value Modulation Pattern (Attribut plausibel abändern) {Case (upper/lower), LSB (least significant bit)}, Reserved/Unused (nicht verwendete Bits ausnutzen)",
+        "hint": ""
+    },
+    {
+        "id": 230,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Storage payload user-data agnostic Patterns gibt es?",
+        "back": "Payload field size Modulation, User-data corruption (blind modification)",
+        "hint": ""
+    },
+    {
+        "id": 231,
+        "folder": "Information Hiding",
+        "front": "Welche Covert Storage payload user-data aware Patterns gibt es?",
+        "back": "Modify redundancy (via transcoding: platz schaffen durch stärkere Kompression), User-data value modulation & Reserver/Unused (targeted modification",
+        "hint": ""
+    },
+    {
+        "id": 232,
+        "folder": "Information Hiding",
+        "front": "Was ist der Unterschied zwischen Embedding Patterns und Representation Patterns?",
+        "back": "Embedding: Wie Informationen embedded werden\nRepresentation: Wie Informationen Repräsentiert werden",
+        "hint": ""
+    },
+    {
+        "id": 233,
+        "folder": "Information Hiding",
+        "front": "Welche embedding temporal modulation patterns gibt es?",
+        "back": "Event Interval Modulation (Zeitliche Abstände variieren) {Rate/Throughput Modulation}, Event Occurrence (Zeitpunkt(e) von Event)",
+        "hint": ""
+    },
+    {
+        "id": 234,
+        "folder": "Information Hiding",
+        "front": "Welche embedding non-temporal patterns gibt es?",
+        "back": "Artificial Element-loss (Pakete, Komma's, ...), Elements/Features Positioning, Elements/Features Enumeration (Duplikate/Anzahlen), State/Value Modulation (Attribute ändern) {reserver, random, blind}, Feature Structure Modulation (Inhalt bleibt gleich) {size feature, character feature}",
+        "hint": ""
+    },
+    {
+        "id": 235,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 236,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 237,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 238,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 239,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 240,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 241,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 242,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 243,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 244,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 245,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 246,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 247,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
         "hint": ""
     }
 ]
