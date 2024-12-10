@@ -1626,85 +1626,85 @@
     {
         "id": 235,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was sind distributed Hiding Methods?",
+        "back": "Protocol Hopping: Informationen über verschiedene Channel verteilen\nProtocol Switching: Reihenfolge von Protokollen bestimmt Nachricht.\n\nCombination Pattern, Hopping Pattern & Pattern Variation (Host-based scattering, Flow-based scattering & Protocol-based scattering)",
         "hint": ""
     },
     {
         "id": 236,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist das Combination Pattern?",
+        "back": "Es werden mehrere Methoden auf einmal angewandt. (Bsp: size modulation von packet + value modulation von TTL)",
         "hint": ""
     },
     {
         "id": 237,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist das Pattern Hopping?",
+        "back": "Es wird zwischen verschiedenen Patterns gewechselt. (Bsp: Protocol Hopping) Es ist dabei aber immernoch ein Flow, bei mehreren Flow's wäre es (auch) Flow-based scattering (Untergruppe von Pattern Variation)",
         "hint": ""
     },
     {
         "id": 238,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist Host-based scattering, Flow-based scattering & Protocol-based scattering?",
+        "back": "Host-based: Ein Pattern wird andewandt, aber über mehrere Hosts verteilt (Bsp: Host mit mehreren IP-Addressen)\nFlow-based: mehrere 'flows' (Stränge) mit einem Pattern\nProtocol-based: auf mehrere Protokolle wird ein Pattern angewandt",
         "hint": ""
     },
     {
         "id": 239,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist Pattern Variation?",
+        "back": "Ein generisches Pattern beschreibt nur die Idee eines Hiding Pattern. Die Variationen sind konkrete Anwendungen des Pattern auf ein Protocol (zB eine varation für IPv4 und eine für IPv6)",
         "hint": ""
     },
     {
         "id": 240,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was sind adaptive Hiding Methoden?",
+        "back": "Adaptive Hiding Methoden passen sich an die Umgebung. Es gibt NEL, Dynamic Overlay Routing for Covert Channels",
         "hint": ""
     },
     {
         "id": 241,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist die adaptive Hiding Methode NEL?",
+        "back": "NEL (Network Environment Learning) ist eine Methode welche sich kontinuierlich an die 'Umgebung' anpasst. Es wird untersucht, welche Protokolle in Frage kommen (bzw welche zB von einer Fire-Wall gefiltert werden). Falls eine Kommunikation auf einem Weg möglich ist, wird dieser Weg verwendet, ansonsten werden andere Wege untersucht. Ein Man-in-the-middle kann relativ leicht die Kommunikation unterbinden, weil die Beteiligten nur passiv überwachen. Durch einen separaten Kanal, über den die Beteiligten aktiv austauschen können, welchen Kommunikationsweg sie als nächstes austesten kann die Methode verbessert werden.",
         "hint": ""
     },
     {
         "id": 242,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist Dynamic Overlay Routing for Covert Channels?",
+        "back": "Es wird die Umgebung analysiert, um den besten Weg für eine Kommunikation zu bestimmen. Dabei ist ein Teil der übermittelten Nachricht ein control (micro) protocol. Es enthält (meta) Informationen über den momentanen Zustand/Kommunikationsweg und die eigendliche Nachricht. Vorteile sind: zuverlässigkeit (ack kann zB gesendet werden), aufgebautes netzwerk kann gemanaged werden, routing kann sich ändern, Nodes können geupdated werden, Nodes können sich entdecken, Protokolle können gewechselt werden. Das control (micro) protocol muss für den Empfänger von anderen Nachrichten unterscheidbar sein, um falsche interpretation von Nachrichten zu vermeiden.",
         "hint": ""
     },
     {
         "id": 243,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie sollten Protokolle bei Multi-Pattern Methoden gewählt werden?",
+        "back": "Grundlegend sollten mehrere Protokolle verwendet werden um die Sicherheit zu erhöhen. Ansonsten ist es entscheidend, ob die Nachricht dringlich ist, die Nachricht sehr groß ist oder die stealthiness am wichtigsten ist. Je nach dem können die einzelnen verfügbaren Protokolle gewichtet werden und zufällig gewählt werden.",
         "hint": ""
     },
     {
         "id": 244,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist Micro Protocol Engineering?",
+        "back": "Aus einem zugrunde liegenden Protokoll (zB IPv4) wird ein Micro Protocol erzeugt. Hierfür werden die Wahrscheinlichkeiten für die verschiedenen Bits des Protokoll untersucht. Das gleiche wird für das zu erzeugende Micro Protocol gemacht. Die Bits werden danach so aufeinander abgestimmt, dass die Wahrscheinlichkeiten zu einander passen. Zuletzt wird überprüft, ob das zugrunde liegende Protokoll nicht verletzt wird. (Unmögliche Bit-Kombinationen, welche leicht erkennbar wären, durch zB 'Language-inclusion-Test') Falls dies der Fall ist, müssen Änderungen an den Protokollen oder am Mapping vorgenommen werden. (Es ist auch möglich beim Mapping die 0/1 Bits zweier Bits zu vertauschen, falls die Wahrscheinlichkeiten so besser abgebildet werden)",
         "hint": ""
     },
     {
         "id": 245,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist reversible data hiding (RDH)?",
+        "back": "Sender und Empfänger verwenden legitime Kommunikation und ändern diese beide ab. Die legitime Kommunikation wird dadurch nicht gestört. Es gibt 'fully-reverable', 'quasi-reversible' & 'non-reversible'. Die Nachricht zu entfernen, kann entweder 'intrinsic' (Methode erlaubt einfaches entfernen), 'explicit' (es wird original Zustand in Nachricht gespeichert) & 'implicit' (statistisch) sein",
         "hint": ""
     },
     {
         "id": 246,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was ist ein Redirector, Broker, Proxy & Deaddrop?",
+        "back": "Instanz (Redirector) zwischen Sender und Empfänger leitet Nachrichten (un)absichtlich weiter. Bei Proxy & Dead-Drop (beides Broker) kann Empfänger Nachrichten aus Instanz extrahieren. Proxy: Instanz repräsentiert Nachricht (zB Load), welche gemessen werden kann. Dead-Drop: Instanz speichert Nachricht in Cache, welcher von Empfänger (später) gelesen werden kann.",
         "hint": ""
     },
     {
