@@ -1710,6 +1710,118 @@
     {
         "id": 247,
         "folder": "Information Hiding",
+        "front": "Was sind Gegenmaßnahmen für Network Steganography?",
+        "back": "Verhindern:\nTraffic Normalizer: aufwendig, Probleme bei re-transmission, cold-start (normailzer startet mitten drin), zu viel Zustand (evtl DOS)\n\nBegrenzen\n\nErkennen:\nPaket Zeitpunkte messen (gegen Inter-Packet times pattern) -> berk et al (prob = 1 - abs(maxbin - avg)) oder ɛ-similarity (sort -> diff -> detect spikes) oder encodieren und compression ratio bestimmen\nSequence-Number diff, encodieren und compression\nRe-transmission mit ɛ-similarity (andere Grenze) und mit compressibility (anderes encoding) aber evtl nicht effektiv\nSize-Modulation compressibility oder ɛ-similarity beide relativ aufwendig (viele Grenzen nötig um verschiedene Varianten zu erkennen)\n\nEs gibt auch Jaccard similarity, st-dev bestimmen",
+        "hint": ""
+    },
+    {
+        "id": 248,
+        "folder": "Information Hiding",
+        "front": "Warum sind bereits wenige False-Positive problematisch bei Gegenmaßnahmen für Network Steganography?",
+        "back": "Es muss in Echtzeit analysiert werden und bei hohen Daten-Raten wie 10Gbit/s sind dies bereits sehr viele Sonderfälle, welche betrachtet werden müssen.",
+        "hint": ""
+    },
+    {
+        "id": 249,
+        "folder": "Information Hiding",
+        "front": "Bei Gegenmaßnahmen für Network Steganography, welche 'Warden' gibt es?",
+        "back": "Behavior (passiv/aktiv, zustandslos, proaktiv/reaktiv (Aktionen ausführen), Dokumentieren, statisch/dynamisch (anpassen an situation)), Structure (distributed (mehrere arbeiten zusammen), Single-Hop/LAN/WAN, Menge Rechenpower/Rechte) & Knowledge (kennt Topologie (kann TTL monitoren), kennt Methode ganz/etwas oder nicht, kennt embedding/extraction/control process)",
+        "hint": ""
+    },
+    {
+        "id": 250,
+        "folder": "Information Hiding",
+        "front": "Was ist minimal requesite fidelity?",
+        "back": "Minimal requesite fidelity ist eine Metrik zum bestimmen, wie stark eine Gegenmaßnahme regulären Verkehr stört. (Ähnlich wie steganograpic cost, aber für Gegenmaßnahmen)",
+        "hint": ""
+    },
+    {
+        "id": 251,
+        "folder": "Information Hiding",
+        "front": "Wie kann (im BLP kontext) steganographie unterbunden werden?",
+        "back": "Write-down bzw Read-up werden verhindert durch 'Blind Write-up'. Hierbei sind ACK jedoch nicht (mehr) möglich (Sonst ACK-Channel). Für mehr Zuverlässigkeit kann ein 'Upwards Channel' verwendet werden. Hierbei wird ein Buffer verwendet, falls Daten zu schnell übermittelt werden. Falls ACK erwünsch sind, können Nachrichten in Buffer gespeichert werden und direkt ACK erhalten (Store & Forward Protocol, Probleme bei vollem Buffer) oder Buffer wird regelmäßig geleert und ACK wird zu zufälligem Zeitpunkt verschickt (Pump). Sobald ACK vorhanden ist, ist ein Channel möglich, aber mit den Methoden kann dieser wenigstens stark reduziert werden.",
+        "hint": ""
+    },
+    {
+        "id": 252,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 253,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 254,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 255,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 256,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 257,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 258,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 259,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 260,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 261,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 262,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 263,
+        "folder": "Information Hiding",
         "front": "",
         "back": "",
         "hint": ""
