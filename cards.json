@@ -1745,8 +1745,8 @@
     {
         "id": 252,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Was sind Gegenmaßnahmen für Protocol-Switching Covert Channel? (Protokolle repräsentieren Information, nicht Protocol Hopping)",
+        "back": "Protocol Channel-aware active Warden: Pakete von einer Sender-Empfänger-Verbindung werden verzögert, falls es unterschiedliche Protokolle sind (Bitrate wird reduziert auf 1 Bit/s für Verzögerung von 2sec).\n\nVerzögerung kann auch zufällig gewählt werden. Angreifer kann diese nicht bestimmen und sich nicht (gut) anpassen. Nachricht wird noch mehr gestört.\n\nDynamic Warden: gegen NEL (Network Environment Learning) durch ständiges wechseln von Filter-Regeln. Sender und Empfänger müssen sich permanent anpassen. Bei statischem Warden wird nur einmal angepasst und danach ist kommunikation ungestört. Wegen dynamischen Warden müssen viel mehr Überprüfungs-Pakete verschickt werden. RAM/CPU-usage kann geringer sein, weil weniger Regeln gleichzeitig aktiv sind. Anzahl von aktiven Regeln und Regel-Wechsel-Intervall können Zufällig gewählt werden um in Durchschnitt noch bessere Ergebnisse zu erhalten.",
         "hint": ""
     },
     {
