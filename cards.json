@@ -1124,7 +1124,7 @@
         "folder": "Komplexitäts Theorie",
         "front": "Wie wird 3SAT auf (0,1,3)-CP polynomiell-reduziert?",
         "back": "",
-        "hint": "3SAT <=P (0,1,3)-CP ((0,1,3-CHampionship-problem)"
+        "hint": "3SAT <=P (0,1,3)-CP ((0,1,3)-Championship-problem)"
     },
     {
         "id": 164,
@@ -1248,36 +1248,36 @@
     {
         "id": 181,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie werden Komplexitäts Klassen für die Resource Platz definiert?",
+        "back": "Die Eingabe ist auf einem read-only Band, auf dem Arbeitsband gibt es nur Zellen mit Adressen >= 1. Die Metrik ist die größte Zelle die auf dem Arbeitsband besucht wird.\n\nDTAPE(s(n)): Platz ⌈s(|x|)⌉ für deterministisch\nNTape(s(n)): Platz ⌈s(|x|)⌉ für nicht-deterministisch\n\nPSPACE = alle DTAPE(n^k) k ∈ N\nNPSPACE = alle NTAPE(n^k) k ∈ N\n\nCSL (Context-Sensitive-Languages) = NTAPE(n)",
         "hint": ""
     },
     {
         "id": 182,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Welchen Speicherbedarf hat eine deterministische Turingmaschine die eine nicht-deterministische simuliert, was ist dazu nötig?",
+        "back": "Die Berechnung muss in Zeit 2^O(log(n)+s(n)) und Platz s(n) sein, dann kann eine Tiefen-Suche auf einem Graphen mit der Größe 2^O(log(n)+s(n)) gemacht werden, welcher die verschiedenen Zustände während der Berechnung repräsentiert. Platz und Zeit der deterministischen Maschine sind 2^O(log(n)+s(n)).",
         "hint": ""
     },
     {
         "id": 183,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie ist die Sortierung der gängigen Komplexitätsklassen bezogen auf Speicherplatz?",
+        "back": "DTAPE(log(n)) ⊆ NTAPE(log(n)) ⊆ P ⊆ NP ⊆ Σk (k>=1) ⊆ PSPACE = NPSPACE",
         "hint": ""
     },
     {
         "id": 184,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Welche Verallgemeinerung von SAT ist in Σk-vollständig, welche ist PSPACE-vollständig?",
+        "back": "Σk: SAT_cir^k\nPSPACE: QBF (quantified boolean formula, bsp: ∀x1 ∃x2: (x1 ∧ x2) ∨ (¬x1 ∧ x2)); Durch den Einsatz von All-Quantoren kann die Formel, welche den Pfad im Konfigurationsgraph statt exponentiell, polynomiell in der Größe ausgedrückt werden.",
         "hint": ""
     },
     {
         "id": 185,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Was ist der Satz von Savitch?",
+        "back": "Wenn s(n) >= log(n) platz-konstruierbar, dann NTAPE(s(n)) ⊆ DTAPE(s(n)^2). Dafür wird anfangs Platz reserviert um zu bestimmen, welchen Rechenweg man ausprobiert. Danach wird jeder Rechenweg ausprobiert. Hierzu wird rekursiv der Konfigurationsgraph durchsucht. Der Speicher nach jedem Rechenweg wird stets bereinigt. Dieser Ansatz verwendet zwar sehr viel mehr Rechenzeit, aber in Bezug auf Speicher ist diese Strategie effizient. Speicherverbrauch: Speicher von rekursivem Rechenweg (O(f(n))) * Rekursionstiefe (O(log2(2^(d * f(n)))) = O(d * f(n))) = O(f(n)^2 * d) (= O(f(n)^2), weil d der Branching-faktor des Problem ist und konstant ist (nicht von der Eingabe abhängt))",
         "hint": ""
     },
     {
