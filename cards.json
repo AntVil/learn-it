@@ -1277,22 +1277,22 @@
         "id": 185,
         "folder": "Komplexitäts Theorie",
         "front": "Was ist der Satz von Savitch?",
-        "back": "Wenn s(n) >= log(n) platz-konstruierbar, dann NTAPE(s(n)) ⊆ DTAPE(s(n)^2). Dafür wird anfangs Platz reserviert um zu bestimmen, welchen Rechenweg man ausprobiert. Danach wird jeder Rechenweg ausprobiert. Hierzu wird rekursiv der Konfigurationsgraph durchsucht. Der Speicher nach jedem Rechenweg wird stets bereinigt. Dieser Ansatz verwendet zwar sehr viel mehr Rechenzeit, aber in Bezug auf Speicher ist diese Strategie effizient. Speicherverbrauch: Speicher von rekursivem Rechenweg (O(f(n))) * Rekursionstiefe (O(log2(2^(d * f(n)))) = O(d * f(n))) = O(f(n)^2 * d) (= O(f(n)^2), weil d der Branching-faktor des Problem ist und konstant ist (nicht von der Eingabe abhängt))",
+        "back": "Wenn s(n) >= log(n) platz-konstruierbar, dann NTAPE(s(n)) ⊆ DTAPE(s(n)^2). Dafür wird anfangs Platz reserviert um zu bestimmen, welchen Rechenweg man ausprobiert. Danach wird jeder Rechenweg ausprobiert. Hierzu wird rekursiv der Konfigurationsgraph durchsucht. Der Speicher nach jedem Rechenweg wird stets bereinigt. Dieser Ansatz verwendet zwar sehr viel mehr Rechenzeit, aber in Bezug auf Speicher ist diese Strategie effizient. Speicherverbrauch: Speicher von rekursivem Rechenweg (O(f(n))) * Rekursionstiefe (O(log2(2^(d * f(n)))) = O(d * f(n))) = O(f(n)^2 * d) (= O(f(n)^2), weil d der Branching-faktor des Problem ist und konstant ist (nicht von der Eingabe abhängt)). Aus diesem Grund ist PSPACE = NPSPACE und die polynomielle Hierarchie für Platz bricht auf der untersten Stufe (PSPACE) zusammen.",
         "hint": ""
     },
     {
         "id": 186,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Was ist der Satz von Immerman und Szelepcsényi?",
+        "back": "Wenn s(n) >= log(n) platz-konstruierbar, dann NTAPE(s(n)) = co-NTAPE(s(n)). Es muss gezeigt werden, dass x ∉ L in den Platzschranken bestimmt werden kann. Der Konfigurationsgraph wird durchsucht wobei konstant viele Zähler verwendet werden um zu bestimmen, wie tief von der start-Konfiguration gesucht wird. Falls während der Suche der Zustand x ∈ L kann dieses Ergebnis geliefert werden ansonsten wird weiter gesucht. Es kann maximal jede Konfiguration einmal besucht werden. Falls jede besucht wurde ist sicher, dass der Zustand x ∈ L nie erreicht wird und deswegen x ∉ L gilt. Ansonsten wird angenommen, dass x ∈ L.",
         "hint": ""
     },
     {
         "id": 187,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
+        "front": "Was sind Anzahl-Probleme?",
+        "back": "Anzahl-Probleme sind Varianten von Problemen ähnlich wie Entscheidungs- oder Optimierungsvarianten. #SAT ist das Problem die Anzahl an erfüllenden Belegungen zu bestimmen. #SAT ∈ #P (polynomiell nicht deterministisch mit so vielen akzeptierenden Rechenwegen wie es Lösungen gibt). Es wird Turing-reduktion verwendet",
+        "hint": "#SAT"
     },
     {
         "id": 188,
