@@ -1297,36 +1297,36 @@
     {
         "id": 188,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Welche beiden Metriken können für Schaltkreis verwendet werden?",
+        "back": "Schaltkreisgröße: Anzahl logischen Gattern (Bausteine)\n\nSchaltkreistiefe: Maximale Tiefe von gerichtetem azyklischen Graph (DAG)/Anzahl Knoten in längstem Pfad",
         "hint": ""
     },
     {
         "id": 189,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Welchen Unterschied haben Algorithmen und SChaltkreise im Bezug auf Eingabelänge?",
+        "back": "Algorithmen sind meist generisch genug um jede Eingabelänge zu akzeptieren. in Schaltkreis ist stets nur für eine Eingabelänge gedacht. Für beliebige Längen muss die gesamte Schaltkreisfamilie bekannt sein.",
         "hint": ""
     },
     {
         "id": 190,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
+        "front": "Was bedeutet 'uniform' im Kontext Algorithmen und Schaltkreisfamilien?",
+        "back": "Ein Algorithmus ist uniform, wenn er für jede Eingabelänge eines Problems die Lösung berechnet.\n\nEine Schaltkreisfamilie ist uniform wenn der Schaltkreis für die Eingabelänge n der Größe s(n) auf Speicherplatz O(log(s(n))) berechenbar ist.",
+        "hint": "uniform = einheitlich beschreibbar"
     },
     {
         "id": 191,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie können t(n)-zeit-beschränkte Turingmaschinen durch Schaltkreise simuliert werden?",
+        "back": "Falls die Maschine stereotype (Lesepositionen hängen nur von Zeitpunkt ab, nicht Eingabe) ist, reicht ein Schaltkreis der Größe O(t(n)). Es wird jeder Rechenschritt der Turingmaschine in eine 'Ebene' im Schaltkreis übersetzt. Die Tiefe ist ebenfalls O(t(n)). Eine Turingmaschine stereotype zu simulieren benötigt einen zusätzlichen logarithmischen Faktor.\n\nFalls die Turingmaschine s(n)-speicherplatz-beschränkt ist, ist für s*(n) = max(s(n), log(n)) eine Tiefe von O(s*(n)^2) möglich.",
         "hint": ""
     },
     {
         "id": 192,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie können Schaltkreisfamilien von einer Turingmaschine simuliert werden?",
+        "back": "Eine Turingmaschine mit zwei Arbeitsbändern, einem Eingabe Band und einem Hilfsband (Hilfsband hängt von Eingabelänge ab) kann eine Schaltkreisfamilie in Zeit O(s*(n)^2) und Platz O(s*(n)) simulieren. Das Hilfsband enthält den Schaltkreis. Eines der Bänder enthält die Zwischen-Ergebnisse des Schaltkreis, das andere Band wird für das Indizieren in das vorherige Band verwendet.\n\nFalls nur ein Arbeits-Band zur Verfügung steht ist ein zusätzlicher Zeitfaktor von log(s*(n)) nötig.\n\nEin Schaltkreis kann auch durch eine Turingmaschine mit Speicher O(d*(n)) simuliert werden. Hierzu wird der DAG zu einem Baum umgewandelt, indem Kopien von Knoten erstellt werden. Die Tiefe bleibt dabei erhalten. Das Arbeitsband wird als Stack verwendet, es sind maximal d Ergebnisse gleichzeitig im Stack.",
         "hint": ""
     },
     {
