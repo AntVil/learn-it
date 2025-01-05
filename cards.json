@@ -1332,37 +1332,37 @@
     {
         "id": 193,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie viele Logische-Gatter/Bausteine sind mindestens nötig um eine explizit definierte boolesche Funktion zu berechnen?",
+        "back": "Die bisher bekannte untere Schranke liegt bei 3n - O(log(n)). Die triviale Grenze liegt bei n-1, weil jedes Eingabe-Bit mit mindestens einem Gatter verbunden sein muss. Ein Schaltkreis der 1 Ausgibt bei 2 oder mehr Eingaben von 1 werden mindestens 2n - 3 Bausteine benötigt.",
         "hint": ""
     },
     {
         "id": 194,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Was sind Monotone Schaltkreise?",
+        "back": "Schaltkreise die nur AND ∧ und OR ∨ enthalten. Sie können nur monotone Funktionen berechnen (aus a <= b folgt f(a) <= f(b), bei der Eingabe eine 0 durch eine 1 ersetzen kann die Ausgabe nur gleich lassen oder zu 1 ändern). Solche Schaltkreise haben die Grenze n^2.",
         "hint": ""
     },
     {
         "id": 195,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie tief ist ein Schaltkreis mindestens?",
+        "back": "Die bisher bekannte untere Schranke liegt bei n^2/log(n). Die triviale Schranke liegt bei ⌈log(n)⌉.",
         "hint": ""
     },
     {
         "id": 196,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
+        "front": "Wie groß sind Schaltkreise, wobei Bausteine AND und OR mehr als 2 Eingaben annehmen? (NOT nimmt nur eine Eingabe)",
+        "back": "Σk = Schaltkreis mit AND auf Ebene und Tiefe k (auch DF)\nΠk = Schaltkreis mit OR auf Ebene und Tiefe k (auch CF)",
         "hint": ""
     },
     {
         "id": 197,
         "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
+        "front": "Was ist die Komplexitäts-Klasse AC^0?",
+        "back": "Boolesche Funktionen die von einem Schaltkreis mit konstanter Tiefe berechnet werden können, wobei nur AND, OR und NOT verwendet werden und AND und OR mehrere Eingänge haben.",
+        "hint": "AC = alternating class"
     },
     {
         "id": 198,
