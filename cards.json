@@ -973,31 +973,24 @@
         "hint": ""
     },
     {
-        "id": 142,
-        "folder": "Komplexitäts Theorie",
-        "front": "Was ist ein Algorithmus?",
-        "back": "",
-        "hint": ""
-    },
-    {
         "id": 143,
         "folder": "Komplexitäts Theorie",
         "front": "Wie misst man die Rechenzeit eines Algorithmus?",
-        "back": "",
+        "back": "Es gibt das einheitliche Kostenmaß (uniform cost model), welches für Algorithmen mit kleinen Zahlen sinnvoll ist. Hierbei wird die Anzahl der Rechenschritte gezählt. Das logaritmische Kostenmaß existiert ebenfalls, aber ist nur sinnvoll, wenn Algorithmen mit sehr großen Zahlen verwendet werden.",
         "hint": ""
     },
     {
         "id": 144,
         "folder": "Komplexitäts Theorie",
         "front": "Wie lautet die Erweiterte Churche These?",
-        "back": "",
+        "back": "Ein Rechnermodell kann durch ein anderes Rechnermodell simuliert werden, sodass t Rechenschritte auf dem ersten p(t) polynomiell viele Schritte auf dem zweiten Modell sind.",
         "hint": ""
     },
     {
         "id": 145,
         "folder": "Komplexitäts Theorie",
         "front": "Wie unterscheiden sich Registermaschinen und Turingmaschinen?",
-        "back": "",
+        "back": "Registermaschinen und Turingmaschinen können sich gegenseitig simulieren. (Grund: Erweiterte Churche These) Registermaschinen verwalten eine Menge an Registern und können diese manipulieren. Turingmaschinen besitzen (mindestens) ein Arbeitsband und einen Schreib-Lese-Kopf.",
         "hint": ""
     },
     {
@@ -1010,43 +1003,43 @@
     {
         "id": 147,
         "folder": "Komplexitäts Theorie",
-        "front": "Welche Komplexitäts-Klassen erlauben Versagen?",
-        "back": "",
+        "front": "Welche Komplexitäts-Klassen erlauben Versagen, welche Fehler?",
+        "back": "Versagen: ZPP, NP ∩ co-NP (= RP* ∩ co-RP*)\nFehler: RP, co-RP, NP co-NP, BPP, PP",
         "hint": ""
     },
     {
         "id": 148,
         "folder": "Komplexitäts Theorie",
         "front": "Welche Komplexitäts-Klassen erlauben einseitige Fehler?",
-        "back": "",
+        "back": "RP (höchstens False-Negative, Prob: 1/2), co-RP (höchstens False-Positive, Prob: 1/2), NP (= RP*), co-NP (= co-RP*)",
         "hint": ""
     },
     {
         "id": 149,
         "folder": "Komplexitäts Theorie",
         "front": "Welche Komplexitäts-Klassen erlauben beidseitige Fehler?",
-        "back": "",
+        "back": "BPP (Prob: 1/3), PP",
         "hint": ""
     },
     {
         "id": 150,
         "folder": "Komplexitäts Theorie",
         "front": "Was ist der Unterschied zwischen Turing-Reduktion und Polynomiell-Reduktion?",
-        "back": "",
+        "back": "Turing-Reduktion erlaubt mehrfache Ausführungen von einem anderen Algorithmus, Polynomielle-Reduktion erlaubt nur eine Ausführung, wobei das Ergebnis nicht mehr weiter verrechnet, sondern nur Ausgegeben werden darf.",
         "hint": ""
     },
     {
         "id": 151,
         "folder": "Komplexitäts Theorie",
         "front": "Wie wird SAT auf 3SAT turing-reduziert?",
-        "back": "",
+        "back": "Klauseln mit zu wenig Literalen, werden durch Literal-Wiederholungen auf die Länge 3 gebracht. Klauseln mit mehr Einträgen werden unterteilt, wobei neue Literale, einmal negiert und einmal regulär pro Klausel auftreten.",
         "hint": "SAT <=T 3SAT"
     },
     {
         "id": 152,
         "folder": "Komplexitäts Theorie",
         "front": "Wie wird 3SAT auf CLIQUE polynomiell-reduziert?",
-        "back": "",
+        "back": "Jede Klausel wird auf ein Knoten Tripel (ohne Kanten) abgebildet. Alle Knoten, verschiedener Tripel, welche nicht die gegenseitige Negation sind, werden verknüpft. Es wird die Clique der Größe m (Anzahl Klauseln) gesucht.",
         "hint": "3SAT <=P CLIQUE (Teilmenge jeder kennt jeden)"
     },
     {
@@ -1304,8 +1297,8 @@
     {
         "id": 189,
         "folder": "Komplexitäts Theorie",
-        "front": "Welchen Unterschied haben Algorithmen und SChaltkreise im Bezug auf Eingabelänge?",
-        "back": "Algorithmen sind meist generisch genug um jede Eingabelänge zu akzeptieren. in Schaltkreis ist stets nur für eine Eingabelänge gedacht. Für beliebige Längen muss die gesamte Schaltkreisfamilie bekannt sein.",
+        "front": "Welchen Unterschied haben Algorithmen und Schaltkreise im Bezug auf Eingabelänge?",
+        "back": "Algorithmen sind meist generisch genug um jede Eingabelänge zu akzeptieren. Ein Schaltkreis ist stets nur für eine Eingabelänge gedacht. Für beliebige Längen muss die gesamte Schaltkreisfamilie bekannt sein.",
         "hint": ""
     },
     {
@@ -1363,34 +1356,6 @@
         "front": "Was ist die Komplexitäts-Klasse AC^0?",
         "back": "Boolesche Funktionen die von einem Schaltkreis mit konstanter Tiefe berechnet werden können, wobei nur AND, OR und NOT verwendet werden und AND und OR mehrere Eingänge haben.",
         "hint": "AC = alternating class"
-    },
-    {
-        "id": 198,
-        "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
-    },
-    {
-        "id": 199,
-        "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
-    },
-    {
-        "id": 200,
-        "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
-    },
-    {
-        "id": 201,
-        "folder": "Komplexitäts Theorie",
-        "front": "",
-        "back": "",
-        "hint": ""
     },
     {
         "id": 202,
@@ -1516,13 +1481,6 @@
         "folder": "Information Hiding",
         "front": "Welche Varianten von Wasserzeichen gibt es?",
         "back": "Robuste Wasserzeichen (Wasserzeichen übersteht starke Änderungen), Fragile Wasserzeichen (Wasserzeichen übersteht nur valide Änderungen) und Digital Fingerprinting (Robust gegen Angriffe sogar wenn mehrere Kopien mit verschiedenen Wasserzeichen vorhanden sind)",
-        "hint": ""
-    },
-    {
-        "id": 220,
-        "folder": "Information Hiding",
-        "front": "",
-        "back": "",
         "hint": ""
     },
     {
