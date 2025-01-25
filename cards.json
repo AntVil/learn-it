@@ -1710,14 +1710,14 @@
     {
         "id": 253,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Welche Subfields von Information Hiding gibt es?",
+        "back": "Watermarking, ...",
         "hint": ""
     },
     {
         "id": 254,
         "folder": "Information Hiding",
-        "front": "",
+        "front": "Was ist ein Out-of-Band Cover Channel?",
         "back": "",
         "hint": ""
     },
