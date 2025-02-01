@@ -1358,6 +1358,13 @@
         "hint": "AC = alternating class"
     },
     {
+        "id": 197,
+        "folder": "Komplexitäts Theorie",
+        "front": "Wie funktioniert der Zero-knowledge proof für Graph Isomorphie?",
+        "back": "Einer der Graphen wird vom Verifizierer ausgesucht und dessen Knoten werden umbenannt. Wenn der Verifizierer den Graphen identifizieren kann, waren die Graphen nicht isomorph, ansonsten kann der Beweiser nur raten.",
+        "hint": ""
+    },
+    {
         "id": 202,
         "folder": "Information Hiding",
         "front": "Was sind die drei Kern-Konzepte von Information Hiding?",
