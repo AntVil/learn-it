@@ -1365,6 +1365,13 @@
         "hint": ""
     },
     {
+        "id": 198,
+        "folder": "Komplexitäts Theorie",
+        "front": "Welche Implikation hätte NP=co-NP?",
+        "back": "Die Polynomielle Hierarchy würde auf der 2ten Ebene zusammenfallen, weil durch Quantoren-Wechsel keine zusätzliche Mächtigkeit kommen würde.",
+        "hint": ""
+    },
+    {
         "id": 202,
         "folder": "Information Hiding",
         "front": "Was sind die drei Kern-Konzepte von Information Hiding?",
