@@ -1647,8 +1647,8 @@
     {
         "id": 242,
         "folder": "Information Hiding",
-        "front": "Was ist Dynamic Overlay Routing for Covert Channels?",
-        "back": "Es wird die Umgebung analysiert, um den besten Weg für eine Kommunikation zu bestimmen. Dabei ist ein Teil der übermittelten Nachricht ein control (micro) protocol. Es enthält (meta) Informationen über den momentanen Zustand/Kommunikationsweg und die eigendliche Nachricht. Vorteile sind: zuverlässigkeit (ack kann zB gesendet werden), aufgebautes netzwerk kann gemanaged werden, routing kann sich ändern, Nodes können geupdated werden, Nodes können sich entdecken, Protokolle können gewechselt werden. Das control (micro) protocol muss für den Empfänger von anderen Nachrichten unterscheidbar sein, um falsche interpretation von Nachrichten zu vermeiden.",
+        "front": "Was ist Dynamic Overlay Routing für Covert Channels?",
+        "back": "Es wird die Umgebung analysiert, um den besten Weg für eine Kommunikation zu bestimmen. Dabei ist ein Teil der übermittelten Nachricht ein control (micro) protocol. Es enthält (meta) Informationen über den momentanen Zustand/Kommunikationsweg und die eigentliche Nachricht. Vorteile sind: Zuverlässigkeit (ack kann zB gesendet werden), aufgebautes netzwerk kann gemanagt werden, routing kann sich ändern, Nodes können ge-updated werden, Nodes können sich entdecken, Protokolle können gewechselt werden. Das control (micro) protocol muss für den Empfänger von anderen Nachrichten unterscheidbar sein, um falsche interpretation von Nachrichten zu vermeiden.",
         "hint": ""
     },
     {
@@ -1683,7 +1683,7 @@
         "id": 247,
         "folder": "Information Hiding",
         "front": "Was sind Gegenmaßnahmen für Network Steganography?",
-        "back": "Verhindern:\nTraffic Normalizer: aufwendig, Probleme bei re-transmission, cold-start (normailzer startet mitten drin), zu viel Zustand (evtl DOS)\n\nBegrenzen\n\nErkennen:\nPaket Zeitpunkte messen (gegen Inter-Packet times pattern) -> berk et al (prob = 1 - abs(maxbin - avg)) oder ɛ-similarity (sort -> diff -> detect spikes) oder encodieren und compression ratio bestimmen\nSequence-Number diff, encodieren und compression\nRe-transmission mit ɛ-similarity (andere Grenze) und mit compressibility (anderes encoding) aber evtl nicht effektiv\nSize-Modulation compressibility oder ɛ-similarity beide relativ aufwendig (viele Grenzen nötig um verschiedene Varianten zu erkennen)\n\nEs gibt auch Jaccard similarity, st-dev bestimmen",
+        "back": "Verhindern:\nTraffic Normalizer: aufwendig, Probleme bei re-transmission, cold-start (normailzer startet mitten drin), zu viel Zustand (evtl DOS)\n\nBegrenzen: Traffic Normalizer\n\nErkennen:\nPaket Zeitpunkte messen (gegen Inter-Packet times pattern) -> berk et al (prob = 1 - abs(maxbin - avg)) oder ɛ-similarity (sort -> diff -> detect spikes) oder encodieren und compression ratio bestimmen\nSequence-Number diff, encodieren und compression\nRe-transmission mit ɛ-similarity (andere Grenze) und mit compressibility (anderes encoding) aber evtl nicht effektiv\nSize-Modulation compressibility oder ɛ-similarity beide relativ aufwendig (viele Grenzen nötig um verschiedene Varianten zu erkennen)\n\nEs gibt auch Jaccard similarity, st-dev bestimmen",
         "hint": ""
     },
     {
@@ -1711,7 +1711,7 @@
         "id": 251,
         "folder": "Information Hiding",
         "front": "Wie kann (im BLP kontext) steganographie unterbunden werden?",
-        "back": "Write-down bzw Read-up werden verhindert durch 'Blind Write-up'. Hierbei sind ACK jedoch nicht (mehr) möglich (Sonst ACK-Channel). Für mehr Zuverlässigkeit kann ein 'Upwards Channel' verwendet werden. Hierbei wird ein Buffer verwendet, falls Daten zu schnell übermittelt werden. Falls ACK erwünsch sind, können Nachrichten in Buffer gespeichert werden und direkt ACK erhalten (Store & Forward Protocol, Probleme bei vollem Buffer) oder Buffer wird regelmäßig geleert und ACK wird zu zufälligem Zeitpunkt verschickt (Pump). Sobald ACK vorhanden ist, ist ein Channel möglich, aber mit den Methoden kann dieser wenigstens stark reduziert werden.",
+        "back": "Write-down bzw Read-up werden verhindert durch 'Blind Write-up'. Hierbei sind ACK jedoch nicht (mehr) möglich (Sonst ACK-Channel). Für mehr Zuverlässigkeit kann ein 'Upwards Channel' verwendet werden. Hierbei wird ein Buffer verwendet, falls Daten zu schnell übermittelt werden. Falls ACK erwünscht sind, können Nachrichten in Buffer gespeichert werden und direkt ACK erhalten (Store & Forward Protocol, Probleme bei vollem Buffer) oder Buffer wird regelmäßig geleert und ACK wird zu zufälligem Zeitpunkt verschickt (Pump). Sobald ACK vorhanden ist, ist ein Channel möglich, aber mit den Methoden kann dieser wenigstens stark reduziert werden.",
         "hint": ""
     },
     {
@@ -1725,7 +1725,7 @@
         "id": 253,
         "folder": "Information Hiding",
         "front": "Welche Subfields von Information Hiding gibt es?",
-        "back": "Watermarking, ...",
+        "back": "Anonymität, Covert Channel, Kryptographie, Obfuscation, Steganographie, Watermarking, ...",
         "hint": ""
     },
     {
@@ -1738,50 +1738,50 @@
     {
         "id": 255,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Können bei Network Steganographie Daten ausschließlich übermittelt werden?",
+        "back": "Nein, es ist auch möglich Daten zu Speicher zum Beispiel mit Network Dead Drops. Der Covert Sender speichert Daten in dem Cache des Dead Drop. Der Covert Empfänger kann die Daten für einige Zeit Anfragen",
         "hint": ""
     },
     {
         "id": 256,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie wird ein Micro Protocol optimiert?",
+        "back": "Es ist nötig ein Micro Protocol zu optimieren, damit es so wenig wie möglich Platz verbraucht und ähnlich zu anderen Nachrichten aussieht. Dabei wird die Verteilung der Bits vom Cover und vom gewünschten Micro Protocol analysiert und ein Mapping erzeugt. Dieses wird Überprüft auf Validität. Falls es nicht zulässig ist, muss ein anderes Mapping verwendet werden oder andere Bits im Cover oder Micro Protocol verwendet werden.",
         "hint": ""
     },
     {
         "id": 257,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Weswegen ist die False-Positive-Rate relevant beim Erkennen von Network Steganographie Methoden?",
+        "back": "Eine hohe FPR führt dazu, dass viele Pakete weiter untersucht werden müssen. Wenn die untersuchte Leitung viele Daten überträgt ist dies nicht mehr möglich.",
         "hint": ""
     },
     {
         "id": 258,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie werden neue Patterns hinzugefügt?",
+        "back": "Ein Paper wird von der Community überprüft und kategorisiert als ein existierendes Pattern oder ein neues Pattern. Dadurch sollen Neu-Erfindungen unterbunden werden und die Terminologie konsistent gehalten werden.",
         "hint": ""
     },
     {
         "id": 259,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie können Covert Channels bei IoT Systemen unterbunden/behindert werden?",
+        "back": "Es wird ein Warden zwischen das System und die Nutzer des System geschalten, welcher unautorisierten Zugriff verweigert.",
         "hint": ""
     },
     {
         "id": 260,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie können Informationen in Cyber-Physical Systems?",
+        "back": "In unbenutzten Registern können Informationen gespeichert werden. Wenn 4-8 Bits durchschnittlich sind nur 16-32 Geräte (wie Sensoren) nötig um einen 128Bit Kryptographischen Key zu speichern. Es gibt viele Störsignale wenn Bsp System/Nutzer Temperaturen ändern. Steg-Analysten können Anomalien leicht erkennen.\n\nScatter Hoarding (wie Eichhörnchen): Informationen an mehreren Orten speichern, welche weniger/selten beeinflusst werden. Scatter Hoarding verwendet BACnet um Werte zu lesen und zu schreiben, anstatt direkt auf Geräte zuzugreifen.",
         "hint": ""
     },
     {
         "id": 261,
         "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "front": "Wie kann man vorgehen, wenn es für eine Methode/Pattern keine Gegenmaßnahmen gibt?",
+        "back": "Man wendet Gegenmaßnahmen Variation an. Dabei wird eine Gegenmaßnahme für eine andere Methode angepasst auf doe gegenwärtige Methode.",
         "hint": ""
     },
     {
@@ -1793,6 +1793,118 @@
     },
     {
         "id": 263,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 264,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 265,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 266,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 267,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 268,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 269,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 270,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 271,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 272,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 273,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 274,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 275,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 276,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 277,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Information Hiding",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 279,
         "folder": "Information Hiding",
         "front": "",
         "back": "",
