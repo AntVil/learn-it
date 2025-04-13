@@ -1786,126 +1786,280 @@
     },
     {
         "id": 262,
-        "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "folder": "Effiziente Algorithmen",
+        "front": "Welche Eigenschaften müssen die Instruktionen eines Algorithmus haben?",
+        "back": "eindeutig, elementar & präzise",
         "hint": ""
     },
     {
         "id": 263,
-        "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "folder": "Effiziente Algorithmen",
+        "front": "Wie lautet das Mastertheorem? Wofür wird es verwendet?",
+        "back": "Das Mastertheorem wird genutzt um die Laufzeit von rekursiven Algorithmen zu bestimmen. Für T(n) <= a*T(n/b)+O(n^d) gilt:\na/b^d < 1: T(n)=O(n^d)\na/b^d = 1: T(n)=O(n^d*log(n))\na/b^d > 1: T(n)=O(n^log_b(a))",
         "hint": ""
     },
     {
         "id": 264,
-        "folder": "Information Hiding",
-        "front": "",
-        "back": "",
+        "folder": "Effiziente Algorithmen",
+        "front": "Welche (typischen) Entwurfsparadigmen gibt es für Algorithmen?",
+        "back": "Dynamisches Programmieren, Teile und Herrsche & Gierige Algorithmen",
         "hint": ""
     },
     {
         "id": 265,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 266,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 267,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 268,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 269,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 270,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 271,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 272,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 273,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 274,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 275,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 276,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 277,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 278,
-        "folder": "Information Hiding",
+        "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
         "hint": ""
     },
     {
         "id": 279,
-        "folder": "Information Hiding",
+        "folder": "Data Mining",
+        "front": "Was sind Attribute, Attribut-Werte und Typen?",
+        "back": "Ein Attribut ist eine Eigenschaft, die Attribut-Werte sind konkrete Werte, die Typen geben an, welche Werte möglich sind",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was unterschiedet isolierte Daten?",
+        "back": "Daten die alleinstehend betrachtet werden können (Bsp: Alter, ...). Das Gegenteil wären Daten mit Abhängigkeiten (Bsp: Netzwerke, Zeitreihen, ...)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Attribut-Typen gibt es?",
+        "back": "Nominal: Identifier deren Werte keine bedeutsame Informationen enthalten\nBinär: Sonderfall von nominal (symmetrisch/asymmetrisch)\nOrdinal: enum (median möglich mittelwert nicht)\nNumerisch: Intervall-skaliert (Attribute haben sinnvolle Differenzen zB Datum) und/oder Verhältnis-skaliert (Attribute haben sinnvolle Verhältnisse zB Alter)\nDiskret (abzählbar (un)-endlich) & Kontinuierlich (Float (theoretisch überabzählbar))\nDatenströme: Mengen an Daten die nur als Stream ökonomisch prozessiert werden können\nTextdokumente: Mehrere Dokumente sind ein Korpus, kann als Bag of Words (Anzahlen verschiedener Wörter) dargestellt werden,\nZeitreihen: Kontextattribute (id/timestamp), Verhaltens-Attribute (eigentliche Messwerte)\nDiskrete Folgen/Strings: Wie Zeitreihen aber Werte sind diskret (Bsp Nutzer ip Adresse bei Event)\nGraphen: Bsp Straßennetz",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche gängigen Lage-Parameter (Statistik) gibt es?",
+        "back": "(gewichtetes) Arithmetisches Mittel, Median, Modus (häufigster Wert)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was bedeutet es, wenn Werte symmetrisch, links- oder rechts-schief sind?",
+        "back": "symmetrisch: Median = Mean\nlinks-schief: Mean < Median\nrechts-schief: Mean > Median",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche gängigen Streuungsmaße gibt es?",
+        "back": "p-Quantil: p Werte unterhalb und (1-p) werte oberhalb\nQuartil: 1,2,3/4-Quantil\nQuartils-Abstand: 3-Quartil - 1-Quartil\nAusreißer: < 3-Q + 1.5 * Q-Abst. oder < 1-Q - 1.5 * Q-Abst.\nVarianz: sum((xi - mean)^2)/(n-1)\nStandardabweichung: sqrt(Varianz)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche (typischen) Diagramme werden bei Data-Mining verwendet?",
+        "back": "Box-Plot: Quartile + Ausreißer als Punkte\nQ-Q-Plot (zwei Verteilungen vergleichen): sortierte Punkte paare + Quartile-Punkte\nHistogram: Klassen\nStreu-Diagram: Scatter.Plot (Punkte Wolke)\nStreudiagramm-Matrix: 2d-Gitter aus Scatter-Plots\nStream Graph: Überlappende Graphen\nCircle Segments: Jedes Attribut bekommt Teil-Kreis (Muster erkennbar)\nParallele Koordinaten: Jedes Attribut bekommt \"Spalte\", für jedes Attribut ein Punkt pro Wert\nKachel-Diagramm: Rechtecke auf Fläche\nWortwolke\nGraph",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was ist eine Metrik im Kontext Abstands-/Ähnlichkeitsmaße",
+        "back": "Eine Metrik ist eine Funktion, für die gilt, gleiche Objekte haben Abstand 0, Abstände sind in beide Richtungen gleich, Dreiecksungleichung (x->y >= x->z + z->y)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was ist eine Ähnlichkeits-Funktion?",
+        "back": "Eine Ähnlichkeits-Funktion hat die Eigenschaft, dass identische Objekte den gleichen oder einen größeren Wert als zwei beliebige Objekte haben. Außerdem ist deren Wert immer >= 0",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Abstands-/Ähnlichkeitsmaße können für Nominale Attribute verwendet werden?",
+        "back": "Anzahl gleicher Werte zwischen zwei Objekten (Überlappungs-Maß) bzw. das Inverse davon.\nEs gibt auch Inverse Auftrittshäufigkeit: Summe 1 / (relative_haeufigkeit_von_wert)^2 (Dabei wird nur summiert wenn der Wert in beiden Objekten gleich ist)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Abstands-/Ähnlichkeitsmaße können für Binäre Attribute verwendet werden?",
+        "back": "symmetrisch: Anz. Ungleich / Anz. Gesamt, asymmetrisch: Anz. Ungleich / (Anz. beide 1 + Anz. Ungleich)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Abstands-/Ähnlichkeitsmaße können für Numerische Attribute verwendet werden?",
+        "back": "Euklidisch, Manhattan, Minkowski ((x-y)^alpha + ...)^(1/alpha), Maximum-Distanz",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was ist mit dem sogenannten Fluch des Dimensionalität gemeint?",
+        "back": "Bei zunehmender Anzahl an Dimensionen tendieren Abstandsfunktionen zunehmend unerwünschte Ergebnisse zu liefern. Das liegt daran, dass Datensätze mit zunehmender Anzahl an Dimensionen im Mittel weniger gut voneinander unterscheidbar sind.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Abstands-/Ähnlichkeitsmaße können für Ordinale Attribute verwendet werden?",
+        "back": "Wird in numerischen Wert überführt. Dazu muss eine Ordnung der verschiedenen Möglichen Werte gebildet werden. Jeder Wert wird dann in das Interval [0, 1] abgebildet.",
+        "hint": "Ordinal = enum"
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie berechnet man den Abstand mit verschiedenen Datentypen?",
+        "back": "Es werden Abstände zwischen den Einzelnen Werten Summiert und durch denen Anzahl geteilt. Fehlende Werte oder Asymmetrisch Binäre Werte mit x=y=0 werden ausgelassen. Die Abstände werden jeweils im Wertebereich [0, 1] bestimmt.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Ähnlichkeits-Funktion kann für Bags-of-Words verwendet werden?",
+        "back": "Die Kosinus-Ähnlichkeit: Skalar-Produkt(x, y) / (Eukl. D(x) * Eukl. D(y))",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie kann verhindert werden, dass Dokumente anhand von Häufig verwendeten Worten als ähnlich anerkannt werden?",
+        "back": "Generische Wörter entfernen und/oder Tf-idf-Maß verwenden. Das bedeutet die Häufigkeit jedes Worts wird mit ln(Anz. Dokumente / Anz. Dokumente mit Wort) multipliziert. Danach kann wie gewohnt die Kosinus-Ähnlichkeit bestimmt werden.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was gibt es bei Ähnlichkeits-Funktionen von Zeitreihen zu beachten?",
+        "back": "Zeitliche Achsen müssen übereinstimmen. Wertebereiche müssen ggf. angepasst werden durch abziehen von Mittelwert und dividieren der Standardabweichung. Jeder Punkt in der Zeitreihe kann dann als eine Dimension betrachtet werden.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was versteht man unter Dynamic Time Warping (DTW)?",
+        "back": "Elemente zweier Zeitreihen werden ggf wiederholt und die beiden Zeitreihen vergleichbar zu machen. Dies erfolgt durch einen Algorithmus, welcher eine Tabelle aufbaut. Die ersten beiden Elemente sind dabei gezwungen gruppiert zu werden (die letzten theoretisch auch). Es wird nun der Abstand zwischen diesen beiden Elementen bestimmt. Alle nachfolgenden Werte der Tabelle werden befüllt indem das Minimum der Werte link, oben und links-oben zum Abstand addiert werden. Die Tabelle kann dann komplett ausgefüllt werden. Das Ergebnis liefert die Zelle unten-rechts. Die Gruppierungen (bzw Wiederholungen) erhält man, indem man den Pfad von unten-rechts nach oben-links folgt, bei dem der Wert minimal ist.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie wird die Edit-Distanz (bzw Levenshtein-Distanz) berechnet?",
+        "back": "Distanz_(i,j) = min(Distanz_(i-1,j) + kosten_löschen, Distanz_(i,j-1) + kosten_einfügen, Distanz_(i-1,j-1) + kosten_ersetzen) (kosten_ersetzen = 0 wenn Werte gleich) \nDistanz_(i,0) = kosten_löschen * i\nDistanz_(0,j) = kosten_einfügen * j",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie wird die Länge der längsten gemeinsame Teilfolge berechnet?",
+        "back": "Falls Elemente gleich +1, sonst max(Zelle(i-1,j), Zelle(i,j-1)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Ähnlichkeiten zwischen Graphen bestimmt werden?",
+        "back": "Es kann der kürzeste Abstand verwendet werden oder die zufalls-weg-basierte Ähnlichkeit. Beim Zufallsweg werden Knoten als ähnlicher gewertet, wenn die mehr Kanten mit höheren Gewichten besitzen. Es ist dabei gedacht, dass ein Zufallsweg, welcher die Kanten relativ zu deren Gewicht wählt eher bei einem Knoten landen, als bei einem anderen.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
         "front": "",
         "back": "",
         "hint": ""
