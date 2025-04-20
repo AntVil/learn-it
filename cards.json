@@ -2060,6 +2060,83 @@
     {
         "id": 279,
         "folder": "Data Mining",
+        "front": "Welche Möglichkeiten gibt es bei der Datenbereinigung?",
+        "back": "Fehlende Werte ignorieren\nManuelles einfügen\nGlobale Konstante\nLage-Parameter (Median/Mean)\nWahrscheinlichster Wert (Regression, Decision Trees)\nInterpolation",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wozu wären Daten geglättet und wie funktioniert es?",
+        "back": "Um Ausreißer zu beseitigen können Daten geglättet werden. Hierzu werden die Daten in Blöcke eingeteilt und in jedem Block werden die Werte angepasst. Zum Beispiel zum Median, Mean oder zum näheren Wert von Minimum oder Maximum. Die Blöcke können auch ein Intervall abdecken und sich sogar überlappen (Glätten mit gleitendem Mittelwert). Es gibt auch das exponentielle Glätten, dabei wird zwischen der ursprünglichen Wert der Zeitreihe und dem zuletzt berechnetem Wert linear interpoliert, wobei ein festes alpha (alpha = 1 -> keine Glättung) gewählt wird. (Vorteilhaft bei starken Ausschlägen)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie berechnet man Chi-Quadrat und wie wertet man das Ergebnis des Chi-Quadrat-Test aus?",
+        "back": "Für zwei Kategorien wird eine Tabelle aufgebaut mit Häufigkeiten der jeweiligen Kombination. Eine weitere Tabelle mit den erwarteten Häufigkeiten wird ebenfalls gebildet, indem die gesamt Anzahl der beiden Kategorien multipliziert und durch die gesamt Anzahl dividiert werden. Die zweite Tabelle entspricht der erwarteten Häufigkeit von je einer Kombination. Um Chi-Quadrat nun zu bestimmen wird die Differenz der beiden Werte quadriert und durch die erwartete Häufigkeit dividiert. Diese Werte werden alle summiert. Um die Bedeutung des Werts zu bestimmen muss die Anzahl Freiheitsgrade durch (Anz. A - 1) * (Anz. B - 1) gebildet werden und ein Signifikanzniveau gegeben sein. Der Schwellenwert kann aus der Wertetabelle abgelesen werden. Ist der berechnete Wert größer besteht besteht eine Korrelation.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie wird die Covarianz und der Korreltations-Koeffizient berechnet und was sagen beide aus?",
+        "back": "Cov(A, B) = E(A * B) - E(A) * E(B)\nE ist der Erwartungswert. Ist die Covarianz positiv besteht ein positiver Zusammenhang, ist sie negativ besteht ein negativer Zusammenhang. Bei einem Wert von 0 kann keine Aussage getroffen werden.\nDer Korreltations-Koeffizient wird durch Cov(A, B) / (Std A * Std B) berechnet. Er gibt die Stärke der Korrelation an und liegt zwischen -1 und 1. Der Wert 0 wird als unkorreliert bezeichnet. Bei Korrelation werden lediglich linearer Zusammenhang geprüft.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die diskrete Wavelet-Transformation und wofür kann man sie verwenden?",
+        "back": "Man kann sie verwenden um Ausreißer zu beseitigen und zur Daten-Reduktion. Es wird eine Funktion zur Glättung und eine für die Unterschiede zwischen Werten benötigt. Nun werden benachbarte Elemente im Array mit den beiden Funktionen transformiert. Das entstehende Array hat die gleiche Größe. Das gleiche Verfahren wird auf der Hälfte des Array angewandt, welche zuvor geglättet wurde. Es wird wiederholt bis nur noch ein Wert vorhanden ist. Werte die betragsmäßig unter einem Schwellenwert liegen können auf 0 gesetzt werden. Die Transformation wird danach rückgängig gemacht.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Haar-Wavelet Transformation?",
+        "back": "Es wird die Wavelet Transformation mit den Funktionen Mean und Diff verwendet. Die Wavelet Koeffizienten sind dabei stets das Ergebnis von Diff über alle Wiederholungen bis zur letzten Zahl die schlicht übernommen wird. Die erzeugten Koeffizienten können als Baum dargestellt werden. Die Basis-Vektoren pro Koeffizient entsprechen einem Vektor aus -1, 0, 1. Multipliziert man die Basis-Vektoren und Koeffizienten und summiert diese erhält man die ursprüngliche Folge. Zur Datenreduktion kann jeder Basisvektor normalisiert werden und alle Koeffizienten mit den geringsten Beträgen auf 0 gesetzt werden. Durch Rücktransformation erhält man eine reduzierte Folge.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welchen nutzen hat die Hauptkomponentenanalyse (PCA)?",
+        "back": "Es ist eine Dimensions-Reduktions-Methode. Die Daten werden so transformiert, dass die jeweiligen Dimensionen die Daten möglichst stark von einander trennen. Die Dimensionen die am wenigsten Beitragen können entfernt werden.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie wird die einfache lineare Regression mit der Methode der kleinsten Quadrate berechnet?",
+        "back": "m = ((x - x_mean) * (y - y_mean))/(x - x_mean)^2\nb = y_mean - m * x_mean",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welchen Nutzen hat die Tilted-Time-Frame Methode und wie funktioniert diese?",
+        "back": "In einem Datenstrom sind Daten aus der Vergangenheit mit gröberer Genauigkeit ausreichend. Es werden also Stichproben des Datenstrom entnommen, wobei desto weiter diese in der Vergangenheit liegen, weniger Stichproben genommen werden. Man unterscheidet:\nNatürliches TTF: 4 * 15min, 24 * 1h, 31 * 1d, 12 * 1m\nlogarithmisches TTF: Intervalle immer zweier Potenzen\nprogressiv-logarithmisches TTF: b_max = Anzahl Behälter, bk = Größe Behälter, Behälter 0 hat 2er Schritte, Behälter 1 4er, ... Behälter k startet mit dem größten Element für das gilt (element + Schritt-Größe/2) ist vielfaches von Schritt-Größe. Das letzte Frame enthält alle noch größeren Zweierpotenzen, welche nicht bereits abgedeckt sind.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die z-Transformation bzw. Standardisierung (Normalisierung)?",
+        "back": "(x - x_mean) / x_std\nEs kann auch die mittlere absolute Abweichung verwendet werden (sum(|x - x_mean|) / n)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was bewirkt die Dezimalskalierung?",
+        "back": "Alle Werte werden durch die nächst größere Zehnerpotenz geteilt der betragsmäßig größten Zahl.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
         "front": "",
         "back": "",
         "hint": ""
