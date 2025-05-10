@@ -1808,42 +1808,42 @@
     {
         "id": 265,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie funktioniert der Algorithmus von Rabin-Karp zur Textsuche und welche Laufzeit hat dieser?",
+        "back": "Es wird eine Primzahl gewählt, welche später zur Berechnung eines Hash benötigt wird. Der Hash des Muster wird gebildet (O(m)). Danach wird der Hash über den Text gebildet. Die verschiedenen Hashes können leicht über den Text berechnet werden, indem ein Zeichen entfernt und ein anderen Hinzugefügt wird (O(n)). Die Hashes werden auf Gleichheit geprüft, bei Gleichheit ist noch eine genaue Untersuchung nötig (O(m)). Dieser Fall tritt jedoch selten auf, vor allem bei guter Wahl der Primzahl. (Bei langem Muster ist Primzahl finden schwerer). Die Erwartete Laufzeit ist O(n)",
         "hint": ""
     },
     {
         "id": 266,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie funktioniert der Algorithmus von Knuth-Morris-Pratt zur Textsuche und welche Laufzeit hat dieser?",
+        "back": "Es wird eine Präfix Tabelle vom Muster erzeugt (O(m)). Nun kann das Muster mit dem Text verglichen werden. Bei einem Mismatch wird in der Präfix-Tabelle zu einem potenziellen Präfix zurück gesprungen. Ist kein Sprung möglich wird das nächste Zeichen im Text betrachtet. Es gibt kein Back-Tracking im Text (O(n)). Die gesamt Laufzeit ist O(m + n)",
         "hint": ""
     },
     {
         "id": 267,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie funktioniert der Algorithmus zur Bestimmung der längsten gemeinsamen Teilsequenz?",
+        "back": "Es wird eine Tabelle aufgebaut mit den Dimensionen der Längen der beiden Wörter. Es wird je das Maximum aus den Zellen links, oben & links-oben bestimmt und in die entsprechende Zelle eingetragen. Falls die Zeichen übereinstimmen wird auf den Wert 1 plus gerechnet. Somit erhält man die Länge der längsten Teilsequenz. Durch traversieren der Tabelle erhält man die (bzw eine) Teilsequenz.",
         "hint": ""
     },
     {
         "id": 268,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Was ist das globale Alignment für zwei Wörter und wie kann dieses berechnet werden?",
+        "back": "Es müssen die Kosten für je zwei gepaarte Buchstaben gegeben sein und die Kosten für je einen ungepaarten Buchstaben. Nun kann wie beim Algorithmus für die längste gemeinsame Teilsequenz eine Tabelle aufgebaut werden, wobei die jeweilige Zelle stets das Minimum der Zellen links, oben & links-oben ist.",
         "hint": ""
     },
     {
         "id": 269,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Worin besteht die Idee der Hirschberg-Erweiterung beim Globalen Alignment?",
+        "back": "Da die Tabelle nur Zeilenweise befüllt wird, müssen nur je zwei Zeilen im Speicher gleichzeitig vorhanden sein. Diese Strategie berechnet jedoch nur die minimalen Kosten. Die Zuordnung muss durch einen rekursiven Ansatz bestimmt werden.",
         "hint": ""
     },
     {
         "id": 270,
         "folder": "Effiziente Algorithmen",
-        "front": "",
+        "front": "Worin besteht die Idee des 4-Sowjets-Trick bei der Berechnung der Edit-Distanz?",
         "back": "",
         "hint": ""
     },
@@ -2133,6 +2133,62 @@
         "front": "Was bewirkt die Dezimalskalierung?",
         "back": "Alle Werte werden durch die nächst größere Zehnerpotenz geteilt der betragsmäßig größten Zahl.",
         "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert der (Apriori) Algorithmus zur Bestimmung der Item-Sets mit einer Mindestanzahl?",
+        "back": "Es werden alle einelementigen Items gefiltert nach deren Häufigkeit (Mindestanzahl). Es werden all Kombinationen der verbliebenen Mengen durch vereinigen gebildet, sodass Mengen entstehen, welche 1 größer sind. Diese werden erneut gefiltert. Der Algorithmus terminiert, wenn nur noch eine oder keine Menge vorhanden ist. Alle Zwischenergebnisse werden vereinigt.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie lautet das Beispiel zu den Assoziationsregeln wenn ein Item-Set mit drei Produkten gegeben ist?",
+        "back": "In dem Beispiel wird die Konfidenz berechnet, welche besagt, wie wahrscheinlich es ist, dass ein Käufer, der eine echte (nicht-leere) Teilmenge aus dem Item-Sets gekauft hat, die restlichen Produkte ebenfalls kaufen wird (Implikation). Es muss eine Mindest-Konfidenz gegeben sein, sodass man alle Kombinationen der Implikationen in den so genannten Assoziationsregeln sammeln kann. (Notation: conf(A => B) = P(A ∪ B) / P(A) = Anz(A ∪ B) / Anz(A))",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Frequent-Pattern-Growth-Methode?",
+        "back": "Es werden alle einelementigen Items nach deren Häufigkeit sortiert. Schrittweise werden alle Transaktionen eingefügt, wobei die Elemente jeder Transaktion nach der sortieren Reihenfolge eingefügt werden. Gibt es einen Knoten wird dieser Inkrementiert, ansonsten wird ein Knoten erzeugt. Um die Knoten zuzuordnen werden Zeiger von einem Array auf die Knoten des Baums, und von den Knoten auf gleiche Items gesetzt. Jetzt wird für jedes Item alle Pfade bestimmt um zu diesem zu gelangen, wobei Pfade mehrfach vorkommen, falls der entsprechende Knoten nicht in 1 endet. Falls nur ein Pfad existiert, werden alle Teilmengen des Pfades gebildet und ausgegeben. Falls mehrere Pfade existieren wird der Algorithmus auf dem reduzierten Baum ausgeführt, welcher nur aus den Pfaden (ohne das betrachtete Item) besteht.",
+        "hint": "Alternative zum Apriori Algorithmus"
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was ist der Lift einer Assoziationsregel und wofür wird dieser verwendet?",
+        "back": "lift(A => B) = (P(A ∪ B)) / (P(A) * P(B))\nEin Wert von 1 bedeutet keine Korrelation. Ein Wert über 1 bedeutet positive Korrelation und ein kleinerer Wert negative Korrelation.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was sind Null-invariante Evaluationsmaße bei Assoziationsregeln und welche gibt es?",
+        "back": "Es handelt sich um Maße die berechnet werden können, ohne Transaktionen zu beachten die nicht weder A noch B enthalten.\nallconf(A,B) = min(conf(A => B), conf(B => A))\nmaxconf(A,B) = max(conf(A => B), conf(B => A))\nKulczynski(A,B) = (conf(A => B) + conf(B => A)) / 2\nCosine(A,B) = sqrt(conf(A => B) * conf(B => A))\nJaccard(A,B) = (Anz A & B) / (Anz A | B)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Seltene Muster bei der Mustersuche entdeckt werden?",
+        "back": "P(A ∪ B) < P(A) * P(B)\nP(A ∪ ¬B) * P(¬A ∪ B) > P(A ∪ B) * P(¬A ∪ ¬B)\n(conf(A => B) + conf(B => A)) / 2 < ε",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Distanz-Metriken gibt es für Muster?",
+        "back": "Musterdistanz: Pdist(A,B) = 1 - (|Anz Transaktionen in A & B| / |Anz Transaktionen in A | B|)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Was ist eine δ-Überdeckung zweier Muster bei der Mustersuche?",
+        "back": "Ein Muster A ist eine δ-Überdeckung eines Muster B, wenn B ⊆ A und Pdist(A,B) < δ gilt. Eine δ-Überdeckung kann verwendet werden um die Anzahl an Mustern zu verringern, ohne wichtige Muster mit geringerem Support/Anzahl zu verwerfen.",
+        "hint": "Komprimierte Muster"
     },
     {
         "id": 279,
