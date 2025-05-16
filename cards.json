@@ -1850,29 +1850,29 @@
     {
         "id": 271,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
-        "hint": ""
+        "front": "Was ist SSSP und wie kann es gelöst werden?",
+        "back": "Es ist das kürzeste Wege Problem von einem Start Konten zu allen anderen Knoten.\nEs kann durch den Bellman-Ford-Algorithmus gelöst werden: Es wird eine Tabelle aufgebaut mit einer Spalte pro Knoten, worin die kürzesten Abstände gespeichert werden. Die nächste Spalte kann berechnet werden indem das Minimum aus der vorherigen Zeile addiert wird mit dem Gewicht (es dürfen nur vorhandene Kanten betrachtet werden). Die Tabelle ist fertig nach V-1 Zeilen, da ein kürzester Weg jeden Knoten maximal 1-mal besuchen kann. Es ist möglich den Algorithmus nur mit 2 Zeilen auszuführen. Der Algorithmus findet kann auch negative Kreise finden. Laufzeit O(V*E) Speicher O(V).",
+        "hint": "Single Source Shortest Path Problem"
     },
     {
         "id": 272,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Welchen Vorteil/Nachteil hat der Dijkstra Algorithmus gegenüber dem Bellman-Ford-Algorithmus?",
+        "back": "Dijkstra benötigt rein positive Kantengewichte, Bellman-Ford nicht. Bei Dijkstra wird stets der Knoten mit geringstem Abstand zur sicheren Knoten-Menge hinzu genommen. Dabei werden alle Abstände von diesem Knoten zu dessen nicht sicheren Nachbarn aktualisiert. Dies wiederholz sich, bis alle Knoten zur sicheren Knoten-Menge gehören. Laufzeit (mit Fibonacci-Heap) O(E + V*log(V)) Speicher O(V).",
         "hint": ""
     },
     {
         "id": 273,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
-        "hint": ""
+        "front": "Was ist APSP und wie kann es gelöst werden?",
+        "back": "Es ist das kürzeste Wege Problem von jedem Knoten zu jedem anderen Knoten.\nEs kann durch mehrfache Ausführungen von Algorithmen für das SSSP gelöst werden. Außerdem gibt es den Johnson-Algorithmus: Es wird der Bellman-Ford-Algorithmus angewendet auf dem Graphen um negative Kanten-Gewichte zu entfernen, kürzeste Wege bleiben dabei erhalten und können wieder berechnet werden. Auf dem neuen Graphen kann der Dijkstra Algorithmus mehrfach aufgerufen werden. Laufzeit O(V*E + V^2*log(V)) Speicher O(V^2).",
+        "hint": "All Pairs Shortest Paths Problem"
     },
     {
         "id": 274,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie funktioniert der Floyd-Warshall Algorithmus?",
+        "back": "Es werden die kürzesten Pfade zwischen allen Knoten-Paaren berechnet. Es wird die Adjazenz-Matrix verwendet. Nun wird durch alle Knoten k iteriert und eine neue Matrix gebildet. Es wird für jedes paar (i, j) der Matrix geprüft, ob über den momentanen Knoten k eine Abkürzung zwischen (i, j) möglich ist. Es wird also stets das Minimum min(A_k-1(i, j), A_k-1(i, k) + A_k-1(k, j) berechnet. Laufzeit O(V^3) Speicher O(V^2).",
         "hint": ""
     },
     {
