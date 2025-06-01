@@ -1878,19 +1878,33 @@
     {
         "id": 275,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie funktioniert der Ford-Fulkerson-Algorithmus zur Lösung des Maximalen s-t-Fluss Problem?",
+        "back": "Ein gerichteter Graph mit Kanten-Kapazitäten ist gegeben. Im Graph ist der maximale Fluss initial 0. Solange Wege mit Kapazität größer 0 gefunden werden, werden diese Wege hinzugefügt. Ein Weg kann auch eine gerichtete Kante rückwerts durchlaufen und vom bestehenden Durchfluss abziehen (statt addieren). Für eine gute Laufzeit müssen 'gute' Wege im Graphen effizient gefunden werden.",
         "hint": ""
     },
     {
         "id": 276,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Was besagt das Max-Flow-Min-Cut-Theorem?",
+        "back": "Der maximale Fluss in einem Graphen entspricht der Schnittkapazität der minimalen Schnitte. (ein Schnitt unterteilt den Graphen in zwei Mengen)",
         "hint": ""
     },
     {
         "id": 277,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was ist der Edmonds-Karp-Algorithmus?",
+        "back": "Es ist eine spezial-Form des Ford-Fulkerson-Algorithmus, wobei Wege durch Breiten-Suchen berechnet werden. Der Vorteil besteht darin, dass der Algorithmus auch mit irrationalen Zahlen terminiert und nicht unnötige Umwege nimmt, bei denen eine Kante oft vorwerts und rückwerts abgelaufen wird. Die Laufzeit beträgt O(V * E^2), weil es maximal (2*E)*(V/4) Durchläufe gibt.",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "Wie berechnet der Psuh-Relabel-Algorithmus Maximale-Flüsse Berechnen?",
+        "back": "An der Quelle wird der Maximale Fluss durch alle verbundenen Kanten geleitet. Alle Knoten an denen ein mehr ein- als abfließt sind aktive Knoten. Aktive Knoten leiten so viel Überschuss weiter wie möglich. Weiterer Überschuss wird zurück geleitet. Es wird zudem eine Höhe der Knoten mit verwaltet um Ansammlung von Fluss in Sack-Gassen zu vermeiden. Dabei fließt der Fluss nur zu Knoten mit niedrigerer Tiefe. Die Höhen müssen also während des Algorithmus angepasst werden und sind Initial 0 (abgesehen von der Quelle). Der Algorithmus hat die Laufzeit O(EV^2), wenn aktive Knoten in einer vorteilhaften Reihenfolge abgearbeitet werden.",
+        "hint": ""
+    },
+    {
+        "id": 278,
         "folder": "Effiziente Algorithmen",
         "front": "",
         "back": "",
@@ -2189,6 +2203,104 @@
         "front": "Was ist eine δ-Überdeckung zweier Muster bei der Mustersuche?",
         "back": "Ein Muster A ist eine δ-Überdeckung eines Muster B, wenn B ⊆ A und Pdist(A,B) < δ gilt. Eine δ-Überdeckung kann verwendet werden um die Anzahl an Mustern zu verringern, ohne wichtige Muster mit geringerem Support/Anzahl zu verwerfen.",
         "hint": "Komprimierte Muster"
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert das Maß Informationsgewinn um einen Entscheidungsbaum aufzubauen?",
+        "back": "Es wird die Differenz aus Entropie (sum((Anz Klasse / Anz gesamt) * log2(1 / (Anz Klasse / Anz gesamt)))) und Informationsbedarf (sum((Anz Attribut Wert / Anz gesamt) * Entropie(Eingaben mit Attribut Wert))) berechnet für jedes Attribut. Das Ergebnis ist der Informationsgehalt in Bits. Das Attribut mit dem höchsten Wert wird gewählt zur Unterteilung. Bei numerischen Werten wird bei der Berechnung Spaltwert für jedes Attribut der Spaltwert mit dem maximalen Informationsgehalt verwendet. Als Kandidaten für Spaltwerte werden alle Werte zwischen zwei sortiert aufeinanderfolgende Werte genommen.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert das Maß Gewinnverhältnis um einen Entscheidungsbaum aufzubauen?",
+        "back": "Es wird analog wie das Maß für Informationsgewinn angewandt, nur dass das Ergebnis pro Attribut durch dessen Spaltentropie (sum(Anz Attribut Wert / Anz gesamt) * log2(Anz Attribut Wert / Anz gesamt)) geteilt wird. Der Sinn dahinter dieses Maß zu verwendet ist es, Attribute mit weniger Ausprägungen als besser zu bewerten.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert das Maß Gini-Index um einen Entscheidungsbaum aufzubauen",
+        "back": "Der Gini-Index einer Menge ist definiert als 1 - sum((relative Anz Klasse)^2). Es wird jede Partitionierung untersucht, welche zwei Ergebnisse besitzt. Die Partitionierung mit geringstem Gini-Index wird ausgewählt.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Entscheidungsbäume effizient bei großen Datenmengen berechnet werden?",
+        "back": "Man kann AVC-Mengen (Attribute-Value-Classlabel) verwenden um nicht alle Daten im Arbeitsspeicher zu halten. Stattdessen werden nur die jeweiligen Anzahlen gespeichert. Es gibt auch das Verfahren BOAT, bei dem Stichproben verwendet werden um Teil-Bäume zu konstruieren. Die Teilbäume werden später vereint und bereinigt.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Naive Bayes Klassifikation, wieso wird er als Naiv bezeichnet?",
+        "back": "Er wird als naiv bezeichnet, weil angenommen wird, dass verschiedene Attribute unabhängig voneinander sind. Es wird für jede Klasse die Wahrscheinlichkeit bestimmt, dass diese auftritt (meist aus den Trainingsdaten). Dann wird die Wahrscheinlichkeit bestimmt, dass ein Attribut einen bestimmten Wert hat, gegeben, dass es in einer bestimmten Klasse auftritt. Zur Klassifikation wird für jede Klasse das Produkt berechnet aus der Wahrscheinlichkeit der Klasse und allen Attribut-Werten gegeben mit dieser Klasse. Die Klasse mit dem größten Wert ist die gewählte Klasse. Bei Numerischen Werten wird eine Normalverteilung angenommen (e^(-(x - Erwartungswert)^2/(2 * std^2)) / (sqrt(2pi)*std)). Das Verfahren kann stabiler gemacht werden indem auf die Anzahlen jedes Attribut-Werts 1 auf-addiert wird (verhindern von 0 Wahrscheinlichkeiten).",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Regel-basierte Klassifikation?",
+        "back": "Es werden Regeln schrittweise Aufgebaut, sobald eine Regel ein gewünschtes Qualitätsmaß besitzt wird sie in die Liste aller Regeln aufgenommen und alle Trainingsdaten welche durch die Regel abgedeckt sind, werden nicht mehr berücksichtigt. Qualitätsmaße messen, ob durch Hinzunahme eine Konjunktion die Regel verbessert wird. Es gibt: Entropie, Informationsgehalt und andere. Auch Regel-basierte Klassifikationen können durch verwerfen von Regeln verbessert werden (Over-fitting vermeiden).",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Evaluationsmaße gibt es für Klassifikationen?",
+        "back": "Genauigkeit (Prozent Korrekt): T / Ges\nFehlerrate: 1 - Genauigkeit\nSensitivität/TPR (Prozent P Korrekt): TP / P\nSpezifität (Prozent N Korrekt): TN / N\nFPR: FP / N\nPräzision: TP / (TP + FP)\nFβ: ((1 + β^2) * Präzision * Sensitivität) / (β^2 * Präzision + Sensitivität)",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie kann die Güte einer Methode zur Klassifikation abgesehen von Evaluationsmaßen noch gemessen werden?",
+        "back": "Durch Kreuz-Validierung und Stichproben ziehen und mehrmaliges Trainieren und Testen kann die Robustheit der Methode abgeschätzt werden.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie wird eine ROC-Kurve erstellt?",
+        "back": "Es werden alle Daten mit deren Wahrscheinlichkeiten klassifiziert. Für jede Wahrscheinlichkeit wird die TPR und die FPR berechnet und in ein Diagramm eingezeichnet. Die Punkte werden anschließend verknüpft. Die diagonale wäre eine zufällige Klassifikation. Mit der ROC-Kurve können Modelle verglichen werden oder optimale Grenzwerte für die Wahrscheinlichkeiten gewählt werden.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Ensemble-Methode Bagging?",
+        "back": "Es werden Subsets (mit zurücklegen) gebildet und jeweils eine Methode darauf angewandt. Die einzelnen Stimmen der Klassifikationen können unterschiedlich vereint werden, auch für numerische Ergebnisse. Diese Methode ist meist sehr Robust und neigt wenig zu Überanpassung, auch wenn die einzelnen Methoden dazu neigen.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Ensemble-Methode Boosting?",
+        "back": "Es werden schrittweise Modelle trainiert, wobei die Modelle aus der vorherigen Iteration verwendet werden um bestimmte Eingaben höher zu gewichten, welche momentan falsch klassifiziert werden. Modelle die dabei wenig Fehler machen haben schlussendlich eine höhere Gewichtung als Modelle mit vielen Fehlern. Dieses Verfahren neigt zu Over-fitting, wenn Ausreißer in den Daten vorhanden sind.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie funktioniert die Ensemble-Methode Zufallswälder?",
+        "back": "Es werden mehrere Bäume unabhängig voneinander aufgebaut. Jeder Baum hat dabei nur eine Stichprobe mit ausgewählten Attributen zur Verfügung. Jeder Baum wird gleich gewichtet. Dieses Verfahren ist im Schnitt nicht so anfällig für Ausreißer und Over-fitting.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "",
+        "back": "",
+        "hint": ""
     },
     {
         "id": 279,
