@@ -2291,15 +2291,15 @@
     {
         "id": 279,
         "folder": "Data Mining",
-        "front": "",
-        "back": "",
+        "front": "Welche Partitionierungs Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
+        "back": "k-Means: Zufällige Punkte sind Zentrum. Nächster (euklidischer) Nachbar gehört zu Cluster. Mittelwert von Cluster ist neues Zentrum. Wiederholen bist keine Änderungen\nk-Medoids (/PAM): Zufällige Punkte sind Zentrum. Nächster (euklidischer) Nachbar gehört zu Cluster. Punkt mit kleinstem Abstand zu allen Cluster-Punkten wird neues Zentrum. Wiederholen bis keine Änderung.",
         "hint": ""
     },
     {
         "id": 279,
         "folder": "Data Mining",
-        "front": "",
-        "back": "",
+        "front": "Welche Hierarchischen Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
+        "back": "Agglomerative Verfahren: Alle Punkte sind in einem eigenen Cluster. Schrittweise werden Cluster zusammengeführt. Als Distanzen zwischen Clustern gibt es min, max, diff_mean, sum_diff_all_pairs/count_all_pairs\nDivisive Verfahren: Es wird die Menge unterteilt bis eine Abbruchbedingung erfüllt ist.\n\nDen Ablauf der Algorithmen kann man mit  einem Dendrogramm (Baum mit Clustern als Knoten, Höhe ist Ähnlichkeit) darstellen. Beim min-Abstand entstehen Ketten (Single-Linkage) bei max-Abstand entstehen vollständige Teilgraphen (Complete-Linkage)",
         "hint": ""
     },
     {
