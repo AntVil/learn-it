@@ -2299,7 +2299,35 @@
         "id": 279,
         "folder": "Data Mining",
         "front": "Welche Hierarchischen Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
-        "back": "Agglomerative Verfahren: Alle Punkte sind in einem eigenen Cluster. Schrittweise werden Cluster zusammengeführt. Als Distanzen zwischen Clustern gibt es min, max, diff_mean, sum_diff_all_pairs/count_all_pairs\nDivisive Verfahren: Es wird die Menge unterteilt bis eine Abbruchbedingung erfüllt ist.\n\nDen Ablauf der Algorithmen kann man mit  einem Dendrogramm (Baum mit Clustern als Knoten, Höhe ist Ähnlichkeit) darstellen. Beim min-Abstand entstehen Ketten (Single-Linkage) bei max-Abstand entstehen vollständige Teilgraphen (Complete-Linkage)",
+        "back": "Agglomerative Verfahren: Alle Punkte sind in einem eigenen Cluster. Schrittweise werden Cluster zusammengeführt. Als Distanzen zwischen Clustern gibt es min, max, diff_mean, sum_diff_all_pairs/count_all_pairs\nDivisive Verfahren: Es wird die Menge unterteilt bis eine Abbruchbedingung erfüllt ist.\n\nDen Ablauf der Algorithmen kann man mit  einem Dendrogramm (Baum mit Clustern als Knoten, Höhe ist Ähnlichkeit) darstellen. Beim min-Abstand entstehen Ketten (Single-Linkage) bei max-Abstand entstehen vollständige Teilgraphen (Complete-Linkage)\n\nBIRCH: Speichern von Clustern in balancierten Baum, mit je drei konstanten Werten (n, sum(x), sum(x^2)). Effektiv bei kreisförmigen Clustern (O(n)).\nChameleon-Verfahren: KNN, danach Cluster zusammenführen. Effektiver bei generischen Clustern (O(n^2))",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Dichtebasierte Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
+        "back": "DBSCAN: ε (Radius) und minPoints muss gegeben sein. Alle Punkte die im Radius mindesten minPoints enthalten sind Kern-Punkte. Kern-Punkte die im Radius von einander liegen werden zu einem Cluster. Rand-Punkte werden auch hinzugefügt. Die restlichen Punkte sind Ausreißer. (O(n^2) bzw. O(n*log(n+durchschnittliche_dichte))\nOPTICS: minPoints muss gegeben sein. Für jeden Punkt wird die Kerndistanz berechnet als der Radius bis minPoints enthalten sind. Die Erreichbarkeitsdistanz ist das Maximum zwischen dem Abstand der Punkte und der Kerndistanz. Die Werte werden verwendet um die Punkte zu sortieren/anzuordnen; es werden keine konkreten Cluster ausgegeben, sondern ein Plot, welcher analysiert werden muss.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Welche Gitterbasierte Cluster-Verfahren wurden im Kurs beschrieben?",
+        "back": "STING: Statistische Informationen werden auf Gitter mit höchster Auflösung berechnet und nach oben weiter berechnet. Von Gitter mit niedriger Auflösung wird nach unten gearbeitet und relevante Ebenen erkannt umd Cluster zu bilden. Arbeitet effizient aber Qualität kann schlechter sein.\nCLIQUE: Datenraum wird unterteilt und Gitter-Zellen werden zusammengeführt/berücksichtigt, wenn diese genug Punkte haben und ähnlich sind. Arbeitet effizient aber Qualität kann schlechter sein.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wann ist ein Cluster-Verfahren sinnvoll?",
+        "back": "Die Hopkins-Statistik kann angeben, ob ein Clustering überhaupt sinnvoll ist. Dabei wird die Datenmenge mit einer zufällig erzeugten Menge verglichen (sum_min_d_rand/(sum_min_d_rand + sum_min_d) > 0.5).\n",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Cluster verfahren evaluiert werden?",
+        "back": "",
         "hint": ""
     },
     {
