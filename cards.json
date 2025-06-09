@@ -2327,7 +2327,7 @@
         "id": 279,
         "folder": "Data Mining",
         "front": "Wie können Cluster verfahren evaluiert werden?",
-        "back": "",
+        "back": "Falls eine Ground-Truth bekannt ist, kann BCubed Precision oder BCubed Recall berechnet werden. Falls nicht, kann zum Beispiel der Silhouetten-Koeffizient eines Elements berechnet werden: a(x) = durchschnittlicher Abstand zu anderen Elementen aus gleichem Cluster, b(x) = min aller Cluster von durchschnittlicher Abstand zu Elementen aus Cluster, s(x) = (b(x) - a(x)) / max(a(x), b(x)). Werte bei 1 sind gut, Werte zwischen -1 und 0 nicht.",
         "hint": ""
     },
     {
