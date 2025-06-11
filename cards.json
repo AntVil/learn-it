@@ -1906,8 +1906,15 @@
     {
         "id": 278,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Was ist das Knotenüberdeckungsproblem?",
+        "back": "Teilmenge alle Knoten mit minimalem Gewicht, wobei mindestens ein Knoten von jeder Kante gewählt werden muss. Brute-Force O(V^2 * 2^V). Eine Pseudo-Polynomielle Laufzeit kann erreicht werden, wenn das Gewicht des Graphen als Konstant angesehen wird. In diesem Fall kann rekursiv die Knotenüberdeckung aufgebaut werden, wobei Rekursions-Pfade frühzeitig abgebrochen werden können O(V^2 * 2^T(G)). Für einen Baum kann das Problem in Zeit O(E) gelöst werden (durch Dynamisches Programmieren).",
+        "hint": "Optimierungsproblem"
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was sind Parametrisierbare Probleme?",
+        "back": "Probleme, welche an sich nicht Polynomielle Laufzeit haben, aber durch einen Parameter, welcher für eine Eingabe berechnet werden kann, eine Polynomielle Laufzeit haben, solange der berechnete Parameter als Konstant angenommen wird. Bsp: O(f(k) * n^c)\nIn gewisser Weise ist P eine Teilmenge der Parametrisierbaren Probleme und es gibt auch Probleme, bei denen ein Parameter nicht komplett heraus-faktorisiert werden kann (XP).",
         "hint": ""
     },
     {
