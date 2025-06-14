@@ -1899,7 +1899,7 @@
     {
         "id": 278,
         "folder": "Effiziente Algorithmen",
-        "front": "Wie berechnet der Psuh-Relabel-Algorithmus Maximale-Flüsse Berechnen?",
+        "front": "Wie berechnet der Push-Relabel-Algorithmus Maximale-Flüsse Berechnen?",
         "back": "An der Quelle wird der Maximale Fluss durch alle verbundenen Kanten geleitet. Alle Knoten an denen ein mehr ein- als abfließt sind aktive Knoten. Aktive Knoten leiten so viel Überschuss weiter wie möglich. Weiterer Überschuss wird zurück geleitet. Es wird zudem eine Höhe der Knoten mit verwaltet um Ansammlung von Fluss in Sack-Gassen zu vermeiden. Dabei fließt der Fluss nur zu Knoten mit niedrigerer Tiefe. Die Höhen müssen also während des Algorithmus angepasst werden und sind Initial 0 (abgesehen von der Quelle). Der Algorithmus hat die Laufzeit O(EV^2), wenn aktive Knoten in einer vorteilhaften Reihenfolge abgearbeitet werden.",
         "hint": ""
     },
@@ -1915,6 +1915,41 @@
         "folder": "Effiziente Algorithmen",
         "front": "Was sind Parametrisierbare Probleme?",
         "back": "Probleme, welche an sich nicht Polynomielle Laufzeit haben, aber durch einen Parameter, welcher für eine Eingabe berechnet werden kann, eine Polynomielle Laufzeit haben, solange der berechnete Parameter als Konstant angenommen wird. Bsp: O(f(k) * n^c)\nIn gewisser Weise ist P eine Teilmenge der Parametrisierbaren Probleme und es gibt auch Probleme, bei denen ein Parameter nicht komplett heraus-faktorisiert werden kann (XP).",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was ist eine Baumzerlegung eines Graphen? Welche Zerlegungen gibt es für einen Graphen mit den Kanten: 1-2, 2-3, 2-4, 3-4? (Form: -◁)",
+        "back": "Bei einer Zerlegung werden Knoten in Taschen gruppiert, sodass jede Kante (und jeder Knoten) in einer Tasche ist. Die Taschen bilden einen Baum und für jeden Knoten bilden dessen Taschen einen (zusammenhängenden) Teilbaum. Beispiel Zerlegungen wären (1234), (12)-(234), aber auch (12)-(1234), (1)-(12)-(1234)-(234)-(34)-(4), ...\nDie Redundanzen einer Zerlegung können in O(k * V) entfernt werden durch eine Tiefen-Suche (O(V)) welche jede zwei Knoten auf teilmengen-beziehung prüft (O(k)), wobei k die Weite der Zerlegung ist.",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was ist die Weite einer Baumzerlegung und was ist die Baumweite eines Graphen?",
+        "back": "Die Weite einer Baumzerlegung ist die Anzahl an Elementen in der größten Tasche minus 1. Die Baumweite eines Graphen ist die kleinste Weite jeder Baumzerlegung des Graphen.",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "",
+        "back": "",
+        "hint": ""
+    },
+    {
+        "id": 278,
+        "folder": "Effiziente Algorithmen",
+        "front": "",
+        "back": "",
         "hint": ""
     },
     {
