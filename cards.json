@@ -1934,22 +1934,22 @@
     {
         "id": 278,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie wird das Vertex-Cover-Problem in der Baumweite parametrisiert?",
+        "back": "Es gibt einen rekursiven Algorithmus der das Paradigma der dynamischen Programmierung nutzt um Vertex-Cover zu lösen. Dabei wird eine gegebene (Redundanz-freie) Baumzerlegung traversiert. Es wird eine Tasche als Wurzel verwendet und für alle Blätter wird das Gewicht für jede mögliche Wahl von Knoten aus der Tasche berechnet. Falls es keine valid Überdeckung ist, wird der Wert unendlich gesetzt. Nun wird für alle inneren Knoten die minimale Überdeckung berechnet aus deren Kind-Knoten. Insgesamt hat der Algorithmus eine Laufzeit von O(4^k * k^2 * V).",
         "hint": ""
     },
     {
         "id": 278,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Welche Approximations-Güte ist für das TSP im euklidischen Raum bekannt?",
+        "back": "Durch einen MST kann die Güte 2 erreicht werden. Durch weitere Berechnungen kann sogar ein 1.5 Güte erreicht werden.",
         "hint": ""
     },
     {
         "id": 278,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Wie heißt die Komplexitätsklasse mit polynomieller Laufzeit und konstanter Approximations-Güte?",
+        "back": "Die Komplexitätsklasse heißt APX. Falls ein zusätzlicher Parameter zum Algorithmus mit gegeben werden kann um die Güte zu beschränken ist es ein PTAS und falls die Laufzeit in diesem Parameter nur um 1/ε wächst ist es ein FPTAS.",
         "hint": ""
     },
     {
