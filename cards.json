@@ -2375,6 +2375,20 @@
     {
         "id": 279,
         "folder": "Data Mining",
+        "front": "Was ist ein Bloomfilter für Zeitreihen?",
+        "back": "Ein Bloomfilter ist eine Datenstruktur zur schnellen Bestimmung ob ein bestimmtes Element in der Zeitreihe vorkommt. Dabei werden nicht die Daten selber betrachtet. Stattdessen wird ein Bit-Array und mehrere Hash-Funktionen verwendet. Initial sind alle Bits 0 und für jedes Element aus der Zeitreihe werden alle Hash-Funktionen ausgewertet und auf das Bit-Array abgebildet, indem an den Stellen im Array der Wert auf 1 gesetzt wird. Um zu prüfen, ob ein Element vorhanden ist, führt man alle Hash-Funktionen aus und führt die Konjunktionen von den Stellen im Bit-Array aus. Es ist zu beachten, dass dabei auch Falsch-Positive Ergebnisse möglich sind. Die Wahrscheinlichkeit für ein Falsch-Positives Ergebnis liegt bei (1 - e^(-n*h/b))^h. Für Häufigkeiten kann das ähnliche Verfahren CountMinSketch verwendet werden, bei dem mehrere Numerische Arrays verwendet werden und bei einer Query die Min-Funktion verwendet wird.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wofür ist der Lossy-Counting Algorithmus für Zeitreihen?",
+        "back": "Der Algorithmus berechnet Häufige Items. Es wird eine Fehlerschranke Ɛ festgelegt, welche vom Algorithmus eingehalten wird. Der Datenstrom wird in Batches aus ⌈1/Ɛ⌉ prozessiert. Jedes Element aus einem Batch wird in eine Datenstruktur eingefügt, wobei Tupel aus element, Anzahl & Fehler gespeichert werden. Ist ein Element bereits vorhanden wird die Anzahl inkrementiert ansonsten wird das Element mit dem Fehler BatchIndex (von 0 ab) gespeichert. Nach einem Batch werden alle Elemente mit Häufigkeit + Fehler < batchIndex entfernt. Mit dem mindest-support kann eine Anfrage gestellt werden, alle Elemente mit Häufigkeit >= (support - Ɛ) * n ausgegeben.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
         "front": "",
         "back": "",
         "hint": ""
