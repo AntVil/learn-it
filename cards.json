@@ -2389,6 +2389,27 @@
     {
         "id": 279,
         "folder": "Data Mining",
+        "front": "Wie können Cluster-Verfahren für Datenströme angewendet werden?",
+        "back": "STREAM-Algorithmus: Unterteilen von Datenstrom in Blöcke. Cluster-Verfahren auf Block anwenden um Repräsentanten zu gewinnen. Wenn genug Blöcke verarbeitet wurden Repräsentanten erneut Clustern. Dies wiederholt man rekursiv. Nachteile bestehen darin, dass keine Gewichtung möglich ist und der Analysezeitraum nicht eingeschränkt werden kann.\nCluStream: Neue Daten werden in Micro-Cluster gruppiert. Micro-Cluster verschiedener Zeiträume werden zusammengefasst.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Text-Dokumente Klassifiziert werden?",
+        "back": "Die Daten einer jeden Klasse können zur Berechnung von Clustern benutzt werden. Neue Dokumente werden dem nächst gelegenen Cluster zugeordnet. Statt zu Clustern können die Dokumente einer Klasse auch aneinander gehängt werden. Bayes-Modell kann ebenso eingesetzt werden, wobei entweder das vorkommen von einem Wort oder die Häufigkeit vom Wort berücksichtigt werden kann.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
+        "front": "Wie können Ausreißer in Zeitreihen und diskreten Folgen bestimmt werden?",
+        "back": "Es werden vorhersagen mit einem Modell getroffen und falls diese zu weit entfernt oder deren Wahrscheinlichkeit zu gering ist, werden Werte als Ausreißer erkannt. Bei Zeitreihen kann ein Modell wie ARIMA o.Ä. verwendet werden. Bei Diskreten Folgen können Markov-Ketten (Automaten mit Wahrscheinlichkeiten pro Pfad, wobei die Ordnung bestimmt die viele vergangene Zustände berücksichtigt werden) verwendet werden. In beiden Fällen werden Vorhersagen durch die letzten vorhandenen Werte gebildet.",
+        "hint": ""
+    },
+    {
+        "id": 279,
+        "folder": "Data Mining",
         "front": "",
         "back": "",
         "hint": ""
