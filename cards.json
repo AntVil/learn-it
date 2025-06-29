@@ -1904,511 +1904,539 @@
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 279,
         "folder": "Effiziente Algorithmen",
         "front": "Was ist das Knotenüberdeckungsproblem?",
         "back": "Teilmenge alle Knoten mit minimalem Gewicht, wobei mindestens ein Knoten von jeder Kante gewählt werden muss. Brute-Force O(V^2 * 2^V). Eine Pseudo-Polynomielle Laufzeit kann erreicht werden, wenn das Gewicht des Graphen als Konstant angesehen wird. In diesem Fall kann rekursiv die Knotenüberdeckung aufgebaut werden, wobei Rekursions-Pfade frühzeitig abgebrochen werden können O(V^2 * 2^T(G)). Für einen Baum kann das Problem in Zeit O(E) gelöst werden (durch Dynamisches Programmieren).",
         "hint": "Optimierungsproblem"
     },
     {
-        "id": 278,
+        "id": 280,
         "folder": "Effiziente Algorithmen",
         "front": "Was sind Parametrisierbare Probleme?",
         "back": "Probleme, welche an sich nicht Polynomielle Laufzeit haben, aber durch einen Parameter, welcher für eine Eingabe berechnet werden kann, eine Polynomielle Laufzeit haben, solange der berechnete Parameter als Konstant angenommen wird. Bsp: O(f(k) * n^c)\nIn gewisser Weise ist P eine Teilmenge der Parametrisierbaren Probleme und es gibt auch Probleme, bei denen ein Parameter nicht komplett heraus-faktorisiert werden kann (XP).",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 281,
         "folder": "Effiziente Algorithmen",
         "front": "Was ist eine Baumzerlegung eines Graphen? Welche Zerlegungen gibt es für einen Graphen mit den Kanten: 1-2, 2-3, 2-4, 3-4? (Form: -◁)",
         "back": "Bei einer Zerlegung werden Knoten in Taschen gruppiert, sodass jede Kante (und jeder Knoten) in einer Tasche ist. Die Taschen bilden einen Baum und für jeden Knoten bilden dessen Taschen einen (zusammenhängenden) Teilbaum. Beispiel Zerlegungen wären (1234), (12)-(234), aber auch (12)-(1234), (1)-(12)-(1234)-(234)-(34)-(4), ...\nDie Redundanzen einer Zerlegung können in O(k * V) entfernt werden durch eine Tiefen-Suche (O(V)) welche jede zwei Knoten auf teilmengen-beziehung prüft (O(k)), wobei k die Weite der Zerlegung ist.",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 282,
         "folder": "Effiziente Algorithmen",
         "front": "Was ist die Weite einer Baumzerlegung und was ist die Baumweite eines Graphen?",
         "back": "Die Weite einer Baumzerlegung ist die Anzahl an Elementen in der größten Tasche minus 1. Die Baumweite eines Graphen ist die kleinste Weite jeder Baumzerlegung des Graphen.",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 283,
         "folder": "Effiziente Algorithmen",
         "front": "Wie wird das Vertex-Cover-Problem in der Baumweite parametrisiert?",
         "back": "Es gibt einen rekursiven Algorithmus der das Paradigma der dynamischen Programmierung nutzt um Vertex-Cover zu lösen. Dabei wird eine gegebene (Redundanz-freie) Baumzerlegung traversiert. Es wird eine Tasche als Wurzel verwendet und für alle Blätter wird das Gewicht für jede mögliche Wahl von Knoten aus der Tasche berechnet. Falls es keine valid Überdeckung ist, wird der Wert unendlich gesetzt. Nun wird für alle inneren Knoten die minimale Überdeckung berechnet aus deren Kind-Knoten. Insgesamt hat der Algorithmus eine Laufzeit von O(4^k * k^2 * V).",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 284,
         "folder": "Effiziente Algorithmen",
         "front": "Welche Approximations-Güte ist für das TSP im euklidischen Raum bekannt?",
         "back": "Durch einen MST kann die Güte 2 erreicht werden. Durch weitere Berechnungen kann sogar ein 1.5 Güte erreicht werden.",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 285,
         "folder": "Effiziente Algorithmen",
         "front": "Wie heißt die Komplexitätsklasse mit polynomieller Laufzeit und konstanter Approximations-Güte?",
         "back": "Die Komplexitätsklasse heißt APX. Falls ein zusätzlicher Parameter zum Algorithmus mit gegeben werden kann um die Güte zu beschränken ist es ein PTAS und falls die Laufzeit in diesem Parameter nur um 1/ε wächst ist es ein FPTAS.",
         "hint": ""
     },
     {
-        "id": 278,
+        "id": 286,
         "folder": "Effiziente Algorithmen",
-        "front": "",
-        "back": "",
+        "front": "Was sind Quanten-Algorithmen?",
+        "back": "Quanten-Algorithmen arbeiten anders als herkömmliche Algorithmen nicht auf einem Modell wie der Word-RAM und verwenden nicht reguläre Bits, sonder Qubits. Ein Qubit wird als eine Super-Position zweier Zustände |0> und |1> geschrieben, wobei es eine Wahrscheinlichkeit für die jeweiligen zustände gibt. Die Quadrat-Summe der Wahrscheinlichkeiten muss 1 ergeben. Wird ein Qubit gemessen tritt einer der Zustände fest ein. Andere Operationen sind ebenfalls möglich und können durch Matrizen repräsentiert werden. Alle Operationen sind reversibel.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 287,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was sind wichtige Gatter bei Quantenalgorithmen?",
+        "back": "X: (0 1 1 0)\nZ: (1 0 0 -1)\nH (Hadamard): 1/sqrt(2) * (1 1 1 -1)\nCNOT: Einheitsmatrix mit unten rechter Quadrant transponiert",
+        "hint": ""
+    },
+    {
+        "id": 288,
+        "folder": "Effiziente Algorithmen",
+        "front": "Gibt es ähnlich wie bei regulären Gattern bei Quanten-Algorithmen auch eine Basis?",
+        "back": "Es gibt zwei Möglichkeiten einer Basis. Entweder erlaubt man alle Gatter die nur auf einem Qubit arbeiten und das CNOT, oder man erlaubt eine Approximation mit den Gattern H, CNOT, P_{pi/2} und P_{pi/4}.",
+        "hint": "NAND"
+    },
+    {
+        "id": 289,
+        "folder": "Effiziente Algorithmen",
+        "front": "Wie werden reguläre Gatter zu Quanten-Gattern umgeformt?",
+        "back": "Quanten-Gatter müssen immer reversibel sein, deswegen müssen die einzelnen Gatter bzw die gesamte Schaltung zuerst reversibel gemacht werden und danach kann die Schaltung zu einem Quantenalgorithmus übersetzt werden. Die reversible Schaltung kann zum Beispiel aus CNOT, NOT und Toffoli-Gattern bestehen, da diese Gatter alle reversible sind.",
+        "hint": ""
+    },
+    {
+        "id": 290,
+        "folder": "Effiziente Algorithmen",
+        "front": "Was berechnet der Algorithmus von Grover?",
+        "back": "Der Algorithmus führt eine bestimmte Anzahl (nicht zu viele) an Grover-Schritten durch um eine Vielzahl an Qubits in eine Super-Position zu bringen, sodass die Eingabe-Bits welche eine Funktion zum Wert 1 bringen würden eine höhere Wahrscheinlichkeit haben beim Messen den Wert 1 zu liefern. In den Schritten wird das Vorzeichen von Eingaben die den Wert 1 liefern würden gewechselt und danach der Durchschnitt gebildet. Zuletzt werden alle Werte am Durchschnitt gespiegelt.",
+        "hint": ""
+    },
+    {
+        "id": 291,
         "folder": "Data Mining",
         "front": "Was sind Attribute, Attribut-Werte und Typen?",
         "back": "Ein Attribut ist eine Eigenschaft, die Attribut-Werte sind konkrete Werte, die Typen geben an, welche Werte möglich sind",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 292,
         "folder": "Data Mining",
         "front": "Was unterschiedet isolierte Daten?",
         "back": "Daten die alleinstehend betrachtet werden können (Bsp: Alter, ...). Das Gegenteil wären Daten mit Abhängigkeiten (Bsp: Netzwerke, Zeitreihen, ...)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 293,
         "folder": "Data Mining",
         "front": "Welche Attribut-Typen gibt es?",
         "back": "Nominal: Identifier deren Werte keine bedeutsame Informationen enthalten\nBinär: Sonderfall von nominal (symmetrisch/asymmetrisch)\nOrdinal: enum (median möglich mittelwert nicht)\nNumerisch: Intervall-skaliert (Attribute haben sinnvolle Differenzen zB Datum) und/oder Verhältnis-skaliert (Attribute haben sinnvolle Verhältnisse zB Alter)\nDiskret (abzählbar (un)-endlich) & Kontinuierlich (Float (theoretisch überabzählbar))\nDatenströme: Mengen an Daten die nur als Stream ökonomisch prozessiert werden können\nTextdokumente: Mehrere Dokumente sind ein Korpus, kann als Bag of Words (Anzahlen verschiedener Wörter) dargestellt werden,\nZeitreihen: Kontextattribute (id/timestamp), Verhaltens-Attribute (eigentliche Messwerte)\nDiskrete Folgen/Strings: Wie Zeitreihen aber Werte sind diskret (Bsp Nutzer ip Adresse bei Event)\nGraphen: Bsp Straßennetz",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 294,
         "folder": "Data Mining",
         "front": "Welche gängigen Lage-Parameter (Statistik) gibt es?",
         "back": "(gewichtetes) Arithmetisches Mittel, Median, Modus (häufigster Wert)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 295,
         "folder": "Data Mining",
         "front": "Was bedeutet es, wenn Werte symmetrisch, links- oder rechts-schief sind?",
         "back": "symmetrisch: Median = Mean\nlinks-schief: Mean < Median\nrechts-schief: Mean > Median",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 296,
         "folder": "Data Mining",
         "front": "Welche gängigen Streuungsmaße gibt es?",
         "back": "p-Quantil: p Werte unterhalb und (1-p) werte oberhalb\nQuartil: 1,2,3/4-Quantil\nQuartils-Abstand: 3-Quartil - 1-Quartil\nAusreißer: < 3-Q + 1.5 * Q-Abst. oder < 1-Q - 1.5 * Q-Abst.\nVarianz: sum((xi - mean)^2)/(n-1)\nStandardabweichung: sqrt(Varianz)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 297,
         "folder": "Data Mining",
         "front": "Welche (typischen) Diagramme werden bei Data-Mining verwendet?",
         "back": "Box-Plot: Quartile + Ausreißer als Punkte\nQ-Q-Plot (zwei Verteilungen vergleichen): sortierte Punkte paare + Quartile-Punkte\nHistogram: Klassen\nStreu-Diagram: Scatter.Plot (Punkte Wolke)\nStreudiagramm-Matrix: 2d-Gitter aus Scatter-Plots\nStream Graph: Überlappende Graphen\nCircle Segments: Jedes Attribut bekommt Teil-Kreis (Muster erkennbar)\nParallele Koordinaten: Jedes Attribut bekommt \"Spalte\", für jedes Attribut ein Punkt pro Wert\nKachel-Diagramm: Rechtecke auf Fläche\nWortwolke\nGraph",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 298,
         "folder": "Data Mining",
         "front": "Was ist eine Metrik im Kontext Abstands-/Ähnlichkeitsmaße",
         "back": "Eine Metrik ist eine Funktion, für die gilt, gleiche Objekte haben Abstand 0, Abstände sind in beide Richtungen gleich, Dreiecksungleichung (x->y >= x->z + z->y)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 299,
         "folder": "Data Mining",
         "front": "Was ist eine Ähnlichkeits-Funktion?",
         "back": "Eine Ähnlichkeits-Funktion hat die Eigenschaft, dass identische Objekte den gleichen oder einen größeren Wert als zwei beliebige Objekte haben. Außerdem ist deren Wert immer >= 0",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 300,
         "folder": "Data Mining",
         "front": "Welche Abstands-/Ähnlichkeitsmaße können für Nominale Attribute verwendet werden?",
         "back": "Anzahl gleicher Werte zwischen zwei Objekten (Überlappungs-Maß) bzw. das Inverse davon.\nEs gibt auch Inverse Auftrittshäufigkeit: Summe 1 / (relative_haeufigkeit_von_wert)^2 (Dabei wird nur summiert wenn der Wert in beiden Objekten gleich ist)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 301,
         "folder": "Data Mining",
         "front": "Welche Abstands-/Ähnlichkeitsmaße können für Binäre Attribute verwendet werden?",
         "back": "symmetrisch: Anz. Ungleich / Anz. Gesamt, asymmetrisch: Anz. Ungleich / (Anz. beide 1 + Anz. Ungleich)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 302,
         "folder": "Data Mining",
         "front": "Welche Abstands-/Ähnlichkeitsmaße können für Numerische Attribute verwendet werden?",
         "back": "Euklidisch, Manhattan, Minkowski ((x-y)^alpha + ...)^(1/alpha), Maximum-Distanz",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 303,
         "folder": "Data Mining",
         "front": "Was ist mit dem sogenannten Fluch des Dimensionalität gemeint?",
         "back": "Bei zunehmender Anzahl an Dimensionen tendieren Abstandsfunktionen zunehmend unerwünschte Ergebnisse zu liefern. Das liegt daran, dass Datensätze mit zunehmender Anzahl an Dimensionen im Mittel weniger gut voneinander unterscheidbar sind.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 304,
         "folder": "Data Mining",
         "front": "Welche Abstands-/Ähnlichkeitsmaße können für Ordinale Attribute verwendet werden?",
         "back": "Wird in numerischen Wert überführt. Dazu muss eine Ordnung der verschiedenen Möglichen Werte gebildet werden. Jeder Wert wird dann in das Interval [0, 1] abgebildet.",
         "hint": "Ordinal = enum"
     },
     {
-        "id": 279,
+        "id": 305,
         "folder": "Data Mining",
         "front": "Wie berechnet man den Abstand mit verschiedenen Datentypen?",
         "back": "Es werden Abstände zwischen den Einzelnen Werten Summiert und durch denen Anzahl geteilt. Fehlende Werte oder Asymmetrisch Binäre Werte mit x=y=0 werden ausgelassen. Die Abstände werden jeweils im Wertebereich [0, 1] bestimmt.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 306,
         "folder": "Data Mining",
         "front": "Welche Ähnlichkeits-Funktion kann für Bags-of-Words verwendet werden?",
         "back": "Die Kosinus-Ähnlichkeit: Skalar-Produkt(x, y) / (Eukl. D(x) * Eukl. D(y))",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 307,
         "folder": "Data Mining",
         "front": "Wie kann verhindert werden, dass Dokumente anhand von Häufig verwendeten Worten als ähnlich anerkannt werden?",
         "back": "Generische Wörter entfernen und/oder Tf-idf-Maß verwenden. Das bedeutet die Häufigkeit jedes Worts wird mit ln(Anz. Dokumente / Anz. Dokumente mit Wort) multipliziert. Danach kann wie gewohnt die Kosinus-Ähnlichkeit bestimmt werden.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 308,
         "folder": "Data Mining",
         "front": "Was gibt es bei Ähnlichkeits-Funktionen von Zeitreihen zu beachten?",
         "back": "Zeitliche Achsen müssen übereinstimmen. Wertebereiche müssen ggf. angepasst werden durch abziehen von Mittelwert und dividieren der Standardabweichung. Jeder Punkt in der Zeitreihe kann dann als eine Dimension betrachtet werden.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 309,
         "folder": "Data Mining",
         "front": "Was versteht man unter Dynamic Time Warping (DTW)?",
         "back": "Elemente zweier Zeitreihen werden ggf wiederholt und die beiden Zeitreihen vergleichbar zu machen. Dies erfolgt durch einen Algorithmus, welcher eine Tabelle aufbaut. Die ersten beiden Elemente sind dabei gezwungen gruppiert zu werden (die letzten theoretisch auch). Es wird nun der Abstand zwischen diesen beiden Elementen bestimmt. Alle nachfolgenden Werte der Tabelle werden befüllt indem das Minimum der Werte link, oben und links-oben zum Abstand addiert werden. Die Tabelle kann dann komplett ausgefüllt werden. Das Ergebnis liefert die Zelle unten-rechts. Die Gruppierungen (bzw Wiederholungen) erhält man, indem man den Pfad von unten-rechts nach oben-links folgt, bei dem der Wert minimal ist.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 310,
         "folder": "Data Mining",
         "front": "Wie wird die Edit-Distanz (bzw Levenshtein-Distanz) berechnet?",
         "back": "Distanz_(i,j) = min(Distanz_(i-1,j) + kosten_löschen, Distanz_(i,j-1) + kosten_einfügen, Distanz_(i-1,j-1) + kosten_ersetzen) (kosten_ersetzen = 0 wenn Werte gleich) \nDistanz_(i,0) = kosten_löschen * i\nDistanz_(0,j) = kosten_einfügen * j",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 311,
         "folder": "Data Mining",
         "front": "Wie wird die Länge der längsten gemeinsame Teilfolge berechnet?",
         "back": "Falls Elemente gleich +1, sonst max(Zelle(i-1,j), Zelle(i,j-1)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 312,
         "folder": "Data Mining",
         "front": "Wie können Ähnlichkeiten zwischen Graphen bestimmt werden?",
         "back": "Es kann der kürzeste Abstand verwendet werden oder die zufalls-weg-basierte Ähnlichkeit. Beim Zufallsweg werden Knoten als ähnlicher gewertet, wenn die mehr Kanten mit höheren Gewichten besitzen. Es ist dabei gedacht, dass ein Zufallsweg, welcher die Kanten relativ zu deren Gewicht wählt eher bei einem Knoten landen, als bei einem anderen.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 313,
         "folder": "Data Mining",
         "front": "Welche Möglichkeiten gibt es bei der Datenbereinigung?",
         "back": "Fehlende Werte ignorieren\nManuelles einfügen\nGlobale Konstante\nLage-Parameter (Median/Mean)\nWahrscheinlichster Wert (Regression, Decision Trees)\nInterpolation",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 314,
         "folder": "Data Mining",
         "front": "Wozu wären Daten geglättet und wie funktioniert es?",
         "back": "Um Ausreißer zu beseitigen können Daten geglättet werden. Hierzu werden die Daten in Blöcke eingeteilt und in jedem Block werden die Werte angepasst. Zum Beispiel zum Median, Mean oder zum näheren Wert von Minimum oder Maximum. Die Blöcke können auch ein Intervall abdecken und sich sogar überlappen (Glätten mit gleitendem Mittelwert). Es gibt auch das exponentielle Glätten, dabei wird zwischen der ursprünglichen Wert der Zeitreihe und dem zuletzt berechnetem Wert linear interpoliert, wobei ein festes alpha (alpha = 1 -> keine Glättung) gewählt wird. (Vorteilhaft bei starken Ausschlägen)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 315,
         "folder": "Data Mining",
         "front": "Wie berechnet man Chi-Quadrat und wie wertet man das Ergebnis des Chi-Quadrat-Test aus?",
         "back": "Für zwei Kategorien wird eine Tabelle aufgebaut mit Häufigkeiten der jeweiligen Kombination. Eine weitere Tabelle mit den erwarteten Häufigkeiten wird ebenfalls gebildet, indem die gesamt Anzahl der beiden Kategorien multipliziert und durch die gesamt Anzahl dividiert werden. Die zweite Tabelle entspricht der erwarteten Häufigkeit von je einer Kombination. Um Chi-Quadrat nun zu bestimmen wird die Differenz der beiden Werte quadriert und durch die erwartete Häufigkeit dividiert. Diese Werte werden alle summiert. Um die Bedeutung des Werts zu bestimmen muss die Anzahl Freiheitsgrade durch (Anz. A - 1) * (Anz. B - 1) gebildet werden und ein Signifikanzniveau gegeben sein. Der Schwellenwert kann aus der Wertetabelle abgelesen werden. Ist der berechnete Wert größer besteht besteht eine Korrelation.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 316,
         "folder": "Data Mining",
         "front": "Wie wird die Covarianz und der Korreltations-Koeffizient berechnet und was sagen beide aus?",
         "back": "Cov(A, B) = E(A * B) - E(A) * E(B)\nE ist der Erwartungswert. Ist die Covarianz positiv besteht ein positiver Zusammenhang, ist sie negativ besteht ein negativer Zusammenhang. Bei einem Wert von 0 kann keine Aussage getroffen werden.\nDer Korreltations-Koeffizient wird durch Cov(A, B) / (Std A * Std B) berechnet. Er gibt die Stärke der Korrelation an und liegt zwischen -1 und 1. Der Wert 0 wird als unkorreliert bezeichnet. Bei Korrelation werden lediglich linearer Zusammenhang geprüft.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 317,
         "folder": "Data Mining",
         "front": "Wie funktioniert die diskrete Wavelet-Transformation und wofür kann man sie verwenden?",
         "back": "Man kann sie verwenden um Ausreißer zu beseitigen und zur Daten-Reduktion. Es wird eine Funktion zur Glättung und eine für die Unterschiede zwischen Werten benötigt. Nun werden benachbarte Elemente im Array mit den beiden Funktionen transformiert. Das entstehende Array hat die gleiche Größe. Das gleiche Verfahren wird auf der Hälfte des Array angewandt, welche zuvor geglättet wurde. Es wird wiederholt bis nur noch ein Wert vorhanden ist. Werte die betragsmäßig unter einem Schwellenwert liegen können auf 0 gesetzt werden. Die Transformation wird danach rückgängig gemacht.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 318,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Haar-Wavelet Transformation?",
         "back": "Es wird die Wavelet Transformation mit den Funktionen Mean und Diff verwendet. Die Wavelet Koeffizienten sind dabei stets das Ergebnis von Diff über alle Wiederholungen bis zur letzten Zahl die schlicht übernommen wird. Die erzeugten Koeffizienten können als Baum dargestellt werden. Die Basis-Vektoren pro Koeffizient entsprechen einem Vektor aus -1, 0, 1. Multipliziert man die Basis-Vektoren und Koeffizienten und summiert diese erhält man die ursprüngliche Folge. Zur Datenreduktion kann jeder Basisvektor normalisiert werden und alle Koeffizienten mit den geringsten Beträgen auf 0 gesetzt werden. Durch Rücktransformation erhält man eine reduzierte Folge.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 319,
         "folder": "Data Mining",
         "front": "Welchen nutzen hat die Hauptkomponentenanalyse (PCA)?",
         "back": "Es ist eine Dimensions-Reduktions-Methode. Die Daten werden so transformiert, dass die jeweiligen Dimensionen die Daten möglichst stark von einander trennen. Die Dimensionen die am wenigsten Beitragen können entfernt werden.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 320,
         "folder": "Data Mining",
         "front": "Wie wird die einfache lineare Regression mit der Methode der kleinsten Quadrate berechnet?",
         "back": "m = ((x - x_mean) * (y - y_mean))/(x - x_mean)^2\nb = y_mean - m * x_mean",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 321,
         "folder": "Data Mining",
         "front": "Welchen Nutzen hat die Tilted-Time-Frame Methode und wie funktioniert diese?",
         "back": "In einem Datenstrom sind Daten aus der Vergangenheit mit gröberer Genauigkeit ausreichend. Es werden also Stichproben des Datenstrom entnommen, wobei desto weiter diese in der Vergangenheit liegen, weniger Stichproben genommen werden. Man unterscheidet:\nNatürliches TTF: 4 * 15min, 24 * 1h, 31 * 1d, 12 * 1m\nlogarithmisches TTF: Intervalle immer zweier Potenzen\nprogressiv-logarithmisches TTF: b_max = Anzahl Behälter, bk = Größe Behälter, Behälter 0 hat 2er Schritte, Behälter 1 4er, ... Behälter k startet mit dem größten Element für das gilt (element + Schritt-Größe/2) ist vielfaches von Schritt-Größe. Das letzte Frame enthält alle noch größeren Zweierpotenzen, welche nicht bereits abgedeckt sind.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 322,
         "folder": "Data Mining",
         "front": "Wie funktioniert die z-Transformation bzw. Standardisierung (Normalisierung)?",
         "back": "(x - x_mean) / x_std\nEs kann auch die mittlere absolute Abweichung verwendet werden (sum(|x - x_mean|) / n)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 323,
         "folder": "Data Mining",
         "front": "Was bewirkt die Dezimalskalierung?",
         "back": "Alle Werte werden durch die nächst größere Zehnerpotenz geteilt der betragsmäßig größten Zahl.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 324,
         "folder": "Data Mining",
         "front": "Wie funktioniert der (Apriori) Algorithmus zur Bestimmung der Item-Sets mit einer Mindestanzahl?",
         "back": "Es werden alle einelementigen Items gefiltert nach deren Häufigkeit (Mindestanzahl). Es werden all Kombinationen der verbliebenen Mengen durch vereinigen gebildet, sodass Mengen entstehen, welche 1 größer sind. Diese werden erneut gefiltert. Der Algorithmus terminiert, wenn nur noch eine oder keine Menge vorhanden ist. Alle Zwischenergebnisse werden vereinigt.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 325,
         "folder": "Data Mining",
         "front": "Wie lautet das Beispiel zu den Assoziationsregeln wenn ein Item-Set mit drei Produkten gegeben ist?",
         "back": "In dem Beispiel wird die Konfidenz berechnet, welche besagt, wie wahrscheinlich es ist, dass ein Käufer, der eine echte (nicht-leere) Teilmenge aus dem Item-Sets gekauft hat, die restlichen Produkte ebenfalls kaufen wird (Implikation). Es muss eine Mindest-Konfidenz gegeben sein, sodass man alle Kombinationen der Implikationen in den so genannten Assoziationsregeln sammeln kann. (Notation: conf(A => B) = P(A ∪ B) / P(A) = Anz(A ∪ B) / Anz(A))",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 326,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Frequent-Pattern-Growth-Methode?",
         "back": "Es werden alle einelementigen Items nach deren Häufigkeit sortiert. Schrittweise werden alle Transaktionen eingefügt, wobei die Elemente jeder Transaktion nach der sortieren Reihenfolge eingefügt werden. Gibt es einen Knoten wird dieser Inkrementiert, ansonsten wird ein Knoten erzeugt. Um die Knoten zuzuordnen werden Zeiger von einem Array auf die Knoten des Baums, und von den Knoten auf gleiche Items gesetzt. Jetzt wird für jedes Item alle Pfade bestimmt um zu diesem zu gelangen, wobei Pfade mehrfach vorkommen, falls der entsprechende Knoten nicht in 1 endet. Falls nur ein Pfad existiert, werden alle Teilmengen des Pfades gebildet und ausgegeben. Falls mehrere Pfade existieren wird der Algorithmus auf dem reduzierten Baum ausgeführt, welcher nur aus den Pfaden (ohne das betrachtete Item) besteht.",
         "hint": "Alternative zum Apriori Algorithmus"
     },
     {
-        "id": 279,
+        "id": 327,
         "folder": "Data Mining",
         "front": "Was ist der Lift einer Assoziationsregel und wofür wird dieser verwendet?",
         "back": "lift(A => B) = (P(A ∪ B)) / (P(A) * P(B))\nEin Wert von 1 bedeutet keine Korrelation. Ein Wert über 1 bedeutet positive Korrelation und ein kleinerer Wert negative Korrelation.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 328,
         "folder": "Data Mining",
         "front": "Was sind Null-invariante Evaluationsmaße bei Assoziationsregeln und welche gibt es?",
         "back": "Es handelt sich um Maße die berechnet werden können, ohne Transaktionen zu beachten die nicht weder A noch B enthalten.\nallconf(A,B) = min(conf(A => B), conf(B => A))\nmaxconf(A,B) = max(conf(A => B), conf(B => A))\nKulczynski(A,B) = (conf(A => B) + conf(B => A)) / 2\nCosine(A,B) = sqrt(conf(A => B) * conf(B => A))\nJaccard(A,B) = (Anz A & B) / (Anz A | B)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 329,
         "folder": "Data Mining",
         "front": "Wie können Seltene Muster bei der Mustersuche entdeckt werden?",
         "back": "P(A ∪ B) < P(A) * P(B)\nP(A ∪ ¬B) * P(¬A ∪ B) > P(A ∪ B) * P(¬A ∪ ¬B)\n(conf(A => B) + conf(B => A)) / 2 < ε",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 330,
         "folder": "Data Mining",
         "front": "Welche Distanz-Metriken gibt es für Muster?",
         "back": "Musterdistanz: Pdist(A,B) = 1 - (|Anz Transaktionen in A & B| / |Anz Transaktionen in A | B|)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 331,
         "folder": "Data Mining",
         "front": "Was ist eine δ-Überdeckung zweier Muster bei der Mustersuche?",
         "back": "Ein Muster A ist eine δ-Überdeckung eines Muster B, wenn B ⊆ A und Pdist(A,B) < δ gilt. Eine δ-Überdeckung kann verwendet werden um die Anzahl an Mustern zu verringern, ohne wichtige Muster mit geringerem Support/Anzahl zu verwerfen.",
         "hint": "Komprimierte Muster"
     },
     {
-        "id": 279,
+        "id": 332,
         "folder": "Data Mining",
         "front": "Wie funktioniert das Maß Informationsgewinn um einen Entscheidungsbaum aufzubauen?",
         "back": "Es wird die Differenz aus Entropie (sum((Anz Klasse / Anz gesamt) * log2(1 / (Anz Klasse / Anz gesamt)))) und Informationsbedarf (sum((Anz Attribut Wert / Anz gesamt) * Entropie(Eingaben mit Attribut Wert))) berechnet für jedes Attribut. Das Ergebnis ist der Informationsgehalt in Bits. Das Attribut mit dem höchsten Wert wird gewählt zur Unterteilung. Bei numerischen Werten wird bei der Berechnung Spaltwert für jedes Attribut der Spaltwert mit dem maximalen Informationsgehalt verwendet. Als Kandidaten für Spaltwerte werden alle Werte zwischen zwei sortiert aufeinanderfolgende Werte genommen.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 333,
         "folder": "Data Mining",
         "front": "Wie funktioniert das Maß Gewinnverhältnis um einen Entscheidungsbaum aufzubauen?",
         "back": "Es wird analog wie das Maß für Informationsgewinn angewandt, nur dass das Ergebnis pro Attribut durch dessen Spaltentropie (sum(Anz Attribut Wert / Anz gesamt) * log2(Anz Attribut Wert / Anz gesamt)) geteilt wird. Der Sinn dahinter dieses Maß zu verwendet ist es, Attribute mit weniger Ausprägungen als besser zu bewerten.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 334,
         "folder": "Data Mining",
         "front": "Wie funktioniert das Maß Gini-Index um einen Entscheidungsbaum aufzubauen",
         "back": "Der Gini-Index einer Menge ist definiert als 1 - sum((relative Anz Klasse)^2). Es wird jede Partitionierung untersucht, welche zwei Ergebnisse besitzt. Die Partitionierung mit geringstem Gini-Index wird ausgewählt.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 335,
         "folder": "Data Mining",
         "front": "Wie können Entscheidungsbäume effizient bei großen Datenmengen berechnet werden?",
         "back": "Man kann AVC-Mengen (Attribute-Value-Classlabel) verwenden um nicht alle Daten im Arbeitsspeicher zu halten. Stattdessen werden nur die jeweiligen Anzahlen gespeichert. Es gibt auch das Verfahren BOAT, bei dem Stichproben verwendet werden um Teil-Bäume zu konstruieren. Die Teilbäume werden später vereint und bereinigt.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 336,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Naive Bayes Klassifikation, wieso wird er als Naiv bezeichnet?",
         "back": "Er wird als naiv bezeichnet, weil angenommen wird, dass verschiedene Attribute unabhängig voneinander sind. Es wird für jede Klasse die Wahrscheinlichkeit bestimmt, dass diese auftritt (meist aus den Trainingsdaten). Dann wird die Wahrscheinlichkeit bestimmt, dass ein Attribut einen bestimmten Wert hat, gegeben, dass es in einer bestimmten Klasse auftritt. Zur Klassifikation wird für jede Klasse das Produkt berechnet aus der Wahrscheinlichkeit der Klasse und allen Attribut-Werten gegeben mit dieser Klasse. Die Klasse mit dem größten Wert ist die gewählte Klasse. Bei Numerischen Werten wird eine Normalverteilung angenommen (e^(-(x - Erwartungswert)^2/(2 * std^2)) / (sqrt(2pi)*std)). Das Verfahren kann stabiler gemacht werden indem auf die Anzahlen jedes Attribut-Werts 1 auf-addiert wird (verhindern von 0 Wahrscheinlichkeiten).",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 337,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Regel-basierte Klassifikation?",
         "back": "Es werden Regeln schrittweise Aufgebaut, sobald eine Regel ein gewünschtes Qualitätsmaß besitzt wird sie in die Liste aller Regeln aufgenommen und alle Trainingsdaten welche durch die Regel abgedeckt sind, werden nicht mehr berücksichtigt. Qualitätsmaße messen, ob durch Hinzunahme eine Konjunktion die Regel verbessert wird. Es gibt: Entropie, Informationsgehalt und andere. Auch Regel-basierte Klassifikationen können durch verwerfen von Regeln verbessert werden (Over-fitting vermeiden).",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 338,
         "folder": "Data Mining",
         "front": "Welche Evaluationsmaße gibt es für Klassifikationen?",
         "back": "Genauigkeit (Prozent Korrekt): T / Ges\nFehlerrate: 1 - Genauigkeit\nSensitivität/TPR (Prozent P Korrekt): TP / P\nSpezifität (Prozent N Korrekt): TN / N\nFPR: FP / N\nPräzision: TP / (TP + FP)\nFβ: ((1 + β^2) * Präzision * Sensitivität) / (β^2 * Präzision + Sensitivität)",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 339,
         "folder": "Data Mining",
         "front": "Wie kann die Güte einer Methode zur Klassifikation abgesehen von Evaluationsmaßen noch gemessen werden?",
         "back": "Durch Kreuz-Validierung und Stichproben ziehen und mehrmaliges Trainieren und Testen kann die Robustheit der Methode abgeschätzt werden.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 340,
         "folder": "Data Mining",
         "front": "Wie wird eine ROC-Kurve erstellt?",
         "back": "Es werden alle Daten mit deren Wahrscheinlichkeiten klassifiziert. Für jede Wahrscheinlichkeit wird die TPR und die FPR berechnet und in ein Diagramm eingezeichnet. Die Punkte werden anschließend verknüpft. Die diagonale wäre eine zufällige Klassifikation. Mit der ROC-Kurve können Modelle verglichen werden oder optimale Grenzwerte für die Wahrscheinlichkeiten gewählt werden.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 341,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Ensemble-Methode Bagging?",
         "back": "Es werden Subsets (mit zurücklegen) gebildet und jeweils eine Methode darauf angewandt. Die einzelnen Stimmen der Klassifikationen können unterschiedlich vereint werden, auch für numerische Ergebnisse. Diese Methode ist meist sehr Robust und neigt wenig zu Überanpassung, auch wenn die einzelnen Methoden dazu neigen.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 342,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Ensemble-Methode Boosting?",
         "back": "Es werden schrittweise Modelle trainiert, wobei die Modelle aus der vorherigen Iteration verwendet werden um bestimmte Eingaben höher zu gewichten, welche momentan falsch klassifiziert werden. Modelle die dabei wenig Fehler machen haben schlussendlich eine höhere Gewichtung als Modelle mit vielen Fehlern. Dieses Verfahren neigt zu Over-fitting, wenn Ausreißer in den Daten vorhanden sind.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 343,
         "folder": "Data Mining",
         "front": "Wie funktioniert die Ensemble-Methode Zufallswälder?",
         "back": "Es werden mehrere Bäume unabhängig voneinander aufgebaut. Jeder Baum hat dabei nur eine Stichprobe mit ausgewählten Attributen zur Verfügung. Jeder Baum wird gleich gewichtet. Dieses Verfahren ist im Schnitt nicht so anfällig für Ausreißer und Over-fitting.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 344,
         "folder": "Data Mining",
         "front": "Welche Partitionierungs Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
         "back": "k-Means: Zufällige Punkte sind Zentrum. Nächster (euklidischer) Nachbar gehört zu Cluster. Mittelwert von Cluster ist neues Zentrum. Wiederholen bist keine Änderungen\nk-Medoids (/PAM): Zufällige Punkte sind Zentrum. Nächster (euklidischer) Nachbar gehört zu Cluster. Punkt mit kleinstem Abstand zu allen Cluster-Punkten wird neues Zentrum. Wiederholen bis keine Änderung.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 345,
         "folder": "Data Mining",
         "front": "Welche Hierarchischen Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
         "back": "Agglomerative Verfahren: Alle Punkte sind in einem eigenen Cluster. Schrittweise werden Cluster zusammengeführt. Als Distanzen zwischen Clustern gibt es min, max, diff_mean, sum_diff_all_pairs/count_all_pairs\nDivisive Verfahren: Es wird die Menge unterteilt bis eine Abbruchbedingung erfüllt ist.\n\nDen Ablauf der Algorithmen kann man mit  einem Dendrogramm (Baum mit Clustern als Knoten, Höhe ist Ähnlichkeit) darstellen. Beim min-Abstand entstehen Ketten (Single-Linkage) bei max-Abstand entstehen vollständige Teilgraphen (Complete-Linkage)\n\nBIRCH: Speichern von Clustern in balancierten Baum, mit je drei konstanten Werten (n, sum(x), sum(x^2)). Effektiv bei kreisförmigen Clustern (O(n)).\nChameleon-Verfahren: KNN, danach Cluster zusammenführen. Effektiver bei generischen Clustern (O(n^2))",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 346,
         "folder": "Data Mining",
         "front": "Welche Dichtebasierte Cluster-Verfahren wurden im Kurs beschrieben und wie funktionieren diese?",
         "back": "DBSCAN: ε (Radius) und minPoints muss gegeben sein. Alle Punkte die im Radius mindesten minPoints enthalten sind Kern-Punkte. Kern-Punkte die im Radius von einander liegen werden zu einem Cluster. Rand-Punkte werden auch hinzugefügt. Die restlichen Punkte sind Ausreißer. (O(n^2) bzw. O(n*log(n+durchschnittliche_dichte))\nOPTICS: minPoints muss gegeben sein. Für jeden Punkt wird die Kerndistanz berechnet als der Radius bis minPoints enthalten sind. Die Erreichbarkeitsdistanz ist das Maximum zwischen dem Abstand der Punkte und der Kerndistanz. Die Werte werden verwendet um die Punkte zu sortieren/anzuordnen; es werden keine konkreten Cluster ausgegeben, sondern ein Plot, welcher analysiert werden muss.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 347,
         "folder": "Data Mining",
         "front": "Welche Gitterbasierte Cluster-Verfahren wurden im Kurs beschrieben?",
         "back": "STING: Statistische Informationen werden auf Gitter mit höchster Auflösung berechnet und nach oben weiter berechnet. Von Gitter mit niedriger Auflösung wird nach unten gearbeitet und relevante Ebenen erkannt umd Cluster zu bilden. Arbeitet effizient aber Qualität kann schlechter sein.\nCLIQUE: Datenraum wird unterteilt und Gitter-Zellen werden zusammengeführt/berücksichtigt, wenn diese genug Punkte haben und ähnlich sind. Arbeitet effizient aber Qualität kann schlechter sein.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 348,
         "folder": "Data Mining",
         "front": "Wann ist ein Cluster-Verfahren sinnvoll?",
         "back": "Die Hopkins-Statistik kann angeben, ob ein Clustering überhaupt sinnvoll ist. Dabei wird die Datenmenge mit einer zufällig erzeugten Menge verglichen (sum_min_d_rand/(sum_min_d_rand + sum_min_d) > 0.5).\n",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 349,
         "folder": "Data Mining",
         "front": "Wie können Cluster verfahren evaluiert werden?",
         "back": "Falls eine Ground-Truth bekannt ist, kann BCubed Precision oder BCubed Recall berechnet werden. Falls nicht, kann zum Beispiel der Silhouetten-Koeffizient eines Elements berechnet werden: a(x) = durchschnittlicher Abstand zu anderen Elementen aus gleichem Cluster, b(x) = min aller Cluster von durchschnittlicher Abstand zu Elementen aus Cluster, s(x) = (b(x) - a(x)) / max(a(x), b(x)). Werte bei 1 sind gut, Werte zwischen -1 und 0 nicht.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 350,
         "folder": "Data Mining",
         "front": "Was ist ein Bloomfilter für Zeitreihen?",
         "back": "Ein Bloomfilter ist eine Datenstruktur zur schnellen Bestimmung ob ein bestimmtes Element in der Zeitreihe vorkommt. Dabei werden nicht die Daten selber betrachtet. Stattdessen wird ein Bit-Array und mehrere Hash-Funktionen verwendet. Initial sind alle Bits 0 und für jedes Element aus der Zeitreihe werden alle Hash-Funktionen ausgewertet und auf das Bit-Array abgebildet, indem an den Stellen im Array der Wert auf 1 gesetzt wird. Um zu prüfen, ob ein Element vorhanden ist, führt man alle Hash-Funktionen aus und führt die Konjunktionen von den Stellen im Bit-Array aus. Es ist zu beachten, dass dabei auch Falsch-Positive Ergebnisse möglich sind. Die Wahrscheinlichkeit für ein Falsch-Positives Ergebnis liegt bei (1 - e^(-n*h/b))^h. Für Häufigkeiten kann das ähnliche Verfahren CountMinSketch verwendet werden, bei dem mehrere Numerische Arrays verwendet werden und bei einer Query die Min-Funktion verwendet wird.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 351,
         "folder": "Data Mining",
         "front": "Wofür ist der Lossy-Counting Algorithmus für Zeitreihen?",
         "back": "Der Algorithmus berechnet Häufige Items. Es wird eine Fehlerschranke Ɛ festgelegt, welche vom Algorithmus eingehalten wird. Der Datenstrom wird in Batches aus ⌈1/Ɛ⌉ prozessiert. Jedes Element aus einem Batch wird in eine Datenstruktur eingefügt, wobei Tupel aus element, Anzahl & Fehler gespeichert werden. Ist ein Element bereits vorhanden wird die Anzahl inkrementiert ansonsten wird das Element mit dem Fehler BatchIndex (von 0 ab) gespeichert. Nach einem Batch werden alle Elemente mit Häufigkeit + Fehler < batchIndex entfernt. Mit dem mindest-support kann eine Anfrage gestellt werden, alle Elemente mit Häufigkeit >= (support - Ɛ) * n ausgegeben.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 352,
         "folder": "Data Mining",
         "front": "Wie können Cluster-Verfahren für Datenströme angewendet werden?",
         "back": "STREAM-Algorithmus: Unterteilen von Datenstrom in Blöcke. Cluster-Verfahren auf Block anwenden um Repräsentanten zu gewinnen. Wenn genug Blöcke verarbeitet wurden Repräsentanten erneut Clustern. Dies wiederholt man rekursiv. Nachteile bestehen darin, dass keine Gewichtung möglich ist und der Analysezeitraum nicht eingeschränkt werden kann.\nCluStream: Neue Daten werden in Micro-Cluster gruppiert. Micro-Cluster verschiedener Zeiträume werden zusammengefasst.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 353,
         "folder": "Data Mining",
         "front": "Wie können Text-Dokumente Klassifiziert werden?",
         "back": "Die Daten einer jeden Klasse können zur Berechnung von Clustern benutzt werden. Neue Dokumente werden dem nächst gelegenen Cluster zugeordnet. Statt zu Clustern können die Dokumente einer Klasse auch aneinander gehängt werden. Bayes-Modell kann ebenso eingesetzt werden, wobei entweder das vorkommen von einem Wort oder die Häufigkeit vom Wort berücksichtigt werden kann.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 354,
         "folder": "Data Mining",
         "front": "Wie können Ausreißer in Zeitreihen und diskreten Folgen bestimmt werden?",
         "back": "Es werden vorhersagen mit einem Modell getroffen und falls diese zu weit entfernt oder deren Wahrscheinlichkeit zu gering ist, werden Werte als Ausreißer erkannt. Bei Zeitreihen kann ein Modell wie ARIMA o.Ä. verwendet werden. Bei Diskreten Folgen können Markov-Ketten (Automaten mit Wahrscheinlichkeiten pro Pfad, wobei die Ordnung bestimmt die viele vergangene Zustände berücksichtigt werden) verwendet werden. In beiden Fällen werden Vorhersagen durch die letzten vorhandenen Werte gebildet.",
         "hint": ""
     },
     {
-        "id": 279,
+        "id": 355,
         "folder": "Data Mining",
         "front": "",
         "back": "",
