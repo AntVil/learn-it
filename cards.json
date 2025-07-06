@@ -2438,6 +2438,20 @@
     {
         "id": 355,
         "folder": "Data Mining",
+        "front": "Wie kann ein Abstand zwischen zwei Graphen (ohne diese zu transformieren) gemessen werden?",
+        "back": "Es kann der größte gemeinsame Teilgraph bestimmt werden und dann die Maße:\nNichtnormalisierter Abstand: Anzahl Knoten nicht in Teilgraph\nVereinigungsnormalisierter Abstand: 1 - (Anz Knoten Teilgraph / Anz Knoten Vereinigung)\nMaximumnormalisierter Abstand: 1 - (Anz Knoten Teilgraph / Max(Anz Knoten))\n\nDiese Maße zu berechnen ist extrem Aufwendig und nur sinnvoll (Geschwindigkeit) bei kleinen Graphen.",
+        "hint": ""
+    },
+    {
+        "id": 356,
+        "folder": "Data Mining",
+        "front": "Wie kann ein Abstand zwischen zwei Graphen mit transformieren gemessen werden?",
+        "back": "Es können häufige Muster in den Graphen erkannt werden um dann die Graphen in eine Vektordarstellung zu bringen. Bei der Berechnung mit Knotenbasiertem Verbund ist zu beachten, dass Teil-Graphen gleichen Knoten aber unterschiedliche Kanten haben können. Beim Kantenbasiertem Verbund können Knoten mit gleicher Bezeichnung verschmolzen werden, oder nicht (beide Fälle können Muster sein). Nach der Berechnung können andere Ähnlichkeitsmaße verwendet werden. Ansonsten ist es auch möglich für die Graphen Indizes zu berechnen und darauf andere Ähnlichkeitsmaße zu verwenden.",
+        "hint": ""
+    },
+    {
+        "id": 357,
+        "folder": "Data Mining",
         "front": "",
         "back": "",
         "hint": ""
