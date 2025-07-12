@@ -2452,8 +2452,15 @@
     {
         "id": 357,
         "folder": "Data Mining",
-        "front": "",
-        "back": "",
+        "front": "Wie werden Sackgassen beim PageRank-Algorithmus behandelt und warum?",
+        "back": "Der Algorithmus erwartet, dass jede Seite auf einem Zufallsweg erreicht werden kann. Da ein Zufallsweg nicht enden soll müssen Sackgasse-Knoten/Komponenten behandelt werden. Für Sackgassen-Knoten werden Kanten zu allen (auch zum eigenen Knoten) hinzugefügt mit gleicher Wahrscheinlichkeit. Um Sackgassen-Komponenten zu behandeln werden Kanten von jedem zu jedem Kanten eingefügt mit der Wahrscheinlichkeit alpha/n. Bereits vorhandene Kanten werden mit alpha-1 multipliziert und alpha/n wird hinzu addiert.",
+        "hint": ""
+    },
+    {
+        "id": 358,
+        "folder": "Data Mining",
+        "front": "Wie berechnet man für eine Gruppe und Artikel die relevanz für bestimmte Personen aus der Gruppe für bestimmte Artikel? Es sind die Bewertungen der einzelnen Personen gegeben.",
+        "back": "Es wird der Pearson-Koeffizient für zwei Spalten bzw Zeilen berechnet (nur gemeinsame Werte können berechnet werden) die jeweiligen Ergebnisse müssen dann interpretiert werden bzw sortiert werden. Pearson-Koeffizient: sum((x - x_mean) * (y - y_mean)) / (sqrt(sum((x - x_mean)^2)) * sqrt(sum((y - y_mean)^2)))",
         "hint": ""
     }
 ]
