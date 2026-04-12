@@ -2462,5 +2462,54 @@
         "front": "Wie berechnet man für eine Gruppe und Artikel die relevanz für bestimmte Personen aus der Gruppe für bestimmte Artikel? Es sind die Bewertungen der einzelnen Personen gegeben.",
         "back": "Es wird der Pearson-Koeffizient für zwei Spalten bzw Zeilen berechnet (nur gemeinsame Werte können berechnet werden) die jeweiligen Ergebnisse müssen dann interpretiert werden bzw sortiert werden. Pearson-Koeffizient: sum((x - x_mean) * (y - y_mean)) / (sqrt(sum((x - x_mean)^2)) * sqrt(sum((y - y_mean)^2)))",
         "hint": ""
+    },
+    {
+        "id": 359,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Nachteile hat die Datenverwaltung über das Dateisystem?",
+        "back": "Redundanz: Speicherverschwendung & Mehrfach aufwand\nInkonsistenz: Folge von Redundanz\nDaten-Programm-Abhängigkeit: Starke Koppelung\nNicht Flexibel: Neue/Andere Anwendungen können evtl nicht die gleichen Dateien verarbeiten",
+        "hint": ""
+    },
+    {
+        "id": 360,
+        "folder": "Datenbank Systeme",
+        "front": "Was unterschiedet das 3 Ebenen Modell und die 5 Schichten Architektur von Datenbanken?",
+        "back": "3 Ebenen Modell (Anwendungs-Sicht auf Datenbank):\nExterne Ebene (Welche Nutzer haben worauf Zugriff), Konzeptionelle Ebene (Welche Daten sind gespeichert und mit welche Beziehungen und Datentypen) & Interne Ebene (Speicherstruktur)\n\n5 Schichten Modell (In das innere der Datenbank schauend):\nDatensystem (Übersetzen / Kontrollen), Zugriffssystem (Datenstruktur, Transaktion) + Speichersystem (Locks, Log), Pufferverwaltung (Seitenwechsel-Strategie) & Externspeicherverwaltung (Daten Lesen/Schreiben)",
+        "hint": ""
+    },
+    {
+        "id": 361,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Anforderungen haben Datenbanksysteme?",
+        "back": "Datenunabhängigkeit (Unabhängig zu Programm), Effizienter Datenzugriff, Gemeinsame Datenbasis (Programme verwenden die gleichen Daten - Single source of truth), Nebenläufiger Datenzugriff (Concurrency), Redundanz vermindern (Intern kann das system redundanz selbst verwalten für performance), Konsistenz (Daten sind konsistent selbst durch die kontrollierte redundanz des systems), Integrität (Daten sind korrekt - constraints), Datensicherheit (Zugriff), Backup/Recovery, Anfragen Stellen, Mehrere Schnittstellen, Flexibel (zB: Tabellen anpassen) & Schnelle Entwicklung Programme",
+        "hint": ""
+    },
+    {
+        "id": 362,
+        "folder": "Datenbank Systeme",
+        "front": "Was bedeutet Datenunabhängigkeit im Bezug auf das 3 Ebenen Modell?",
+        "back": "Datenunabhängigkeit in diesem Kontext bedeutet, dass Änderungen auf einer Ebene nicht die Ebenen darüber beeinflussen.\n\nDie logische Datenunabhängigkeit besagt, dass eine Änderung der Konzeptionellen Ebene sich nicht auf die Externe Ebene auswirkt. Zum Beispiel führt das einfügen von einem weiteren Feld in eine Tabelle (in der Regel) zu keiner Änderung für Anwendungsprogramme.\nDie physische Datenunabhängigkeit besagt, dass eine Änderung der Internen Ebene sich nicht auf die Konzeptionelle Ebene auswirkt. Zum Beispiel ist keine Änderung nötig, wenn eine andere Datenstruktur oder ein anderer Algorithmus intern verwendet wird.",
+        "hint": ""
+    },
+    {
+        "id": 363,
+        "folder": "Datenbank Systeme",
+        "front": "Wie stehen die Begriffe Datensatz, Wert, Feld, Seite & Slot in Beziehung zueinander?",
+        "back": "Ein Datensatz ist ein Menge an Werten, welche zusammengehören. Synonyme für Datensatz in diesem Kontext wären Eintrag, Zeile einer Tabelle oder Tupel. Ein Wert aus einem Datensatz ist eine Ausprägung eines Feldes. Eine Seite ist die kleinste Einheit mit der die Datenbank arbeitet. Wenn gelesen oder geschrieben wird, wird immer eine Seite gelesen und geschrieben. Eine Seite wird eingeteilt in Slots, welche die Plätze für Datensätze sind. Eine Seite kann auch einen Seitenkopf besitzen um Meta-Daten wie Adressen oder Speicherbereiche uä. zu speichern.",
+        "hint": ""
+    },
+    {
+        "id": 364,
+        "folder": "Datenbank Systeme",
+        "front": "Wie werden Datensätze bezüglich ihrer länge unterschieden und was bedeutet das für die Organisation der Daten?",
+        "back": "Fixer Länge: Jeder Eintrag hat die gleiche Länge. Man kann sie hintereinander speichern und die Meta-Daten im Systemkatalog speichern.\n\nVariabler Länge: Einträge haben unterschiedliche Länge. Man kann Separatoren, Längen-Prefixe oder eine Lookup Struktur verwenden. Probleme entstehen beim Löschen oder Überschreiben wodurch Lücken entstehen die nicht immer gefüllt werden können, da diese Potenziell zu klein sind für neue Datensätze (Fragmentierung).\n\nSehr Lang: Datensatz passt nicht mehr auf eine Seite. Hierfür können entweder Datensätze aufgeteilt auf Seiten und verkettet werden oder nur relevante Meta-Daten auf den Seiten zu speichern und den Rest auf spezielle Seiten auszulagern.\n\n(Bei Längen ist noch zu erwähnen, dass das Alignment eine Rolle spielen kann. Falls Felder nicht vertauscht werden kann es zu ungenutzem speicher kommen)",
+        "hint": ""
+    },
+    {
+        "id": 365,
+        "folder": "Datenbank Systeme",
+        "front": "Wie sehen Seitenformate bezüglich der Länge der zu speichernden Datensätze aus?",
+        "back": "Fixer Länge: Slots haben die gleiche Länge wie die Datensätze und können hintereinander angewordnet werden. Löschen kann implementiert werden durch Überschreiben mit letztem validen Wert, jedoch müssen ggf Zeiger beachtet werden. Es kann auch eine Bit-Map verwendet werden um Löschungen zu markieren, sodass weniger Zeiger angepasst werden müssen.\n\nVariabler Länge: Löschen kann zu Fragmentieren führen. Es muss dafür gesorgt werden, dass Datensätze auf einer Seite verschoben werden können um freien Speicher zu schaffen. Dies kann über ein Seitenverzeichnis erreicht werden, welches jedem Datensatz eine stable Id (DID) gibt, mit dem dieser aufgefunden werden kann. Falls ein Datensatz trotz Komprimierung (Fragmentierung beheben) nicht auf eine Seite passt wird eine Überlauf-Seite erzeugt und der DID der \"Haus-Seite\" verweist auf einen DID der Überlauf-Seite. Es sollte sichergestellt werden, dass Überlaufsketten maximal die Länge 1 haben um",
+        "hint": ""
     }
 ]
