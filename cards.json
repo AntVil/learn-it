@@ -2509,7 +2509,77 @@
         "id": 365,
         "folder": "Datenbank Systeme",
         "front": "Wie sehen Seitenformate bezüglich der Länge der zu speichernden Datensätze aus?",
-        "back": "Fixer Länge: Slots haben die gleiche Länge wie die Datensätze und können hintereinander angewordnet werden. Löschen kann implementiert werden durch Überschreiben mit letztem validen Wert, jedoch müssen ggf Zeiger beachtet werden. Es kann auch eine Bit-Map verwendet werden um Löschungen zu markieren, sodass weniger Zeiger angepasst werden müssen.\n\nVariabler Länge: Löschen kann zu Fragmentieren führen. Es muss dafür gesorgt werden, dass Datensätze auf einer Seite verschoben werden können um freien Speicher zu schaffen. Dies kann über ein Seitenverzeichnis erreicht werden, welches jedem Datensatz eine stable Id (DID) gibt, mit dem dieser aufgefunden werden kann. Falls ein Datensatz trotz Komprimierung (Fragmentierung beheben) nicht auf eine Seite passt wird eine Überlauf-Seite erzeugt und der DID der \"Haus-Seite\" verweist auf einen DID der Überlauf-Seite. Es sollte sichergestellt werden, dass Überlaufsketten maximal die Länge 1 haben um",
+        "back": "Fixer Länge: Slots haben die gleiche Länge wie die Datensätze und können hintereinander angewordnet werden. Löschen kann implementiert werden durch Überschreiben mit letztem validen Wert, jedoch müssen ggf Zeiger beachtet werden. Es kann auch eine Bit-Map verwendet werden um Löschungen zu markieren, sodass weniger Zeiger angepasst werden müssen.\n\nVariabler Länge: Löschen kann zu Fragmentieren führen. Es muss dafür gesorgt werden, dass Datensätze auf einer Seite verschoben werden können um freien Speicher zu schaffen. Dies kann über ein Seitenverzeichnis erreicht werden, welches jedem Datensatz eine stable Id (DID) gibt, mit dem dieser aufgefunden werden kann. Falls ein Datensatz trotz Komprimierung (Fragmentierung beheben) nicht auf eine Seite passt wird eine Überlauf-Seite erzeugt und der DID der \"Haus-Seite\" verweist auf einen DID der Überlauf-Seite. Es sollte sichergestellt werden, dass Überlaufsketten maximal die Länge 1 haben um eine gute Laufzeit zu garantieren.\n\nSehr lang: Datensatz passt nicht auf eine leere Seite. In diesem Fall können Seiten wie eine Verkettete Liste aufeinander zeigen, was zu sehr vielen Seitenzugriffen führen kann. Die andere Möglichekeit ist nur die Meta-Daten zu speichern und die tatsächlichen Daten auf spezielle Seiten auszulagern mit einer Referenz auf diese.",
+        "hint": ""
+    },
+    {
+        "id": 366,
+        "folder": "Datenbank Systeme",
+        "front": "Was bedeutet Clustering im Kontext Externspeicherverwaltung?",
+        "back": "Clustering im Kontext Externspeicherverwaltung beschreibt das \"nah beieinander liegen\" von logisch verwanden Daten. Die Konsequenz ist, dass im besten Fall weniger Seiten aus dem Externen-Speicher angefordert werden müssen.",
+        "hint": ""
+    },
+    {
+        "id": 367,
+        "folder": "Datenbank Systeme",
+        "front": "Wie werden Dateien im Kontext Datenbanken behandelt? Welche Dateiorganisationen gibt es und welche Unterschiede haben diese?",
+        "back": "Dateien bestehen aus einem Dateikopf (file-header) mit Meta-Informationen und werden in Blöcke fester Größe unterteilt. (Feste Größe vereinfacht unteranderem die Arbeit für die Systempufferverwaltung)\n\nHaufendateien: Unsortiert + Seitenverzeichnis oder Verkettete-Liste > Suchen schwer, aber Einfügen/Löschen relativ leicht\n\nSortierte-Dateien: Sortiert nach Ordnungsfeld > Binär-Suchen schneller, aber Einfügen muss alles verschieben (Löschmarkierung als Alternative möglich)\n\nHash-Dateien (Überlaufseiten möglich bei Kollision): Seiten meist nicht voll, effizient für Einfügen, Löschen & Existens. Schlecht bei Bereichs-Anfragen",
+        "hint": ""
+    },
+    {
+        "id": 368,
+        "folder": "Datenbank Systeme",
+        "front": "Wofür ist der System-Katalog wichtig?",
+        "back": "Der System-Katalog speichert Meta-Daten des Systems. Beispiele sind Schemata, Datei-Organisation, Einstellungen (Seitengröße, Systempuffer Größe, ...), Sichten (View), ...\n\nDer System-Katalog bestitzt meist auch Informationen über den eigenen Aufbau und erlaubt ebenfalls Anfragen über die Query-Language.",
+        "hint": ""
+    },
+    {
+        "id": 369,
+        "folder": "Datenbank Systeme",
+        "front": "Was ist das Segment-Konzept?",
+        "back": "Ein Block einer Datei entspricht (meist) einer Seite welche in einen Rahmen des Systempuffers passt. Eine Menge an Seiten mit einer logischen gemeinsamkeit wird als ein Segment zusammengefasst. Segmente und Seiten abstrahieren von Dateien und Blöcken. Man unterscheidet Segment-Typen mit verschiedenen spezialisierten Eigenschaften (Bsp: temporär, privat / system-relevant, öffentlich / daten-relevant, ...). In einer Datei sind meist mehrere Segmente aufzufinden, aber ein Segment wird (meist) nicht über mehrere Dateien verteilt.",
+        "hint": ""
+    },
+    {
+        "id": 370,
+        "folder": "Datenbank Systeme",
+        "front": "Wie werden Segmente auf Dateien abgebildet?",
+        "back": "Direkte Seitenadressierung: Jede Seite eines Segments wird aufeinander folgend in einer Datei gespeichert, die ungenutzen Blöcke müssen in der Datei reserviert sein und führen zu ungenutzen Speicher\n\nIndirekte Seitenadressierung: Es wird eine Seiten-Tabelle und eine Bit-Tabelle verwendet um Seiten zuzuordnen und freie Blöcke zu markieren. In diesem Fall verbrauchen Dateien weniger ungenutzen Speicher, aber es kann zu mehr Over-Head kommen, vorallem wenn die Seiten-Tabelle selbst nicht mehr auf eine Seite passt und ebenfalls zerlegt werden muss.",
+        "hint": ""
+    },
+    {
+        "id": 371,
+        "folder": "Datenbank Systeme",
+        "front": "Wie können Recovery-Methoden beim Abbilden von Segmenten auf Dateien unterstützt werden?",
+        "back": "Twin-Slot-Verfahren: Es wird eine Modifikation der Direkte Seitenadressierung vorgenommen. Alle Blöcke werden verdoppelt und aufeinanderfolgend gespeichert. Zwei Blöcke werden immer abwechselnd verwendet. Durch Seitensperren können transaktions Recoveries leicht implementiert werden.\n\nSchattenspeicher-Konzept: Es werden Kopien der Bit-Tabelle und Seiten-Tabelle bei Sicherungs-Punkten erzeugt, freie Blöcke der Datei werden dabei verwendet um den neuen Zustand zu speichern. Logisch zusammenhängende Seiten sind hier meist physisch weiter voneinander entfernt und physisches Clustering ist meist nicht möglich. Recovery ist zudem nur beschränkt auf ein Segment, es müssen also bestimmte Logs gesammelt werden, falls mehrere Segmente betroffen sind. Bei Großen Datenbanken kann der Overhead dieser Strategie zu hohen Antwortzeiten führen, für kleine Datenbanken ist das normalerweise kein Problem.",
+        "hint": ""
+    },
+    {
+        "id": 372,
+        "folder": "Datenbank Systeme",
+        "front": "Was sind Speicherzuteilungs und Seitenersetzungs Strategien im bezug auf den Systempuffer?",
+        "back": "Der Systempuffer kann nur eine begrenzte Anzahl an Seiten verwalten. Nützliche Seiten sollten dabei möglichst im Systempuffer verweilen und andere Seiten sollten überscheibbar sein. Die beiden Strategien sind verantwortlich für diese Aufgaben. Die Speicherzuteilungs Strategien haben die Aufgabe speicher für eine Transaktion bereitzustellen bzw Aussagen über benötigte und potentiell unbenötige Seiten zu machen (Beispiel Working-Set-Strategie: Zeit-Fenster wird betrachtet um länger-nicht-zugegriffene Seiten zu erkennen). Dabei kann Speicher von mehrere Transaktionen gleichzeitig verwendet werden. Die Seitenersetzungs Strategien geben vor welche Seite wohl am wenigsten relevant ist zu dem gegebenen Zeitpunkt. (Schlechtere Beispiel: FIFO, LFU: Least Frequeuently Used; Bessere Beispiele: LFU: Least Frequently Used, Clock: Used-Bit + Durchlaufen & Dekrementieren, MRU: Most Recently Used)",
+        "hint": ""
+    },
+    {
+        "id": 373,
+        "folder": "Datenbank Systeme",
+        "front": "Was sind Indexstrukturen und Such-Schlüssel?",
+        "back": "Indexstrukturen (verwaltet von Zugriffspfad-Manager) helfen beim schnelleren Auffinden von Daten. Sie benötigen zusätzlichen Speicherplatz und Aufwand beim Einfügen, aber machen es möglich Suchanfragen zu beschleunigen. Indexstrukturen können mit den Daten zusammen gespiechert werden, aber aus einer vielzahl an gründen werden diese separat gespeichert. (Die reduziert auch die Kopplung zwischen Record-Manager und Zugriffspfad-Manager) Mit einem Such-Schlüssel ist eine Attributkombination gemeint, nach der passende Datensätze gefunden werden sollen.",
+        "hint": ""
+    },
+    {
+        "id": 374,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Anfrage-Typen gibt es für Indexstrukturen?",
+        "back": "Sequentieller Zugriff: Sortierter zugriff\n\nDirekter Zugriff: Alles mit gleich Bedingung\n\nBereichsanfrage: Alles zwischen Bedingung\n\nExistenztest: Gibt es einen Eintrag?",
+        "hint": ""
+    },
+    {
+        "id": 375,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Indexstruktur Klassifikationen gibt es?",
+        "back": "Dicht/Dünn: Wird jeder Wert in der Struktur gespeichert oder werden Werte zusammengefasst?\n\nPrimär/Sekundär: Sind die Daten nach einem eindeutigen Feld sortiert? (Sekundär-Index sind immer Dicht)\n\nGeclusterter: Sind die Daten nach einem Feld geclustert?\n\nZusammengesetzt: Feld Kombination? (Möglichkeit Sortierung nach Tupel-Reihenfolge, Reihenfolge ist wichtig für Anfrage-Typen bzw Angefrage Felder, Alternative Mehrdimensionale Indexstruktur: Gut für Such-Feld Kombinationen, aber meist schlechter bei einfachen Feldern)\n\nMehrstufig: Index wird auf Index aufgebaut",
         "hint": ""
     }
 ]
