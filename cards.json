@@ -2581,5 +2581,12 @@
         "front": "Welche Indexstruktur Klassifikationen gibt es?",
         "back": "Dicht/Dünn: Wird jeder Wert in der Struktur gespeichert oder werden Werte zusammengefasst?\n\nPrimär/Sekundär: Sind die Daten nach einem eindeutigen Feld sortiert? (Sekundär-Index sind immer Dicht)\n\nGeclusterter: Sind die Daten nach einem Feld geclustert?\n\nZusammengesetzt: Feld Kombination? (Möglichkeit Sortierung nach Tupel-Reihenfolge, Reihenfolge ist wichtig für Anfrage-Typen bzw Angefrage Felder, Alternative Mehrdimensionale Indexstruktur: Gut für Such-Feld Kombinationen, aber meist schlechter bei einfachen Feldern)\n\nMehrstufig: Index wird auf Index aufgebaut",
         "hint": ""
+    },
+    {
+        "id": 376,
+        "folder": "Datenbank Systeme",
+        "front": "Welche wichtigen Indexstruktur gibt es?",
+        "back": "ISAM (indexed sequential access method): Statischer Baum mit Überlaufseiten, gut weil keine Pfade gesperrt werden müssen (mehrere Transaktionen), aber schlechter bei großen/wachsenden Daten-Mengen\n\nB Baum: Verallgemeinerung von Binär-Baum, wird balanziert durch operationen, Knoten sind immer zu mind 50% befüllt, alle Knoten haben Daten\n\nB^+ Baum: Nur Blätter enthalten Daten, Blätter sind verkettet (sinnvoll für Bereichsanfragen)\n\nPräfix B^+ Baum: Innere Knoten mit Suchschlüssel String können den Separator-Eintrag komprimieren (man speichert nur den Präfix)\n\nB^* Baum: Füllgrad wird vom Nutzer angepasst\n\nStatisches Hashing: feste Anzahl Buckets mit verketteter Liste\n\nDynamisches Hashing: Digital Baum (auch Verzeichnis Baum) wird aufgebaut, Hash wird als Binärzahl interpretiert und im Blatt-Knoten-Behälter gespeichert. Bei voll-sein wird der Behälter aufgeteilt. Wachsen und Schrumpfen möglich.\n\nErweiterbares Hashing: Verzeichnis hat globale Tiefe (Anzahl betrachtete Bits), Verzeichnis weißt auf Behälter mit lokaler Tiefe (Verweise sind nicht eindeutig, falls lokale Tiefe kleiner), verschmelzen von Behältern bzw verkleiner des Verzeichnis ist möglich\n\nLineares Hashing: Mehrere Hash Funktionen, ein Behälter wir aufgeteilt bei erzeugen von Überlaufseite (muss nicht der Behälter mit dieser Seite sein), wenn alle Behälter von Runde aufgeteilt wird nächste Runde begonnen und nächste Hash-Funktionen verwendet",
+        "hint": ""
     }
 ]
