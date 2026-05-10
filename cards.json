@@ -2588,5 +2588,33 @@
         "front": "Welche wichtigen Indexstruktur gibt es?",
         "back": "ISAM (indexed sequential access method): Statischer Baum mit Überlaufseiten, gut weil keine Pfade gesperrt werden müssen (mehrere Transaktionen), aber schlechter bei großen/wachsenden Daten-Mengen\n\nB Baum: Verallgemeinerung von Binär-Baum, wird balanziert durch operationen, Knoten sind immer zu mind 50% befüllt, alle Knoten haben Daten\n\nB^+ Baum: Nur Blätter enthalten Daten, Blätter sind verkettet (sinnvoll für Bereichsanfragen)\n\nPräfix B^+ Baum: Innere Knoten mit Suchschlüssel String können den Separator-Eintrag komprimieren (man speichert nur den Präfix)\n\nB^* Baum: Füllgrad wird vom Nutzer angepasst\n\nStatisches Hashing: feste Anzahl Buckets mit verketteter Liste\n\nDynamisches Hashing: Digital Baum (auch Verzeichnis Baum) wird aufgebaut, Hash wird als Binärzahl interpretiert und im Blatt-Knoten-Behälter gespeichert. Bei voll-sein wird der Behälter aufgeteilt. Wachsen und Schrumpfen möglich.\n\nErweiterbares Hashing: Verzeichnis hat globale Tiefe (Anzahl betrachtete Bits), Verzeichnis weißt auf Behälter mit lokaler Tiefe (Verweise sind nicht eindeutig, falls lokale Tiefe kleiner), verschmelzen von Behältern bzw verkleiner des Verzeichnis ist möglich\n\nLineares Hashing: Mehrere Hash Funktionen, ein Behälter wir aufgeteilt bei erzeugen von Überlaufseite (muss nicht der Behälter mit dieser Seite sein), wenn alle Behälter von Runde aufgeteilt wird nächste Runde begonnen und nächste Hash-Funktionen verwendet",
         "hint": ""
+    },
+    {
+        "id": 377,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Probleme entstehen beim Arbeiten mit geometrischen Daten im Vergleich zu alphanumerischen Daten?",
+        "back": "Geometrische Daten sind meist viel größer und müssen mit komplizierteren Algorithmen verarbeitet werden. Es gibt Punkte, Linien und Polygone mit potentziell zugehörigen weiteren Attributen. Oft können komplizierte Geometrische Daten durch Platzhalter repräsentiert werden, wie zum Beispiel Bounding-Boxen (Mininales Achsenparalleles Rechteck = MAR). Die Physikalische Clusterung der Daten anhand von deren Nähe ist meist sehr sinnvoll, weswegen oft eine primäre Index-Struktur verwendet wird.",
+        "hint": ""
+    },
+    {
+        "id": 378,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Operationen sind auf Geometrischen Daten möglich?",
+        "back": "Bereichsanfrage: enthalten oder schneidet Abfrage-Fenster (Partielle Bereichanfrage: Spezialfall wenn mind eine Dimension Universum entspricht)\nEnthaltenseinsanfrage: vollständig enthalten in Abfrage-Fenster\nNächster Nachbar: Nahestes Objekt zu Abfrage-Punkt\nPunktsuche: exakten Abfrage-Punkt finden\nEinfügen\nLöschen",
+        "hint": ""
+    },
+    {
+        "id": 379,
+        "folder": "Datenbank Systeme",
+        "front": "Welche wichtigen geometrischen Index-Strukturen für Punkte gibt es?",
+        "back": "Eindimensionale Einbettung: Auf Mehr-Dimensionale Daten wird eine Ordnung definert und reguläre Index-Strukturen können dann verwendet werden. (Beispiel Z-Ordnung: unten-link, oben-link, unten-recht, oben-recht; Daten werden in Z-Elemente unterteilt)\n\nGrid-File: Datenraum wird unterteilt mit Splitlinien, Verzeichnis speichert Behälter-Addressen (Zweiseiten-Zugriffs-Prinzip wie bei erweiterbarem Hashing: Scales -> Verzeichnis -> Behälter)\n\nk-d-Baum: jede Ebene im Baum teilt andere Dimension entlang von Daten-Punkt, Datenpunkte sind in Blättern\n\nk-d-B-Baum: Erweiterung: jeder Knoten ist Seite mit Intervallen und Zeigern bzw Blatt enhthält Daten-Punkte. Effizient bei Bereichsabfragen, aber evtl teuer bei Einfügen.",
+        "hint": ""
+    },
+    {
+        "id": 380,
+        "folder": "Datenbank Systeme",
+        "front": "Wie können Rechtecke (Bounding-Boxes) in geometrischen Index-Strukturen gespeichert werden?",
+        "back": "Abbilden auf Punkt mit doppelt so großer Dimension (entweder Ecken oder Mitte), Nachteil: Schiefe Verteilung und Nähebeziehung meist nicht gut abgebildet.\n\nR Baum: Fast wie k-d-Baum, aber Regionen sind nicht zwingend disjunkt. Beim Einfügen wird Region gefunden mit geringster nötigen Vergrößerung. Effizient wenn Regionen sich möglichst wenig überschneiden.\n\nR+ Baum: R-Baum, bei dem Rechtecke zerschnitten werden. Algorithmisch schwer, vorallem bei split.",
+        "hint": ""
     }
 ]
