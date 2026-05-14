@@ -2616,5 +2616,68 @@
         "front": "Wie können Rechtecke (Bounding-Boxes) in geometrischen Index-Strukturen gespeichert werden?",
         "back": "Abbilden auf Punkt mit doppelt so großer Dimension (entweder Ecken oder Mitte), Nachteil: Schiefe Verteilung und Nähebeziehung meist nicht gut abgebildet.\n\nR Baum: Fast wie k-d-Baum, aber Regionen sind nicht zwingend disjunkt. Beim Einfügen wird Region gefunden mit geringster nötigen Vergrößerung. Effizient wenn Regionen sich möglichst wenig überschneiden.\n\nR+ Baum: R-Baum, bei dem Rechtecke zerschnitten werden. Algorithmisch schwer, vorallem bei split.",
         "hint": ""
+    },
+    {
+        "id": 381,
+        "folder": "Datenbank Systeme",
+        "front": "Was ist externes Sortieren und wofür ist es wichtig?",
+        "back": "Beim externen Sortieren ist es wichtig die Anzahl an Seiten-Zugriffen zu minimieren, da diese sehr viel Zeit benötigen. Datensätze müssen meist Sequentiell verarbeitet werden, also nicht Random-Access. Merge-Sort ist ein Beispiel für einen kompatiblen Algorithmus.",
+        "hint": ""
+    },
+    {
+        "id": 382,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Merge-Sort varianten gibt es beim externen Sortieren?",
+        "back": "Direkter 2-Wege-Mergesort: Regulärer Merge-Sort (2 Dateien werden gelesen und dann zusammengefügt)\n\nAusgeglichener 2-Wege-Mergesort: Vorsortieren von kleinen Bereichen fester Länge, danach regulär weiter\n\nNatürlicher 2-Wege-Mergesort: Erzeugen von Läufen, durch iterieren durch Folge, Läufe können größer als Hauptspeicher sein. Sehr effektiv wenn Daten (leicht) vor-sortiert.\n\nAusgeglichener Mehr-Wege-Mergesort: Mehrere Dateien werden auf einmal zusammengefügt.",
+        "hint": ""
+    },
+    {
+        "id": 383,
+        "folder": "Datenbank Systeme",
+        "front": "Was ist ein logischer Plan und wie unterscheidet er sich von einem physischen?",
+        "back": "Der logische Plan ist eine Verkettung von Operationen ohne tatsächliche konkrete Implementationen. Ein physischer Plan entsteht aus einem logischen Plan und weist jeder Operationen eine Implementierung zu. Es kann mehrere phsyische Pläne geben mit verschiedenen Vor- und Nachteilen.",
+        "hint": ""
+    },
+    {
+        "id": 384,
+        "folder": "Datenbank Systeme",
+        "front": "Welche Aufgaben hat der Anfrageoptimierer?",
+        "back": "Der Anfrageoptimierer nimmt eine SQL-Anfrage entgegen und erzeugt einen effizieten Plan. Der Plan kann danach an das Ausführungssystem (Query-Prozessor + physische Algebra) übergeben werden. Das Ausführungssystem führt den Plan entweder wie ein Interpreter durch oder kann sogar eine Übersetzung der Anfrage durchführen (Ähnlich wie Compiler). Eine Übersetzung kann sinnvoll sein bei mehrmaligem Ausführen der gleichen Anfrage. Die Übersetzung und meta-Informationen werden im Systemkatalog gespeichert.",
+        "hint": ""
+    },
+    {
+        "id": 385,
+        "folder": "Datenbank Systeme",
+        "front": "Wieso verwenden Datenbanken Stromverarbeitung (stream processing / pipelining)?",
+        "back": "Eine Batchprocessing ist möglich bei Datenbanken, aber es gibt einen großen Nachteil wenn Ergebnisse (Relationen) nicht mehr in den Hauptspeicher passen. Bei der Stromverarbeitung gibt es dieses Problem (fast) nicht. Es werden nicht gesamte Ergebnisse (Relationen) aus Operationen sondern lediglich einzelne Tupel von einer zu nächsten Operation übergeben. Manche Operationen können nicht Stromverarbeitend implementiert werden wie zB 'sortieren'. Solche Operationen müssen alle Werte einsammeln und werden 'blokierend' genannt.",
+        "hint": ""
+    },
+    {
+        "id": 386,
+        "folder": "Datenbank Systeme",
+        "front": "Welchen Einfluss haben disjunktiv und konjunktiv verknüpfte Selektions-Bedingungen auf die Anfrage-Optimierung?",
+        "back": "In konjunktiver Form kann das System die Indexe der verschiedenen Attribute ausnutzen. Auch wenn nicht jedes Attribut aus der Selektion einen Index besitzt. In disjunktiver Form können Indexe (meist) nur ausgenutzt werden, wenn alle Attribute einen Index besitzen. Falls dies nicht der Fall ist, muss ein Full-Scan durchgeführt werden.",
+        "hint": ""
+    },
+    {
+        "id": 387,
+        "folder": "Datenbank Systeme",
+        "front": "Wie unterscheiden sich Selektion und Projektion im Kontext Anfrage Optimierung bzw Ausführungssystem?",
+        "back": "Die Selektion wird verwendet um die Anzahl an Tupel zu reduzieren. Die Projektion wird verwendet um die Anzahl der Elemente in einem Tupel zu reduzieren.",
+        "hint": ""
+    },
+    {
+        "id": 388,
+        "folder": "Datenbank Systeme",
+        "front": "Wie kann ein 'SELECT DISTINCT' realisiert werden?",
+        "back": "Falls das System durch einen Primärschlüssel duplikate ausschließen kann, ist kein Mehraufwand nötig. Ansonsten kann das System die Werte komplett einsammeln extern sortieren und danach duplikate entfernen. Ein anderer Ansatz verwendet eine Hash-Funktion um die Tupel auf Behälter zu partitionieren und danach wird ein Hash-Set (andere Hash-Funktion) pro Behälter verwendet um duplikate zu entfernen.",
+        "hint": ""
+    },
+    {
+        "id": 389,
+        "folder": "Datenbank Systeme",
+        "front": "Wie kann ein 'JOIN' realisiert werden?",
+        "back": "Es kann das kartesische Produkt mit einer Selektion und Projektion verwendet werden, jedoch ist dies ineffizient.\n\nNested-Loop Join: immer anwendbar, geschachtelte for-Schleifen\n\nIndex-Nested-Loop Join: Index existiert auf einer der Relationen, geschachtelte for-Schleifen mit leichten Anpassungen\n\nSort-Merge-Join: Sortieren, dann mit Zeigern durch sortiere Relationen gehen (Effektiv bei bereits sortierten Relationen)\n\nEinfacher Hash-Join: Kleinere Relation wird zu Hashtabelle transformiert und andere Relation wird durchlaufen (Wenn kleine Relation zu groß muss partitioniert werden, effektiv wenn anwendbar)\n\nGrace Hash-Join: Partitionierung von beiden Relationen, danach einfacher Hash-Join (effektiv wenn anwendbar, weniger Memory nötig)",
+        "hint": ""
     }
 ]
